@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
+import { Loader2 } from 'lucide-react'
 interface User {
   id: string
   email: string
@@ -28,7 +29,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (response.ok) {
         const data = await response.json()
         setUser(data.user)
-        if(pathname === '/login') {
+        if (pathname === '/login') {
           router.push('/')
         }
       } else {
@@ -62,7 +63,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   return (
     <AuthContext.Provider value={{ user, loading, logout, refreshUser }}>
-      {children}
+      {loading ? (<div className="flex items-center justify-center h-full"><Loader2 className="w-10 h-10 animate-spin" /></div>) : (children)}
     </AuthContext.Provider>
   )
 }

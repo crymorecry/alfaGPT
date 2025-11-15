@@ -7,7 +7,6 @@ interface StockChartProps {
   stock: Stock
 }
 
-// Кастомный Tooltip компонент
 const CustomTooltip = (props: any) => {
   const { active, payload, label } = props
   if (active && payload && payload.length) {
@@ -61,18 +60,15 @@ export default function StockChart({ stock }: StockChartProps) {
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={chartData}>
           <defs>
-            {/* Градиент для линии */}
             <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor={chartColor} stopOpacity={1} />
               <stop offset="100%" stopColor={chartColor} stopOpacity={0.8} />
             </linearGradient>
-            {/* Градиент для области под линией (эффект свечения) */}
             <linearGradient id={areaGradientId} x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor={chartColor} stopOpacity={0.3} />
               <stop offset="50%" stopColor={chartColor} stopOpacity={0.15} />
               <stop offset="100%" stopColor={chartColor} stopOpacity={0} />
             </linearGradient>
-            {/* Фильтр для эффекта свечения */}
             <filter id={`glow-${stock.ticker}`}>
               <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
               <feMerge>
@@ -100,14 +96,12 @@ export default function StockChart({ stock }: StockChartProps) {
             tickFormatter={(value) => `₽${value.toFixed(0)}`}
           />
           <Tooltip content={<CustomTooltip />} />
-          {/* Область под линией для эффекта свечения */}
           <Area
             type="monotone"
             dataKey="price"
             fill={`url(#${areaGradientId})`}
             stroke="none"
           />
-          {/* Основная линия с эффектом свечения */}
           <Line
             type="monotone"
             dataKey="price"

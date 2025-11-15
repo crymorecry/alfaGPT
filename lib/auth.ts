@@ -97,7 +97,6 @@ export async function verifyToken(token: string) {
   }
 
   if (authToken.expiresAt < new Date()) {
-    // Токен истек, удаляем его
     await prisma.authToken.delete({
       where: { id: authToken.id },
     })

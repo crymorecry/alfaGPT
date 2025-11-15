@@ -70,7 +70,6 @@ export default function LoginForm({ step, setStep }: { step: 'email' | 'code', s
         return
       }
 
-      // Успешная авторизация - перезагружаем страницу
       window.location.reload()
     } catch (err) {
       setError('Ошибка при проверке кода')
@@ -80,7 +79,6 @@ export default function LoginForm({ step, setStep }: { step: 'email' | 'code', s
     }
   }
 
-  // Автоматическая проверка при заполнении всех полей
   useEffect(() => {
     const codeString = code.join('')
     if (codeString.length === 6 && step === 'code' && !loading && !hasVerifiedRef.current) {

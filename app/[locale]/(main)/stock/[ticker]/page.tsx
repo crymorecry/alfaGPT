@@ -5,6 +5,8 @@ import { useParams, useRouter } from 'next/navigation'
 import { ArrowLeft, TrendingUp, TrendingDown } from 'lucide-react'
 import StockChart from '@/components/stock/StockChart'
 import { Stock } from '@/components/stock/types'
+import Title from '@/components/ui/title'
+import { useTranslations } from 'next-intl'
 
 export default function StockDetailPage() {
   const params = useParams()
@@ -13,22 +15,22 @@ export default function StockDetailPage() {
   const [stock, setStock] = useState<Stock | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-
+  const t = useTranslations("stock")
   useEffect(() => {
     const fetchStock = async () => {
       try {
         setLoading(true)
         const response = await fetch(`/api/stocks/${ticker}`)
-        
+
         if (!response.ok) {
-          setError('Акция не найдена')
+          setError(t('stock_not_found'))
           return
         }
 
         const data = await response.json()
         setStock(data)
       } catch (err) {
-        setError('Ошибка при загрузке данных')
+        setError(t('error_loading_data'))
       } finally {
         setLoading(false)
       }
@@ -42,7 +44,7 @@ export default function StockDetailPage() {
   if (loading) {
     return (
       <div className="w-full flex items-center justify-center min-h-[400px]">
-        <div className="text-gray-500 dark:text-gray-400">Загрузка...</div>
+        <div className="text-gray-500 dark:text-gray-400">{t('loading')}</div>
       </div>
     )
   }
@@ -55,10 +57,10 @@ export default function StockDetailPage() {
           className="mb-6 flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors bg-[#1161EF] rounded-lg p-2"
         >
           <ArrowLeft className="w-5 h-5" />
-          <span>Назад к списку</span>
+          <span>{t('back_to_list')}</span>
         </button>
         <div className="text-center py-12">
-          <p className="text-red-500 text-lg">{error || 'Акция не найдена'}</p>
+          <p className="text-red-500 text-lg">{error || t('stock_not_found')}</p>
         </div>
       </div>
     )
@@ -76,28 +78,31 @@ export default function StockDetailPage() {
   }
 
   const formatMarketCap = (cap: number) => {
-    if (cap >= 1e12) return `${(cap / 1e12).toFixed(2)} трлн ₽`
-    if (cap >= 1e9) return `${(cap / 1e9).toFixed(2)} млрд ₽`
-    return `${(cap / 1e6).toFixed(2)} млн ₽`
+    if (cap >= 1e12) return `${(cap / 1e12).toFixed(2)} ${t('trillion')} ₽`
+    if (cap >= 1e9) return `${(cap / 1e9).toFixed(2)} ${t('billion')}`
+    return `${(cap / 1e6).toFixed(2)} ${t('million')}`
   }
 
   const formatVolume = (volume: number) => {
-    if (volume >= 1e9) return `${(volume / 1e9).toFixed(2)} млрд`
-    if (volume >= 1e6) return `${(volume / 1e6).toFixed(2)} млн`
-    return `${(volume / 1e3).toFixed(2)} тыс`
+    if (volume >= 1e9) return `${(volume / 1e9).toFixed(2)} ${t('billion')}`
+    if (volume >= 1e6) return `${(volume / 1e6).toFixed(2)} ${t('million')}`
+    return `${(volume / 1e3).toFixed(2)} ${t('thousand')}`
   }
 
   const extendedStock = stock as any
 
   return (
     <div className="w-full">
-      <button
-        onClick={() => router.push('/stock')}
-        className="mb-6 flex items-center gap-2 text-white dark:hover:text-white transition-colors bg-[#1161EF] rounded-lg p-2"
-      >
-        <ArrowLeft className="w-5 h-5" />
-        <span>Назад к списку</span>
-      </button>
+      <div className="flex flex-col gap-4 lg:flex-row justify-between items-center">
+        <Title>Stock</Title>
+        <button
+          onClick={() => router.push('/stock')}
+          className="flex items-center gap-2 text-white dark:hover:text-white transition-colors bg-[#1161EF] rounded-lg p-2"
+        >
+          <ArrowLeft className="w-5 h-5" />
+          <span className="text-sm font-medium whitespace-nowrap">{t('back_to_list')}</span>
+        </button>
+      </div>
 
       <div className="bg-white dark:bg-zinc-900 rounded-xl p-8 border border-gray-200 dark:border-zinc-800">
         <div className="flex items-start justify-between mb-8">
@@ -123,7 +128,7 @@ export default function StockDetailPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg p-4">
-            <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Текущая цена</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">{t('current_price')}</div>
             <div className="text-2xl font-bold text-zinc-900 dark:text-white">
               {formatPrice(stock.price)} ₽
             </div>
@@ -134,7 +139,7 @@ export default function StockDetailPage() {
 
           {extendedStock.open && (
             <div className="bg-white dark:bg-zinc-900 rounded-lg p-4 border border-gray-200 dark:border-zinc-800">
-              <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Открытие</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">{t('opening')}</div>
               <div className="text-2xl font-bold text-zinc-900 dark:text-white">
                 {formatPrice(extendedStock.open)} ₽
               </div>
@@ -143,7 +148,7 @@ export default function StockDetailPage() {
 
           {extendedStock.high && (
             <div className="bg-white dark:bg-zinc-900 rounded-lg p-4 border border-gray-200 dark:border-zinc-800">
-              <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Максимум</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">{t('maximum')}</div>
               <div className="text-2xl font-bold text-zinc-900 dark:text-white">
                 {formatPrice(extendedStock.high)} ₽
               </div>
@@ -152,8 +157,8 @@ export default function StockDetailPage() {
 
           {extendedStock.low && (
             <div className="bg-white dark:bg-zinc-900 rounded-lg p-4 border border-gray-200 dark:border-zinc-800">
-              <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Минимум</div>
-                      <div className="text-2xl font-bold text-zinc-900 dark:text-white">
+              <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">{t('minimum')}</div>
+              <div className="text-2xl font-bold text-zinc-900 dark:text-white">
                 {formatPrice(extendedStock.low)} ₽
               </div>
             </div>
@@ -162,7 +167,7 @@ export default function StockDetailPage() {
 
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">
-            График цены
+            {t('price_chart')}
           </h2>
           <div className="h-96 bg-white dark:bg-zinc-900 rounded-xl p-4 border border-gray-200 dark:border-zinc-800">
             <StockChart stock={stock} />
@@ -171,14 +176,14 @@ export default function StockDetailPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white dark:bg-zinc-900 rounded-lg p-4 border border-gray-200 dark:border-zinc-800">
-            <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Капитализация</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">{t('capitalization')}</div>
             <div className="text-xl font-bold text-zinc-900 dark:text-white">
               {formatMarketCap(stock.marketCap)}
             </div>
           </div>
 
           <div className="bg-white dark:bg-zinc-900 rounded-lg p-4 border border-gray-200 dark:border-zinc-800">
-            <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Объем торгов</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">{t('volume')}</div>
             <div className="text-xl font-bold text-zinc-900 dark:text-white">
               {formatVolume(stock.volume)}
             </div>

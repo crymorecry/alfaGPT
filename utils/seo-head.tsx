@@ -29,7 +29,6 @@ export function generateMetadata(props: ISEOMetadataProps): Metadata {
     } = props
 
     const finalTitle = watermark ? `${title} | ${SEO_HEAD_WATERMARK}` : title
-    // Для OpenGraph нужен абсолютный URL изображения
     const absoluteOgImage = ogURL.startsWith('http') ? ogURL : `${SITE_URL}${ogURL}`
     const absoluteUrl = url ? (url.startsWith('http') ? url : `${SITE_URL}${url}`) : SITE_URL
 

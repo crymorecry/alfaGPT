@@ -1,15 +1,17 @@
 'use client'
 
 import { Stock } from './types'
-import { TrendingUp, TrendingDown } from 'lucide-react'
+import { TrendingUp, TrendingDown, Star } from 'lucide-react'
 import StockChart from './StockChart'
 
 interface StockCardProps {
   stock: Stock
   onClick?: () => void
+  isFavorite?: boolean
+  onToggleFavorite?: () => void
 }
 
-export default function StockCard({ stock, onClick }: StockCardProps) {
+export default function StockCard({ stock, onClick, isFavorite = false, onToggleFavorite }: StockCardProps) {
   const isPositive = stock.change >= 0
   const changeColor = isPositive ? 'text-green-500' : 'text-red-500'
   const bgColor = isPositive ? 'bg-green-500/10' : 'bg-red-500/10'
@@ -27,14 +29,33 @@ export default function StockCard({ stock, onClick }: StockCardProps) {
     return `${(cap / 1e6).toFixed(2)} млн ₽`
   }
 
+  const handleFavoriteClick = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    onToggleFavorite?.()
+  }
+
   return (
     <div
       onClick={onClick}
-      className={`bg-white dark:bg-zinc-900 rounded-xl p-6 border border-gray-200 dark:border-zinc-800 transition-all duration-200 ${
+      className={`bg-white dark:bg-zinc-900 rounded-xl p-6 border border-gray-200 dark:border-zinc-800 transition-all duration-200 relative ${
         onClick ? 'cursor-pointer hover:shadow-lg hover:border-[#1161EF]' : ''
       }`}
     >
-      <div className="flex items-start justify-between mb-4">
+      <button
+        onClick={handleFavoriteClick}
+        className="absolute top-4 right-4 z-10 p-1.5 rounded-lg transition-all duration-200 hover:bg-gray-100 dark:hover:bg-zinc-800"
+        aria-label={isFavorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+      >
+        <Star 
+          className={`w-5 h-5 transition-all duration-200 ${
+            isFavorite 
+              ? 'fill-[#1161EF] text-[#1161EF]' 
+              : 'text-gray-400 dark:text-gray-500 hover:text-[#1161EF]'
+          }`} 
+        />
+      </button>
+
+      <div className="flex items-start justify-between mb-4 pr-8">
         <div>
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
             {stock.ticker}

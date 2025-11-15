@@ -19,3 +19,8 @@ export async function getAuthUser(request: NextRequest) {
   return result.user
 }
 
+export async function getUserId(request: NextRequest): Promise<string | null> {
+  const user = await getAuthUser(request)
+  return user?.id || null
+}
+

@@ -2,20 +2,6 @@ import { NextResponse } from 'next/server'
 
 const MOEX_BASE_URL = 'https://iss.moex.com/iss'
 
-const POPULAR_TICKERS = [
-  'SBER',
-  'GAZP',
-  'LKOH',
-  'YNDX',
-  'GMKN',
-  'ROSN',
-  'NVTK',
-  'TATN',
-  'MGNT',
-  'MOEX',
-  'ALRS',
-  'PLZL'
-]
 
 async function fetchStockHistory(ticker: string) {
   try {
@@ -42,8 +28,7 @@ async function fetchStockHistory(ticker: string) {
 
 export async function GET() {
   try {
-    const tickersParam = POPULAR_TICKERS.join(',')
-    const url = `${MOEX_BASE_URL}/engines/stock/markets/shares/boards/TQBR/securities.json?iss.meta=off&iss.only=securities,marketdata&securities=${tickersParam}&iss.json=extended`
+    const url = `${MOEX_BASE_URL}/engines/stock/markets/shares/boards/TQBR/securities.json?iss.meta=off&iss.only=securities,marketdata&iss.json=extended`
 
     const response = await fetch(url)
 

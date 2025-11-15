@@ -12,7 +12,6 @@ interface MoexSecurity {
   MARKETCAP?: number
 }
 
-// Функция для преобразования массива данных MOEX в объект
 function arrayToObject(columns: string[], data: any[]): Record<string, any> {
   const result: Record<string, any> = {}
   columns.forEach((column, index) => {
@@ -46,7 +45,6 @@ async function fetchStockDetail(ticker: string) {
       return null
     }
 
-    // Преобразуем массивы в объекты
     const security = arrayToObject(securitiesColumns, securitiesData[0])
     const market = marketdataData.length > 0 
       ? arrayToObject(marketdataColumns, marketdataData[0])

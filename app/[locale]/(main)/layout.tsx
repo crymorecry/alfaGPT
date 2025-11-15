@@ -1,15 +1,13 @@
 import '@/app/globals.css'
 import { NextIntlClientProvider, useLocale, useMessages } from 'next-intl'
 import { ThemeProvider } from 'next-themes'
-import { Montserrat } from 'next/font/google'
 import { Providers } from '@/context/ChakraProvider'
 import { AuthProvider } from '@/components/auth/AuthProvider'
 import SideBar from '@/components/landing/sidebar'
+import BgSVG from '@/components/ui/bgSVG'
+import { Toaster } from '@/components/ui/toaster'
+import Navbar from '@/components/landing/navbar'
 
-const font = Montserrat({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-})
 export default function RootLayout({
   children,
 }: {
@@ -19,21 +17,27 @@ export default function RootLayout({
   const messages = useMessages();
   return (
     <html lang={locale}>
-      <body className={font.className}>
+      <body>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} forcedTheme="light">
           <Providers>
             <NextIntlClientProvider locale={locale} messages={messages}>
               <AuthProvider>
-                <div className='relative flex h-screen max-h-screen flex-col lg:overflow-y-hidden'>
-                  <div className='flex relative h-full pt-16 lg:pt-0'>
+                <div className='flex flex-col w-full 2xl:px-20'>
+                  <div className='flex w-full h-full'>
                     <SideBar />
-                    <div className='h-full w-full overflow-y-scroll px-4 py-8 pb-[200px] lg:px-8 2xl:px-16'>
-                      <main className='w-full max-w-screen-2xl mx-auto'>
-                        {children}
-                      </main>
+                    <div className='h-full w-[230px] flex-shrink-0 hidden lg:flex'></div>
+                    <div className='relative w-full'>
+                      <BgSVG />
+                      <div className='flex flex-col w-full'>
+                        <Navbar />
+                        <main className='w-full lg:w-full 2xl:w-full mx-auto px-4 lg:px-6 2xl:px-10 lg:mt-0 pb-[100px]'>
+                          {children}
+                        </main>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <Toaster />
               </AuthProvider>
             </NextIntlClientProvider>
           </Providers>
