@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*,
+::before,
+::after {
+  overflow-wrap: break-word;
+  scroll-behavior: smooth;
+}
+
+:root,
+body,
+html {
+  height: 100%;
+  --removed-body-scroll-bar-size: 0px !important;
+}
+
+
+body {
+  position: relative;
+  min-height: 100%;
+  font-feature-settings: 'kern';
+  --removed-body-scroll-bar-size: 0px !important
+}
+
+
+.theme {
+  transition: 1s all ease;
+}
+
+.light {
+  background-color: none;
+  color: #111;
+  background-color: #F3F4F6;
+}
+
+.dark {
+  background-color: #141518;
+  color: #bbb;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 2px;
+  border-radius: 100%;
+}
+
+[data-theme=dark] ::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 26px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+._next {
+  height: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
