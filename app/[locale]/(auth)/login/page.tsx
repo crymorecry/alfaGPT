@@ -1,9 +1,9 @@
 'use client'
 import LoginForm from '@/components/auth/LoginForm'
 import Logo from '@/components/ui/logo'
-import { Metadata } from 'next'
 import React, { useState } from 'react'
 import { useTranslations } from 'next-intl'
+
 export default function LoginPage() {
   const t = useTranslations('login')
   const [step, setStep] = useState<'email' | 'code'>('email')

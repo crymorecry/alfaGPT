@@ -3,6 +3,14 @@ import { NextIntlClientProvider, useLocale, useMessages } from 'next-intl'
 import { ThemeProvider } from 'next-themes'
 import { AuthProvider } from '@/components/auth/AuthProvider'
 import { Providers } from '@/context/ChakraProvider'
+import { generateMetadata } from '@/utils/seo-head'
+
+export const metadata = generateMetadata({
+  title: 'Авторизация',
+  description: 'Войдите в личный кабинет Alfa Copilot для доступа к бизнес-инструментам и ИИ-помощнику.',
+  url: '/login',
+  index: false
+})
 
 export default function RootLayout({
   children,

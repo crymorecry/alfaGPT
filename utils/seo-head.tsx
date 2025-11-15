@@ -1,11 +1,11 @@
 import { Metadata } from 'next'
 
-const SEO_HEAD_WATERMARK = 'Volency'
-const DOMAIN = 'volency.vercel.app'
+const SEO_HEAD_WATERMARK = 'Alfa Copilot'
+const DOMAIN = 'alfa-copilot.vercel.app'
 const SITE_URL = `https://${DOMAIN}`
-const SITE_NAME = 'Volency — быстрая дистрибуция музыки'
+const SITE_NAME = 'Alfa Copilot — бизнес-помощник с ИИ'
 const keywords =
-    'дистрибуция музыки, Spotify, Apple Music, Яндекс.Музыка, VK Музыка, роялти, артисты, музыканты, стриминг, публикация музыки, музыкальная дистрибуция, volency, volency.ru'
+    'бизнес-помощник, ИИ-ассистент, управление финансами, маркетинг, юридические вопросы, управление задачами, акции, биржа, аналитика, alfa copilot, бизнес-инструменты'
 
 export interface ISEOMetadataProps {
     title: string
