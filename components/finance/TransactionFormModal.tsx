@@ -6,6 +6,7 @@ import { toaster } from '@/components/ui/toaster'
 import { useTranslations } from 'next-intl'
 import { XIcon } from 'lucide-react'
 import { DateInput } from '@/components/ui/date-input'
+import { useBusiness } from '@/components/business/BusinessProvider'
 interface TransactionFormModalProps {
   isOpen: boolean
   onClose: () => void
@@ -14,6 +15,7 @@ interface TransactionFormModalProps {
 
 export default function TransactionFormModal({ isOpen, onClose, onSuccess }: TransactionFormModalProps) {
   const t = useTranslations("finance")
+  const { currentBusiness } = useBusiness()
 
   const [form, setForm] = useState({
     date: new Date(),
@@ -43,13 +45,18 @@ export default function TransactionFormModal({ isOpen, onClose, onSuccess }: Tra
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (!currentBusiness) {
+      toaster.create({ title: t('error'), description: t('no_business_selected') })
+      return
+    }
     try {
       const res = await fetch('/api/transactions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...form,
-          date: form.date.toISOString().split('T')[0]
+          date: form.date.toISOString().split('T')[0],
+          businessId: currentBusiness.id
         })
       })
 

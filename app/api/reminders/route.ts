@@ -9,8 +9,17 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    const { searchParams } = new URL(request.url)
+    const businessId = searchParams.get('businessId')
+
+    const where: any = { userId }
+    
+    if (businessId) {
+      where.businessId = businessId
+    }
+
     const reminders = await prisma.reminder.findMany({
-      where: { userId },
+      where,
       orderBy: { date: 'asc' }
     })
 
@@ -29,11 +38,16 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { title, date, description } = body
+    const { businessId, title, date, description } = body
+
+    if (!businessId) {
+      return NextResponse.json({ error: 'businessId обязателен' }, { status: 400 })
+    }
 
     const reminder = await prisma.reminder.create({
       data: {
         userId,
+        businessId,
         title,
         date: new Date(date),
         description: description || null,

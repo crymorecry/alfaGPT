@@ -6,7 +6,7 @@ import CalendarEventsModal from './CalendarEventsModal'
 
 interface CalendarEvent {
   id: string
-  type: 'task' | 'reminder' | 'payment' | 'content'
+  type: 'task' | 'reminder' | 'payment'
   title: string
   date: string
   data: any
@@ -98,7 +98,6 @@ export default function CalendarView() {
       case 'task': return 'bg-blue-500'
       case 'reminder': return 'bg-green-500'
       case 'payment': return 'bg-orange-500'
-      case 'content': return 'bg-purple-500'
       default: return 'bg-gray-500'
     }
   }
@@ -118,7 +117,7 @@ export default function CalendarView() {
 
   return (
     <div className="p-6 bg-white dark:bg-zinc-900 rounded-lg shadow-sm mb-6">
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex lg:flex-row flex-col items-center justify-between mb-4">
         <h2 className="text-xl font-semibold">{t('calendar')}</h2>
         <div className="flex items-center gap-2">
           <button
@@ -204,10 +203,6 @@ export default function CalendarView() {
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-orange-500"></div>
               <span className="text-gray-600 dark:text-gray-400">{t('payments')}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-              <span className="text-gray-600 dark:text-gray-400">{t('content')}</span>
             </div>
           </div>
         </>

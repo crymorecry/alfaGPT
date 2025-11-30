@@ -1,6 +1,6 @@
 'use client'
 
-import { DollarSign, Megaphone, Scale, Settings, BarChart3, TrendingUp } from 'lucide-react'
+import { DollarSign, Settings, BarChart3, Users } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import Title from '../ui/title'
 import { useTranslations } from 'next-intl'
@@ -17,20 +17,12 @@ const modules = [
         href: '/finance'
     },
     {
-        id: 'marketing',
-        title: 'marketing',
-        description: 'marketing_description',
-        icon: Megaphone,
-        color: 'orange',
-        href: '/marketing'
-    },
-    {
-        id: 'legal',
-        title: 'legal',
-        description: 'legal_description',
-        icon: Scale,
+        id: 'employees',
+        title: 'employees',
+        description: 'employees_description',
+        icon: Users,
         color: 'purple',
-        href: '/legal'
+        href: '/employees'
     },
     {
         id: 'operations',
@@ -47,14 +39,6 @@ const modules = [
         icon: BarChart3,
         color: 'red',
         href: '/analytics'
-    },
-    {
-        id: 'stock',
-        title: 'stock',
-        description: 'stock_description',
-        icon: TrendingUp,
-        color: 'teal',
-        href: '/stock'
     }
 ]
 

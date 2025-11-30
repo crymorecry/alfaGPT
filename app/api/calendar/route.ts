@@ -21,7 +21,7 @@ export async function GET(request: NextRequest) {
       ? new Date(parseInt(year), parseInt(month), 0)
       : new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0)
 
-    const [tasks, reminders, payments, contentCalendar] = await Promise.all([
+    const [tasks, reminders, payments] = await Promise.all([
       prisma.task.findMany({
         where: {
           userId,
@@ -69,25 +69,10 @@ export async function GET(request: NextRequest) {
           status: true
         }
       }),
-      prisma.contentCalendar.findMany({
-        where: {
-          userId,
-          date: {
-            gte: startDate,
-            lte: endDate
-          }
-        },
-        select: {
-          id: true,
-          description: true,
-          date: true,
-          platform: true
-        }
-      })
     ])
 
     const events = [
-      ...tasks.map(task => ({
+      ...tasks.map((task: any) => ({
         id: task.id,
         type: 'task' as const,
         title: task.title,
@@ -97,7 +82,7 @@ export async function GET(request: NextRequest) {
           status: task.status
         }
       })),
-      ...reminders.map(reminder => ({
+      ...reminders.map((reminder: any) => ({
         id: reminder.id,
         type: 'reminder' as const,
         title: reminder.title,
@@ -106,7 +91,7 @@ export async function GET(request: NextRequest) {
           completed: reminder.completed
         }
       })),
-      ...payments.map(payment => ({
+      ...payments.map((payment: any) => ({
         id: payment.id,
         type: 'payment' as const,
         title: `Платеж: ${payment.contractor}`,
@@ -116,16 +101,6 @@ export async function GET(request: NextRequest) {
           status: payment.status
         }
       })),
-      ...contentCalendar.map(content => ({
-        id: content.id,
-        type: 'content' as const,
-        title: `Пост: ${content.platform}`,
-        date: content.date,
-        data: {
-          platform: content.platform,
-          description: content.description
-        }
-      }))
     ]
 
     return NextResponse.json(events)

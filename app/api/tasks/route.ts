@@ -9,8 +9,17 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    const { searchParams } = new URL(request.url)
+    const businessId = searchParams.get('businessId')
+
+    const where: any = { userId }
+    
+    if (businessId) {
+      where.businessId = businessId
+    }
+
     const tasks = await prisma.task.findMany({
-      where: { userId },
+      where,
       orderBy: { deadline: 'asc' }
     })
 
@@ -29,11 +38,16 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { title, priority, deadline, status } = body
+    const { businessId, title, priority, deadline, status } = body
+
+    if (!businessId) {
+      return NextResponse.json({ error: 'businessId обязателен' }, { status: 400 })
+    }
 
     const task = await prisma.task.create({
       data: {
         userId,
+        businessId,
         title,
         priority,
         deadline: new Date(deadline),

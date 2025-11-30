@@ -121,3 +121,9 @@ export async function getUserFromToken(authHeader: string | null) {
   return result.user
 }
 
+export async function getUserIdFromToken(request: Request) {
+  const authHeader = request.headers.get('authorization')
+  const user = await getUserFromToken(authHeader)
+  return user?.id || null
+}
+

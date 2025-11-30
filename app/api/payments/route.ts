@@ -11,11 +11,16 @@ export async function GET(request: NextRequest) {
 
     const { searchParams } = new URL(request.url)
     const status = searchParams.get('status')
+    const businessId = searchParams.get('businessId')
 
     const where: any = { userId }
     
     if (status && status !== 'all') {
       where.status = status
+    }
+
+    if (businessId) {
+      where.businessId = businessId
     }
 
     const payments = await prisma.payment.findMany({
@@ -38,11 +43,16 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { date, contractor, description, amount } = body
+    const { businessId, date, contractor, description, amount } = body
+
+    if (!businessId) {
+      return NextResponse.json({ error: 'businessId обязателен' }, { status: 400 })
+    }
 
     const payment = await prisma.payment.create({
       data: {
         userId,
+        businessId,
         date: new Date(date),
         contractor,
         description,

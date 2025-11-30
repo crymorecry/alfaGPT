@@ -10,12 +10,17 @@ export async function GET(request: NextRequest) {
     }
 
     const { searchParams } = new URL(request.url)
+    const businessId = searchParams.get('businessId')
     const category = searchParams.get('category')
     const type = searchParams.get('type')
     const month = searchParams.get('month')
     const year = searchParams.get('year')
 
     const where: any = { userId }
+    
+    if (businessId) {
+      where.businessId = businessId
+    }
     
     if (category && category !== 'all') {
       where.category = category
@@ -54,11 +59,16 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { date, category, type, amount, description } = body
+    const { date, category, type, amount, description, businessId } = body
+
+    if (!businessId) {
+      return NextResponse.json({ error: 'businessId is required' }, { status: 400 })
+    }
 
     const transaction = await prisma.transaction.create({
       data: {
         userId,
+        businessId,
         date: new Date(date),
         category,
         type,

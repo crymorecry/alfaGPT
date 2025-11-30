@@ -5,6 +5,7 @@ import { Dialog, Portal } from '@chakra-ui/react'
 import { toaster } from '@/components/ui/toaster'
 import { useTranslations } from 'next-intl'
 import { XIcon } from 'lucide-react'
+import { useBusiness } from '@/components/business/BusinessProvider'
 
 interface ReminderFormModalProps {
   isOpen: boolean
@@ -14,6 +15,7 @@ interface ReminderFormModalProps {
 
 export default function ReminderFormModal({ isOpen, onClose, onSuccess }: ReminderFormModalProps) {
   const t = useTranslations("operations")
+  const { currentBusiness } = useBusiness()
   const [form, setForm] = useState({
     title: '',
     date: '',
@@ -23,6 +25,11 @@ export default function ReminderFormModal({ isOpen, onClose, onSuccess }: Remind
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
+    if (!currentBusiness) {
+      toaster.create({ title: t('error'), description: t('no_business_selected'), type: 'error' })
+      return
+    }
+
     if (!form.date) {
       toaster.create({ title: t('error'), description: t('date_required'), type: 'error' })
       return
@@ -32,7 +39,10 @@ export default function ReminderFormModal({ isOpen, onClose, onSuccess }: Remind
       const res = await fetch('/api/reminders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form)
+        body: JSON.stringify({
+          businessId: currentBusiness.id,
+          ...form
+        })
       })
 
       if (res.ok) {

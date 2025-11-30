@@ -3,7 +3,7 @@ import { generateMetadata } from '@/utils/seo-head'
 
 export const metadata = generateMetadata({
   title: 'Главная',
-  description: 'Alfa Copilot — универсальный бизнес-помощник с ИИ. Управление финансами, маркетинг, юридические вопросы, задачи и аналитика в одном месте.',
+  description: 'Alfa Copilot — универсальный бизнес-помощник с ИИ. Управление финансами, работники, задачи и аналитика в одном месте.',
   url: '/'
 })
 

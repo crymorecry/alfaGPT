@@ -3,23 +3,14 @@
 import { useState, useRef, useEffect } from 'react'
 import { Button } from '@chakra-ui/react'
 import { useTranslations } from 'next-intl'
-import { Send, Bot, User } from 'lucide-react'
+import { Send, Bot, User, Trash2 } from 'lucide-react'
 import { toaster } from '../ui/toaster'
 import Title from '../ui/title'
-
-interface Message {
-    role: 'user' | 'assistant'
-    content: string
-}
+import { useChat } from './ChatProvider'
 
 export default function ChatView() {
     const t = useTranslations("chat")
-    const [messages, setMessages] = useState<Message[]>([
-        {
-            role: 'assistant',
-            content: t('welcome_message')
-        }
-    ])
+    const { messages, addMessage, clearMessages } = useChat()
     const [input, setInput] = useState('')
     const [isLoading, setIsLoading] = useState(false)
     const messagesEndRef = useRef<HTMLDivElement>(null)
@@ -35,8 +26,8 @@ export default function ChatView() {
     const handleSend = async () => {
         if (!input.trim() || isLoading) return
 
-        const userMessage: Message = { role: 'user', content: input.trim() }
-        setMessages(prev => [...prev, userMessage])
+        const userMessage = { role: 'user' as const, content: input.trim() }
+        addMessage(userMessage)
         setInput('')
         setIsLoading(true)
 
@@ -54,7 +45,7 @@ export default function ChatView() {
 
             if (res.ok) {
                 const data = await res.json()
-                setMessages(prev => [...prev, { role: 'assistant', content: data.message }])
+                addMessage({ role: 'assistant', content: data.message })
             } else {
                 const errorData = await res.json()
                 toaster.create({
@@ -62,10 +53,10 @@ export default function ChatView() {
                     description: errorData.error || t('error_chat'),
                     type: 'error'
                 })
-                setMessages(prev => [...prev, {
+                addMessage({
                     role: 'assistant',
                     content: t('error_message')
-                }])
+                })
             }
         } catch (error) {
             console.error('Error sending message:', error)
@@ -74,12 +65,23 @@ export default function ChatView() {
                 description: t('error_chat'),
                 type: 'error'
             })
-            setMessages(prev => [...prev, {
+            addMessage({
                 role: 'assistant',
                 content: t('error_message')
-            }])
+            })
         } finally {
             setIsLoading(false)
+        }
+    }
+
+    const handleClear = () => {
+        if (confirm(t('clear_chat_confirm'))) {
+            clearMessages()
+            toaster.create({
+                title: t('success'),
+                description: t('chat_cleared'),
+                type: 'success'
+            })
         }
     }
 
@@ -92,7 +94,16 @@ export default function ChatView() {
 
     return (
         <div>
-            <Title>{t('title')}</Title>
+            <div className="flex items-center justify-between mb-4">
+                <Title>Chat</Title>
+                <button
+                    onClick={handleClear}
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
+                >
+                    <Trash2 className="w-4 h-4" />
+                    {t('clear_chat')}
+                </button>
+            </div>
 
             <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-sm flex flex-col h-[calc(100vh-200px)] min-h-[600px]">
                 <div className="flex-1 overflow-y-auto p-6 space-y-4">

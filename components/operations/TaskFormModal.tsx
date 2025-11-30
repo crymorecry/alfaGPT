@@ -6,6 +6,7 @@ import { toaster } from '@/components/ui/toaster'
 import { useTranslations } from 'next-intl'
 import { XIcon } from 'lucide-react'
 import { DateInput } from '@/components/ui/date-input'
+import { useBusiness } from '@/components/business/BusinessProvider'
 
 interface TaskFormModalProps {
   isOpen: boolean
@@ -15,6 +16,7 @@ interface TaskFormModalProps {
 
 export default function TaskFormModal({ isOpen, onClose, onSuccess }: TaskFormModalProps) {
   const t = useTranslations("operations")
+  const { currentBusiness } = useBusiness()
   const [form, setForm] = useState({
     title: '',
     priority: 'medium',
@@ -32,6 +34,11 @@ export default function TaskFormModal({ isOpen, onClose, onSuccess }: TaskFormMo
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
+    if (!currentBusiness) {
+      toaster.create({ title: t('error'), description: t('no_business_selected'), type: 'error' })
+      return
+    }
+
     if (!form.deadline) {
       toaster.create({ title: t('error'), description: t('deadline_required'), type: 'error' })
       return
@@ -42,6 +49,7 @@ export default function TaskFormModal({ isOpen, onClose, onSuccess }: TaskFormMo
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          businessId: currentBusiness.id,
           ...form,
           deadline: form.deadline.toISOString().split('T')[0]
         })

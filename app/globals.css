@@ -15,6 +15,7 @@ body,
 html {
   height: 100%;
   --removed-body-scroll-bar-size: 0px !important;
+  font-family: "ONVIBE-UI font", sans-serif;
 }
 
 
@@ -74,3 +75,4 @@ input[type=number] {
 input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
+

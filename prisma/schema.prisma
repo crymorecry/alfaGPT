@@ -1,10 +1,10 @@
 generator client {
-  provider = "prisma-client-js"
+  provider = "prisma-client"
+  output   = "../generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
 model User {
@@ -13,15 +13,71 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   
+  businesses      Business[]
   chats           Chat[]
   authTokens      AuthToken[]
   transactions    Transaction[]
   payments        Payment[]
   tasks           Task[]
   reminders       Reminder[]
-  contentCalendar ContentCalendar[]
   insights        Insight[]
   favoriteStocks  FavoriteStock[]
+}
+
+model Business {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name          String
+  ip            String?
+  address       String?
+  yandexMapLink String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  employees         Employee[]
+  transactions      Transaction[]
+  payments          Payment[]
+  tasks             Task[]
+  reminders         Reminder[]
+  insights          Insight[]
+  recurringExpenses RecurringExpense[]
+  
+  @@index([userId])
+}
+
+model Employee {
+  id          String   @id @default(cuid())
+  businessId  String
+  business    Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  name        String
+  email       String?
+  phone       String?
+  position    String?
+  dailyRate   Float
+  workSchedule String  @default("5/2")
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  days        EmployeeDay[]
+
+  @@index([businessId])
+}
+
+model EmployeeDay {
+  id          String   @id @default(cuid())
+  employeeId  String
+  employee    Employee @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+  date        DateTime
+  type        String
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([employeeId, date])
+  @@index([employeeId])
+  @@index([date])
 }
 
 model Chat {
@@ -53,6 +109,8 @@ model Transaction {
   id          String   @id @default(cuid())
   userId      String
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  businessId  String
+  business    Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
   date        DateTime
   category    String
   type        String
@@ -62,6 +120,7 @@ model Transaction {
   updatedAt   DateTime @updatedAt
 
   @@index([userId])
+  @@index([businessId])
   @@index([date])
   @@index([category])
 }
@@ -70,6 +129,8 @@ model Payment {
   id          String   @id @default(cuid())
   userId      String
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  businessId  String
+  business    Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
   date        DateTime
   contractor  String
   description String
@@ -79,6 +140,7 @@ model Payment {
   updatedAt   DateTime @updatedAt
 
   @@index([userId])
+  @@index([businessId])
   @@index([date])
   @@index([status])
 }
@@ -87,6 +149,8 @@ model Task {
   id        String   @id @default(cuid())
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  businessId String
+  business  Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
   title     String
   priority  String
   deadline  DateTime
@@ -95,6 +159,7 @@ model Task {
   updatedAt DateTime @updatedAt
 
   @@index([userId])
+  @@index([businessId])
   @@index([status])
   @@index([deadline])
 }
@@ -103,6 +168,8 @@ model Reminder {
   id          String   @id @default(cuid())
   userId      String
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  businessId  String
+  business    Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
   title       String
   date        DateTime
   description String?
@@ -111,29 +178,18 @@ model Reminder {
   updatedAt   DateTime @updatedAt
 
   @@index([userId])
+  @@index([businessId])
   @@index([date])
   @@index([completed])
 }
 
-model ContentCalendar {
-  id          String   @id @default(cuid())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  date        DateTime
-  platform    String
-  type        String
-  description String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  @@index([userId])
-  @@index([date])
-}
 
 model Insight {
   id        String   @id @default(cuid())
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  businessId String
+  business  Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
   icon      String
   text      String
   level     String
@@ -141,6 +197,7 @@ model Insight {
   updatedAt DateTime @updatedAt
 
   @@index([userId])
+  @@index([businessId])
   @@index([level])
 }
 
@@ -154,4 +211,18 @@ model FavoriteStock {
   @@unique([userId, ticker])
   @@index([userId])
   @@index([ticker])
+}
+
+model RecurringExpense {
+  id          String   @id @default(cuid())
+  businessId  String
+  business    Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  name        String
+  amount      Float
+  frequency   String
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([businessId])
 }

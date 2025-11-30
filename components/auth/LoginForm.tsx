@@ -2,8 +2,10 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { MailIcon } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export default function LoginForm({ step, setStep }: { step: 'email' | 'code', setStep: (step: 'email' | 'code') => void }) {
+  const t = useTranslations('login')
   const [email, setEmail] = useState('')
   const [code, setCode] = useState<string[]>(['', '', '', '', '', ''])
   const [loading, setLoading] = useState(false)
@@ -29,13 +31,13 @@ export default function LoginForm({ step, setStep }: { step: 'email' | 'code', s
       const data = await response.json()
 
       if (!response.ok) {
-        setError(data.error || 'Ошибка при отправке кода')
+        setError(data.error || t('error_sending_code'))
         return
       }
-      setMessage('Код отправлен на вашу почту')
+      setMessage(t('code_sent'))
       setStep('code' as 'email' | 'code')
     } catch (err) {
-      setError('Ошибка при отправке кода')
+      setError(t('error_sending_code'))
     } finally {
       setLoading(false)
     }
@@ -65,14 +67,14 @@ export default function LoginForm({ step, setStep }: { step: 'email' | 'code', s
       const data = await response.json()
 
       if (!response.ok) {
-        setError(data.error || 'Неверный код')
+        setError(data.error || t('invalid_code'))
         hasVerifiedRef.current = false
         return
       }
 
       window.location.reload()
     } catch (err) {
-      setError('Ошибка при проверке кода')
+      setError(t('error_verifying_code'))
       hasVerifiedRef.current = false
     } finally {
       setLoading(false)
@@ -117,7 +119,7 @@ export default function LoginForm({ step, setStep }: { step: 'email' | 'code', s
             disabled={loading}
             className="w-full py-2 px-4 bg-[#1161EF] hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium rounded-lg transition-colors"
           >
-            {loading ? 'Отправка...' : 'Отправить код'}
+            {loading ? t('sending') : t('send_code')}
           </button>
         </form>
       ) : (

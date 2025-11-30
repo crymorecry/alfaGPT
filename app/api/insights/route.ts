@@ -9,8 +9,14 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    const { searchParams } = new URL(request.url)
+    const businessId = searchParams.get('businessId')
+
     const insights = await prisma.insight.findMany({
-      where: { userId },
+      where: {
+        userId,
+        ...(businessId && { businessId })
+      },
       orderBy: { createdAt: 'desc' }
     })
 
@@ -29,11 +35,16 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { icon, text, level } = body
+    const { businessId, icon, text, level } = body
+
+    if (!businessId) {
+      return NextResponse.json({ error: 'businessId обязателен' }, { status: 400 })
+    }
 
     const insight = await prisma.insight.create({
       data: {
         userId,
+        businessId,
         icon,
         text,
         level

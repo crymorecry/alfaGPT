@@ -52,11 +52,11 @@ export default function PaymentsView() {
         body: JSON.stringify({ id, status: 'completed' })
       })
       if (res.ok) {
-        toaster.create({ title: 'Успешно', description: 'Платеж выполнен' })
+        toaster.create({ title: t('success'), description: t('payment_completed') })
         fetchPayments()
       }
     } catch (error) {
-      toaster.create({ title: 'Ошибка', description: 'Ошибка при обновлении платежа' })
+      toaster.create({ title: t('error'), description: t('error_updating_payment') })
     }
   }
 
@@ -64,11 +64,11 @@ export default function PaymentsView() {
     try {
       const res = await fetch(`/api/payments?id=${id}`, { method: 'DELETE' })
       if (res.ok) {
-        toaster.create({ title: 'Успешно', description: 'Платеж удален' })
+        toaster.create({ title: t('success'), description: t('payment_deleted') })
         fetchPayments()
       }
     } catch (error) {
-      toaster.create({ title: 'Ошибка', description: 'Ошибка при удалении платежа' })
+      toaster.create({ title: t('error'), description: t('error_deleting_payment') })
     }
   }
 
@@ -76,7 +76,7 @@ export default function PaymentsView() {
     <div>
       <div className="p-6 bg-white dark:bg-zinc-900 rounded-lg shadow-sm">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-semibold">Напоминания о платежах</h2>
+          <h2 className="text-xl font-semibold">{t('payments_reminders')}</h2>
           <button className="bg-[#1161EF] text-white hover:bg-[#1161EF]/80 transition-all duration-200 px-4 py-2 rounded-md" onClick={() => setIsModalOpen(true)}>{t('add_payment')}</button>
         </div>
         <div className="mb-4 max-w-md">

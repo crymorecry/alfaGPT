@@ -6,7 +6,8 @@ import { toaster } from '@/components/ui/toaster'
 import { XIcon } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { DateInput } from '@/components/ui/date-input'
-interface PaymentFormModalProps {
+import { useBusiness } from '@/components/business/BusinessProvider'
+  interface PaymentFormModalProps {
   isOpen: boolean
   onClose: () => void
   onSuccess: () => void
@@ -15,11 +16,17 @@ interface PaymentFormModalProps {
 export default function PaymentFormModal({ isOpen, onClose, onSuccess }: PaymentFormModalProps) {
   const [form, setForm] = useState({ date: new Date() as Date | null, contractor: '', description: '', amount: '' })
   const t = useTranslations("finance")
+  const { currentBusiness } = useBusiness()
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
+      if (!currentBusiness) {
+        toaster.create({ title: t('error'), description: t('no_business_selected') })
+        return
+      }
+
       if (!form.date) {
-        toaster.create({ title: t('error'), description: 'Дата обязательна' })
+        toaster.create({ title: t('error'), description: t('date_required') })
         return
       }
 
@@ -27,6 +34,7 @@ export default function PaymentFormModal({ isOpen, onClose, onSuccess }: Payment
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          businessId: currentBusiness.id,
           ...form,
           date: form.date.toISOString().split('T')[0]
         })

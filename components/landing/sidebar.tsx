@@ -1,7 +1,7 @@
 'use client'
 
 import Logo from "@/components/ui/logo"
-import { Home, TrendingUp, DollarSign, Megaphone, Scale, Settings, BarChart3, MessageSquare } from "lucide-react"
+import { Home, DollarSign, Settings, MessageSquare, Users, BarChart3 } from "lucide-react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -15,9 +15,9 @@ const links = [
         icon: Home
     },
     {
-        name: "Stock",
-        href: "/stock",
-        icon: TrendingUp
+        name: "Analytics",
+        href: "/analytics",
+        icon: BarChart3
     },
     {
         name: "Finance",
@@ -25,14 +25,9 @@ const links = [
         icon: DollarSign
     },
     {
-        name: "Marketing",
-        href: "/marketing",
-        icon: Megaphone
-    },
-    {
-        name: "Legal",
-        href: "/legal",
-        icon: Scale
+        name: "Employees",
+        href: "/employees",
+        icon: Users
     },
     {
         name: "Operations",

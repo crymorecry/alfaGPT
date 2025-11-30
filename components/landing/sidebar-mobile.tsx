@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Drawer, Portal } from '@chakra-ui/react'
 import { Menu, XIcon } from 'lucide-react'
 import Logo from '../ui/logo'
-import { Home, TrendingUp, DollarSign, Megaphone, Scale, Settings, MessageSquare } from 'lucide-react'
+import { Home, DollarSign, Settings, MessageSquare, Users } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -16,24 +16,14 @@ const links = [
         icon: Home
     },
     {
-        name: 'Stock',
-        href: '/stock',
-        icon: TrendingUp
-    },
-    {
         name: 'Finance',
         href: '/finance',
         icon: DollarSign
     },
     {
-        name: 'Marketing',
-        href: '/marketing',
-        icon: Megaphone
-    },
-    {
-        name: 'Legal',
-        href: '/legal',
-        icon: Scale
+        name: 'Employees',
+        href: '/employees',
+        icon: Users
     },
     {
         name: 'Operations',

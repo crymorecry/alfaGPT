@@ -92,12 +92,14 @@ const DateInput: React.FC<DateInputProps> = ({
 
     if (!isValidDate) return false
 
-    const minDateToCheck = minDate || new Date()
-    const minDateNormalized = new Date(minDateToCheck)
-    minDateNormalized.setHours(0, 0, 0, 0)
-    testDate.setHours(0, 0, 0, 0)
+    if (minDate) {
+      const minDateNormalized = new Date(minDate)
+      minDateNormalized.setHours(0, 0, 0, 0)
+      testDate.setHours(0, 0, 0, 0)
+      return testDate >= minDateNormalized
+    }
     
-    return testDate >= minDateNormalized
+    return true
   }, [minDate])
 
   const updateValidityAndNotify = useCallback((newDate: DateParts) => {
@@ -252,10 +254,9 @@ const DateInput: React.FC<DateInputProps> = ({
       const monthNum = parseInt(date.month, 10)
       const yearNum = parseInt(date.year, 10)
       
-      if (!isNaN(dayNum) && !isNaN(monthNum) && !isNaN(yearNum)) {
+      if (!isNaN(dayNum) && !isNaN(monthNum) && !isNaN(yearNum) && minDate) {
         const testDate = new Date(yearNum, monthNum - 1, dayNum)
-        const minDateToCheck = minDate || new Date()
-        const minDateNormalized = new Date(minDateToCheck)
+        const minDateNormalized = new Date(minDate)
         minDateNormalized.setHours(0, 0, 0, 0)
         testDate.setHours(0, 0, 0, 0)
         
@@ -320,14 +321,13 @@ const DateInput: React.FC<DateInputProps> = ({
           mode="single"
           selected={value}
           onSelect={handleCalendarSelect}
-          disabled={(date) => {
-            const minDateToCheck = minDate || new Date()
-            const minDateNormalized = new Date(minDateToCheck)
+          disabled={minDate ? (date) => {
+            const minDateNormalized = new Date(minDate)
             minDateNormalized.setHours(0, 0, 0, 0)
             const dateNormalized = new Date(date)
             dateNormalized.setHours(0, 0, 0, 0)
             return dateNormalized < minDateNormalized
-          }}
+          } : undefined}
           initialFocus
           className="rounded-md border-0"
         />

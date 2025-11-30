@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
 
     const systemPrompt = `Ты универсальный ИИ-помощник для бизнеса. Твоя задача - помогать пользователям с различными вопросами: бизнес-советы, финансы, маркетинг, юридические вопросы, управление задачами и другие бизнес-задачи. Отвечай на русском языке, будь профессиональным, дружелюбным и полезным. Предоставляй конкретные и практичные советы.`
 
-    const model = 'google/gemini-2.0-flash-001'
+    const model = process.env.OPENROUTER_MODEL || 'openai/gpt-oss-20b:free'
 
     const response = await fetch(OPENROUTER_API_URL, {
       method: 'POST',

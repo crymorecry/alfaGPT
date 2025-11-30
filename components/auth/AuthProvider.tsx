@@ -29,7 +29,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (response.ok) {
         const data = await response.json()
         setUser(data.user)
-        if (pathname === '/login') {
+        if (pathname === '/login' || pathname === '/ru/login') {
           router.push('/')
         }
       } else {

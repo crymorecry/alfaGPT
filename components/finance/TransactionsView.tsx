@@ -7,9 +7,15 @@ import TransactionFormModal from './TransactionFormModal'
 import { useTranslations } from 'next-intl'
 import { XIcon } from 'lucide-react'
 import { toaster } from '@/components/ui/toaster'
+import { useBusiness } from '@/components/business/BusinessProvider'
 
-export default function TransactionsView() {
+interface TransactionsViewProps {
+  onRefresh?: () => void
+}
+
+export default function TransactionsView({ onRefresh }: TransactionsViewProps = {}) {
   const t = useTranslations("finance")
+  const { currentBusiness } = useBusiness()
   const [transactions, setTransactions] = useState<Transaction[]>([])
   const [loading, setLoading] = useState(true)
   const [filterCategory, setFilterCategory] = useState('all')
@@ -37,16 +43,22 @@ export default function TransactionsView() {
   }), [t])
 
   useEffect(() => {
-    fetchTransactions()
-  }, [])
+    if (currentBusiness) {
+      fetchTransactions()
+    }
+  }, [currentBusiness])
 
   useEffect(() => {
-    fetchTransactions()
-  }, [filterCategory, filterType])
+    if (currentBusiness) {
+      fetchTransactions()
+    }
+  }, [filterCategory, filterType, currentBusiness])
 
   const fetchTransactions = async () => {
+    if (!currentBusiness) return
     try {
       const params = new URLSearchParams()
+      params.append('businessId', currentBusiness.id)
       if (filterCategory !== 'all') params.append('category', filterCategory)
       if (filterType !== 'all') params.append('type', filterType)
       
@@ -220,7 +232,10 @@ export default function TransactionsView() {
       <TransactionFormModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
-        onSuccess={fetchTransactions}
+        onSuccess={() => {
+          fetchTransactions()
+          onRefresh?.()
+        }}
       />
     </div>
   )
