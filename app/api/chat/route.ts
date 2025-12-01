@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
     }
 
     const messages = await prisma.chatMessage.findMany({
-      where: { 
+      where: {
         user: { id: userId }
       },
       orderBy: { createdAt: 'asc' },
@@ -53,7 +53,34 @@ export async function POST(request: NextRequest) {
     }
 
     const lastMessage = messages[messages.length - 1]
+
+    // Проверка модерации перед отправкой
     if (lastMessage && lastMessage.role === 'user') {
+      try {
+        const moderationResponse = await fetch('https://openrouter.ai/api/v1/moderations', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': OPENROUTER_API_KEY ? `Bearer ${OPENROUTER_API_KEY}` : '',
+          },
+          body: JSON.stringify({
+            input: lastMessage.content
+          })
+        })
+
+        if (moderationResponse.ok) {
+          const moderationData = await moderationResponse.json()
+          if (moderationData.results?.[0]?.flagged) {
+            return NextResponse.json(
+              { error: 'Ваше сообщение содержит недопустимый контент. Пожалуйста, переформулируйте запрос.' },
+              { status: 400 }
+            )
+          }
+        }
+      } catch (moderationError) {
+        console.error('Ошибка проверки модерации:', moderationError)
+      }
+
       await prisma.chatMessage.create({
         data: {
           user: { connect: { id: userId } },
@@ -106,7 +133,7 @@ export async function POST(request: NextRequest) {
       }
     })
 
-    return NextResponse.json({ 
+    return NextResponse.json({
       message: generatedText
     })
   } catch (error) {
