@@ -388,14 +388,12 @@ export const ModelName = {
   Business: 'Business',
   Employee: 'Employee',
   EmployeeDay: 'EmployeeDay',
-  Chat: 'Chat',
+  ChatMessage: 'ChatMessage',
   AuthToken: 'AuthToken',
   Transaction: 'Transaction',
   Payment: 'Payment',
   Task: 'Task',
   Reminder: 'Reminder',
-  Insight: 'Insight',
-  FavoriteStock: 'FavoriteStock',
   RecurringExpense: 'RecurringExpense'
 } as const
 
@@ -412,7 +410,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "user" | "business" | "employee" | "employeeDay" | "chat" | "authToken" | "transaction" | "payment" | "task" | "reminder" | "insight" | "favoriteStock" | "recurringExpense"
+    modelProps: "user" | "business" | "employee" | "employeeDay" | "chatMessage" | "authToken" | "transaction" | "payment" | "task" | "reminder" | "recurringExpense"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -712,77 +710,77 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
-    Chat: {
-      payload: Prisma.$ChatPayload<ExtArgs>
-      fields: Prisma.ChatFieldRefs
+    ChatMessage: {
+      payload: Prisma.$ChatMessagePayload<ExtArgs>
+      fields: Prisma.ChatMessageFieldRefs
       operations: {
         findUnique: {
-          args: Prisma.ChatFindUniqueArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload> | null
+          args: Prisma.ChatMessageFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatMessagePayload> | null
         }
         findUniqueOrThrow: {
-          args: Prisma.ChatFindUniqueOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>
+          args: Prisma.ChatMessageFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatMessagePayload>
         }
         findFirst: {
-          args: Prisma.ChatFindFirstArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload> | null
+          args: Prisma.ChatMessageFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatMessagePayload> | null
         }
         findFirstOrThrow: {
-          args: Prisma.ChatFindFirstOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>
+          args: Prisma.ChatMessageFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatMessagePayload>
         }
         findMany: {
-          args: Prisma.ChatFindManyArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>[]
+          args: Prisma.ChatMessageFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatMessagePayload>[]
         }
         create: {
-          args: Prisma.ChatCreateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>
+          args: Prisma.ChatMessageCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatMessagePayload>
         }
         createMany: {
-          args: Prisma.ChatCreateManyArgs<ExtArgs>
+          args: Prisma.ChatMessageCreateManyArgs<ExtArgs>
           result: BatchPayload
         }
         createManyAndReturn: {
-          args: Prisma.ChatCreateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>[]
+          args: Prisma.ChatMessageCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatMessagePayload>[]
         }
         delete: {
-          args: Prisma.ChatDeleteArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>
+          args: Prisma.ChatMessageDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatMessagePayload>
         }
         update: {
-          args: Prisma.ChatUpdateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>
+          args: Prisma.ChatMessageUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatMessagePayload>
         }
         deleteMany: {
-          args: Prisma.ChatDeleteManyArgs<ExtArgs>
+          args: Prisma.ChatMessageDeleteManyArgs<ExtArgs>
           result: BatchPayload
         }
         updateMany: {
-          args: Prisma.ChatUpdateManyArgs<ExtArgs>
+          args: Prisma.ChatMessageUpdateManyArgs<ExtArgs>
           result: BatchPayload
         }
         updateManyAndReturn: {
-          args: Prisma.ChatUpdateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>[]
+          args: Prisma.ChatMessageUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatMessagePayload>[]
         }
         upsert: {
-          args: Prisma.ChatUpsertArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatPayload>
+          args: Prisma.ChatMessageUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ChatMessagePayload>
         }
         aggregate: {
-          args: Prisma.ChatAggregateArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.AggregateChat>
+          args: Prisma.ChatMessageAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateChatMessage>
         }
         groupBy: {
-          args: Prisma.ChatGroupByArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.ChatGroupByOutputType>[]
+          args: Prisma.ChatMessageGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ChatMessageGroupByOutputType>[]
         }
         count: {
-          args: Prisma.ChatCountArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.ChatCountAggregateOutputType> | number
+          args: Prisma.ChatMessageCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ChatMessageCountAggregateOutputType> | number
         }
       }
     }
@@ -1156,154 +1154,6 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
-    Insight: {
-      payload: Prisma.$InsightPayload<ExtArgs>
-      fields: Prisma.InsightFieldRefs
-      operations: {
-        findUnique: {
-          args: Prisma.InsightFindUniqueArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$InsightPayload> | null
-        }
-        findUniqueOrThrow: {
-          args: Prisma.InsightFindUniqueOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$InsightPayload>
-        }
-        findFirst: {
-          args: Prisma.InsightFindFirstArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$InsightPayload> | null
-        }
-        findFirstOrThrow: {
-          args: Prisma.InsightFindFirstOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$InsightPayload>
-        }
-        findMany: {
-          args: Prisma.InsightFindManyArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$InsightPayload>[]
-        }
-        create: {
-          args: Prisma.InsightCreateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$InsightPayload>
-        }
-        createMany: {
-          args: Prisma.InsightCreateManyArgs<ExtArgs>
-          result: BatchPayload
-        }
-        createManyAndReturn: {
-          args: Prisma.InsightCreateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$InsightPayload>[]
-        }
-        delete: {
-          args: Prisma.InsightDeleteArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$InsightPayload>
-        }
-        update: {
-          args: Prisma.InsightUpdateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$InsightPayload>
-        }
-        deleteMany: {
-          args: Prisma.InsightDeleteManyArgs<ExtArgs>
-          result: BatchPayload
-        }
-        updateMany: {
-          args: Prisma.InsightUpdateManyArgs<ExtArgs>
-          result: BatchPayload
-        }
-        updateManyAndReturn: {
-          args: Prisma.InsightUpdateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$InsightPayload>[]
-        }
-        upsert: {
-          args: Prisma.InsightUpsertArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$InsightPayload>
-        }
-        aggregate: {
-          args: Prisma.InsightAggregateArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.AggregateInsight>
-        }
-        groupBy: {
-          args: Prisma.InsightGroupByArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.InsightGroupByOutputType>[]
-        }
-        count: {
-          args: Prisma.InsightCountArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.InsightCountAggregateOutputType> | number
-        }
-      }
-    }
-    FavoriteStock: {
-      payload: Prisma.$FavoriteStockPayload<ExtArgs>
-      fields: Prisma.FavoriteStockFieldRefs
-      operations: {
-        findUnique: {
-          args: Prisma.FavoriteStockFindUniqueArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$FavoriteStockPayload> | null
-        }
-        findUniqueOrThrow: {
-          args: Prisma.FavoriteStockFindUniqueOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$FavoriteStockPayload>
-        }
-        findFirst: {
-          args: Prisma.FavoriteStockFindFirstArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$FavoriteStockPayload> | null
-        }
-        findFirstOrThrow: {
-          args: Prisma.FavoriteStockFindFirstOrThrowArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$FavoriteStockPayload>
-        }
-        findMany: {
-          args: Prisma.FavoriteStockFindManyArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$FavoriteStockPayload>[]
-        }
-        create: {
-          args: Prisma.FavoriteStockCreateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$FavoriteStockPayload>
-        }
-        createMany: {
-          args: Prisma.FavoriteStockCreateManyArgs<ExtArgs>
-          result: BatchPayload
-        }
-        createManyAndReturn: {
-          args: Prisma.FavoriteStockCreateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$FavoriteStockPayload>[]
-        }
-        delete: {
-          args: Prisma.FavoriteStockDeleteArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$FavoriteStockPayload>
-        }
-        update: {
-          args: Prisma.FavoriteStockUpdateArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$FavoriteStockPayload>
-        }
-        deleteMany: {
-          args: Prisma.FavoriteStockDeleteManyArgs<ExtArgs>
-          result: BatchPayload
-        }
-        updateMany: {
-          args: Prisma.FavoriteStockUpdateManyArgs<ExtArgs>
-          result: BatchPayload
-        }
-        updateManyAndReturn: {
-          args: Prisma.FavoriteStockUpdateManyAndReturnArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$FavoriteStockPayload>[]
-        }
-        upsert: {
-          args: Prisma.FavoriteStockUpsertArgs<ExtArgs>
-          result: runtime.Types.Utils.PayloadToResult<Prisma.$FavoriteStockPayload>
-        }
-        aggregate: {
-          args: Prisma.FavoriteStockAggregateArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.AggregateFavoriteStock>
-        }
-        groupBy: {
-          args: Prisma.FavoriteStockGroupByArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.FavoriteStockGroupByOutputType>[]
-        }
-        count: {
-          args: Prisma.FavoriteStockCountArgs<ExtArgs>
-          result: runtime.Types.Utils.Optional<Prisma.FavoriteStockCountAggregateOutputType> | number
-        }
-      }
-    }
     RecurringExpense: {
       payload: Prisma.$RecurringExpensePayload<ExtArgs>
       fields: Prisma.RecurringExpenseFieldRefs
@@ -1471,15 +1321,15 @@ export const EmployeeDayScalarFieldEnum = {
 export type EmployeeDayScalarFieldEnum = (typeof EmployeeDayScalarFieldEnum)[keyof typeof EmployeeDayScalarFieldEnum]
 
 
-export const ChatScalarFieldEnum = {
+export const ChatMessageScalarFieldEnum = {
   id: 'id',
-  title: 'title',
   userId: 'userId',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  role: 'role',
+  content: 'content',
+  createdAt: 'createdAt'
 } as const
 
-export type ChatScalarFieldEnum = (typeof ChatScalarFieldEnum)[keyof typeof ChatScalarFieldEnum]
+export type ChatMessageScalarFieldEnum = (typeof ChatMessageScalarFieldEnum)[keyof typeof ChatMessageScalarFieldEnum]
 
 
 export const AuthTokenScalarFieldEnum = {
@@ -1556,30 +1406,6 @@ export const ReminderScalarFieldEnum = {
 } as const
 
 export type ReminderScalarFieldEnum = (typeof ReminderScalarFieldEnum)[keyof typeof ReminderScalarFieldEnum]
-
-
-export const InsightScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  businessId: 'businessId',
-  icon: 'icon',
-  text: 'text',
-  level: 'level',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-} as const
-
-export type InsightScalarFieldEnum = (typeof InsightScalarFieldEnum)[keyof typeof InsightScalarFieldEnum]
-
-
-export const FavoriteStockScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  ticker: 'ticker',
-  createdAt: 'createdAt'
-} as const
-
-export type FavoriteStockScalarFieldEnum = (typeof FavoriteStockScalarFieldEnum)[keyof typeof FavoriteStockScalarFieldEnum]
 
 
 export const RecurringExpenseScalarFieldEnum = {
@@ -1771,14 +1597,12 @@ export type GlobalOmitConfig = {
   business?: Prisma.BusinessOmit
   employee?: Prisma.EmployeeOmit
   employeeDay?: Prisma.EmployeeDayOmit
-  chat?: Prisma.ChatOmit
+  chatMessage?: Prisma.ChatMessageOmit
   authToken?: Prisma.AuthTokenOmit
   transaction?: Prisma.TransactionOmit
   payment?: Prisma.PaymentOmit
   task?: Prisma.TaskOmit
   reminder?: Prisma.ReminderOmit
-  insight?: Prisma.InsightOmit
-  favoriteStock?: Prisma.FavoriteStockOmit
   recurringExpense?: Prisma.RecurringExpenseOmit
 }
 

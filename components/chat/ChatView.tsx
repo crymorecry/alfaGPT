@@ -98,9 +98,9 @@ export default function ChatView() {
                 <Title>Chat</Title>
                 <button
                     onClick={handleClear}
-                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg transition-colors hover:bg-blue-700 whitespace-nowrap"
                 >
-                    <Trash2 className="w-4 h-4" />
+                    <Trash2 className="w-4 h-4 text-white" />
                     {t('clear_chat')}
                 </button>
             </div>

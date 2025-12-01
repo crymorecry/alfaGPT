@@ -1,10 +1,47 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { prisma } from '@/lib/prisma'
+import { getUserId } from '@/lib/middleware-auth'
 
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions'
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || ''
 
+export async function GET(request: NextRequest) {
+  try {
+    const userId = await getUserId(request)
+    if (!userId) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
+    const messages = await prisma.chatMessage.findMany({
+      where: { 
+        user: { id: userId }
+      },
+      orderBy: { createdAt: 'asc' },
+      select: {
+        id: true,
+        role: true,
+        content: true,
+        createdAt: true
+      }
+    })
+
+    return NextResponse.json(messages)
+  } catch (error) {
+    console.error('Error fetching messages:', error)
+    return NextResponse.json(
+      { error: 'Ошибка при получении сообщений' },
+      { status: 500 }
+    )
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
+    const userId = await getUserId(request)
+    if (!userId) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const body = await request.json()
     const { messages } = body
 
@@ -13,6 +50,17 @@ export async function POST(request: NextRequest) {
         { error: 'Сообщения обязательны' },
         { status: 400 }
       )
+    }
+
+    const lastMessage = messages[messages.length - 1]
+    if (lastMessage && lastMessage.role === 'user') {
+      await prisma.chatMessage.create({
+        data: {
+          user: { connect: { id: userId } },
+          role: 'user',
+          content: lastMessage.content
+        }
+      })
     }
 
     const systemPrompt = `Ты универсальный ИИ-помощник для бизнеса. Твоя задача - помогать пользователям с различными вопросами: бизнес-советы, финансы, маркетинг, юридические вопросы, управление задачами и другие бизнес-задачи. Отвечай на русском языке, будь профессиональным, дружелюбным и полезным. Предоставляй конкретные и практичные советы.`
@@ -25,7 +73,7 @@ export async function POST(request: NextRequest) {
         'Content-Type': 'application/json',
         'Authorization': OPENROUTER_API_KEY ? `Bearer ${OPENROUTER_API_KEY}` : '',
         'HTTP-Referer': process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
-        'X-Title': 'Alfa Copilot'
+        'X-Title': 'Volency'
       },
       body: JSON.stringify({
         model,
@@ -50,11 +98,44 @@ export async function POST(request: NextRequest) {
     const data = await response.json()
     const generatedText = data.choices?.[0]?.message?.content || ''
 
-    return NextResponse.json({ message: generatedText })
+    await prisma.chatMessage.create({
+      data: {
+        user: { connect: { id: userId } },
+        role: 'assistant',
+        content: generatedText
+      }
+    })
+
+    return NextResponse.json({ 
+      message: generatedText
+    })
   } catch (error) {
     console.error('Error in chat:', error)
     return NextResponse.json(
       { error: 'Ошибка при обработке запроса' },
+      { status: 500 }
+    )
+  }
+}
+
+export async function DELETE(request: NextRequest) {
+  try {
+    const userId = await getUserId(request)
+    if (!userId) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
+    await prisma.chatMessage.deleteMany({
+      where: {
+        user: { id: userId }
+      }
+    })
+
+    return NextResponse.json({ success: true })
+  } catch (error) {
+    console.error('Error deleting messages:', error)
+    return NextResponse.json(
+      { error: 'Ошибка при удалении сообщений' },
       { status: 500 }
     )
   }

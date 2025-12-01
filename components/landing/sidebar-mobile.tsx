@@ -58,7 +58,7 @@ export default function SideBarMobile() {
                     <Drawer.Positioner>
                         <Drawer.Content className="w-[280px]">
                             <Drawer.Header className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-zinc-700">
-                                <div className="w-32">
+                                <div className="w-40">
                                     <Logo />
                                 </div>
                                 <button

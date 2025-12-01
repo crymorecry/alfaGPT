@@ -55,14 +55,12 @@ export const ModelName = {
   Business: 'Business',
   Employee: 'Employee',
   EmployeeDay: 'EmployeeDay',
-  Chat: 'Chat',
+  ChatMessage: 'ChatMessage',
   AuthToken: 'AuthToken',
   Transaction: 'Transaction',
   Payment: 'Payment',
   Task: 'Task',
   Reminder: 'Reminder',
-  Insight: 'Insight',
-  FavoriteStock: 'FavoriteStock',
   RecurringExpense: 'RecurringExpense'
 } as const
 
@@ -136,15 +134,15 @@ export const EmployeeDayScalarFieldEnum = {
 export type EmployeeDayScalarFieldEnum = (typeof EmployeeDayScalarFieldEnum)[keyof typeof EmployeeDayScalarFieldEnum]
 
 
-export const ChatScalarFieldEnum = {
+export const ChatMessageScalarFieldEnum = {
   id: 'id',
-  title: 'title',
   userId: 'userId',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  role: 'role',
+  content: 'content',
+  createdAt: 'createdAt'
 } as const
 
-export type ChatScalarFieldEnum = (typeof ChatScalarFieldEnum)[keyof typeof ChatScalarFieldEnum]
+export type ChatMessageScalarFieldEnum = (typeof ChatMessageScalarFieldEnum)[keyof typeof ChatMessageScalarFieldEnum]
 
 
 export const AuthTokenScalarFieldEnum = {
@@ -221,30 +219,6 @@ export const ReminderScalarFieldEnum = {
 } as const
 
 export type ReminderScalarFieldEnum = (typeof ReminderScalarFieldEnum)[keyof typeof ReminderScalarFieldEnum]
-
-
-export const InsightScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  businessId: 'businessId',
-  icon: 'icon',
-  text: 'text',
-  level: 'level',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-} as const
-
-export type InsightScalarFieldEnum = (typeof InsightScalarFieldEnum)[keyof typeof InsightScalarFieldEnum]
-
-
-export const FavoriteStockScalarFieldEnum = {
-  id: 'id',
-  userId: 'userId',
-  ticker: 'ticker',
-  createdAt: 'createdAt'
-} as const
-
-export type FavoriteStockScalarFieldEnum = (typeof FavoriteStockScalarFieldEnum)[keyof typeof FavoriteStockScalarFieldEnum]
 
 
 export const RecurringExpenseScalarFieldEnum = {

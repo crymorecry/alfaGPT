@@ -10,7 +10,7 @@ export default function LoginPage() {
   return (
     <div className="flex flex-col gap-y-12">
       <div className="flex flex-col items-center gap-6 text-center">
-        <div className='w-40'>
+        <div className='w-52'>
           <Logo />
         </div>
         <span className='text-3xl font-semibold text-gray-900 dark:text-white'>{t('title')}</span>

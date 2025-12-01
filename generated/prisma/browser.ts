@@ -38,10 +38,10 @@ export type Employee = Prisma.EmployeeModel
  */
 export type EmployeeDay = Prisma.EmployeeDayModel
 /**
- * Model Chat
+ * Model ChatMessage
  * 
  */
-export type Chat = Prisma.ChatModel
+export type ChatMessage = Prisma.ChatMessageModel
 /**
  * Model AuthToken
  * 
@@ -67,16 +67,6 @@ export type Task = Prisma.TaskModel
  * 
  */
 export type Reminder = Prisma.ReminderModel
-/**
- * Model Insight
- * 
- */
-export type Insight = Prisma.InsightModel
-/**
- * Model FavoriteStock
- * 
- */
-export type FavoriteStock = Prisma.FavoriteStockModel
 /**
  * Model RecurringExpense
  * 

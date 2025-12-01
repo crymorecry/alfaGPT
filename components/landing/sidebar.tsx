@@ -48,7 +48,7 @@ export default function SideBar() {
         <div className='h-full fixed w-[230px] flex-shrink-0 hidden lg:flex'>
             <div className="flex flex-shrink-0 w-full flex-col px-2 gap-y-6 pt-4 pb-10">
                 <div className="flex flex-col gap-y-4 w-full flex-shrink-0">
-                    <div className="w-32">
+                    <div className="w-40">
                         <Logo />
                     </div>
                     <div className="flex flex-col gap-y-2">

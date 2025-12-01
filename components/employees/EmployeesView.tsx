@@ -123,7 +123,7 @@ export default function EmployeesView() {
             {t('no_employees')}
           </p>
         ) : (
-          <div className="space-y-3">
+          <>
             {employees.map((employee) => (
               <div
                 key={employee.id}
@@ -196,7 +196,7 @@ export default function EmployeesView() {
                 </div>
               </div>
             ))}
-          </div>
+          </>
         )}
       </div>
 

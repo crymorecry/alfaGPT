@@ -116,10 +116,10 @@ export default function ChatModal() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={handleClear}
-                  className="p-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
+                  className="p-2 bg-blue-500 text-white rounded-lg transition-colors"
                   title={t('clear_chat')}
                 >
-                  <Trash2 className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+                  <Trash2 className="w-4 h-4 text-white" />
                 </button>
                 <div className='flex p-2 hover:bg-gray-100 dark:hover:bg-zinc-800 transition-all duration-200 rounded-lg items-center justify-center cursor-pointer'>
                   <XIcon className="w-5 h-5" onClick={() => setIsOpen(false)} />

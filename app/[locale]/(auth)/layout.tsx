@@ -7,7 +7,7 @@ import { generateMetadata } from '@/utils/seo-head'
 
 export const metadata = generateMetadata({
   title: 'Авторизация',
-  description: 'Войдите в личный кабинет Alfa Copilot для доступа к бизнес-инструментам и ИИ-помощнику.',
+  description: 'Войдите в личный кабинет Volency для доступа к бизнес-инструментам и ИИ-помощнику.',
   url: '/login',
   index: false
 })

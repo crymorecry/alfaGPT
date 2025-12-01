@@ -212,7 +212,6 @@ export type BusinessWhereInput = {
   payments?: Prisma.PaymentListRelationFilter
   tasks?: Prisma.TaskListRelationFilter
   reminders?: Prisma.ReminderListRelationFilter
-  insights?: Prisma.InsightListRelationFilter
   recurringExpenses?: Prisma.RecurringExpenseListRelationFilter
 }
 
@@ -231,7 +230,6 @@ export type BusinessOrderByWithRelationInput = {
   payments?: Prisma.PaymentOrderByRelationAggregateInput
   tasks?: Prisma.TaskOrderByRelationAggregateInput
   reminders?: Prisma.ReminderOrderByRelationAggregateInput
-  insights?: Prisma.InsightOrderByRelationAggregateInput
   recurringExpenses?: Prisma.RecurringExpenseOrderByRelationAggregateInput
 }
 
@@ -253,7 +251,6 @@ export type BusinessWhereUniqueInput = Prisma.AtLeast<{
   payments?: Prisma.PaymentListRelationFilter
   tasks?: Prisma.TaskListRelationFilter
   reminders?: Prisma.ReminderListRelationFilter
-  insights?: Prisma.InsightListRelationFilter
   recurringExpenses?: Prisma.RecurringExpenseListRelationFilter
 }, "id">
 
@@ -299,7 +296,6 @@ export type BusinessCreateInput = {
   payments?: Prisma.PaymentCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseCreateNestedManyWithoutBusinessInput
 }
 
@@ -317,7 +313,6 @@ export type BusinessUncheckedCreateInput = {
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedCreateNestedManyWithoutBusinessInput
 }
 
@@ -335,7 +330,6 @@ export type BusinessUpdateInput = {
   payments?: Prisma.PaymentUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUpdateManyWithoutBusinessNestedInput
 }
 
@@ -353,7 +347,6 @@ export type BusinessUncheckedUpdateInput = {
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedUpdateManyWithoutBusinessNestedInput
 }
 
@@ -553,20 +546,6 @@ export type BusinessUpdateOneRequiredWithoutRemindersNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.BusinessUpdateToOneWithWhereWithoutRemindersInput, Prisma.BusinessUpdateWithoutRemindersInput>, Prisma.BusinessUncheckedUpdateWithoutRemindersInput>
 }
 
-export type BusinessCreateNestedOneWithoutInsightsInput = {
-  create?: Prisma.XOR<Prisma.BusinessCreateWithoutInsightsInput, Prisma.BusinessUncheckedCreateWithoutInsightsInput>
-  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutInsightsInput
-  connect?: Prisma.BusinessWhereUniqueInput
-}
-
-export type BusinessUpdateOneRequiredWithoutInsightsNestedInput = {
-  create?: Prisma.XOR<Prisma.BusinessCreateWithoutInsightsInput, Prisma.BusinessUncheckedCreateWithoutInsightsInput>
-  connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutInsightsInput
-  upsert?: Prisma.BusinessUpsertWithoutInsightsInput
-  connect?: Prisma.BusinessWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.BusinessUpdateToOneWithWhereWithoutInsightsInput, Prisma.BusinessUpdateWithoutInsightsInput>, Prisma.BusinessUncheckedUpdateWithoutInsightsInput>
-}
-
 export type BusinessCreateNestedOneWithoutRecurringExpensesInput = {
   create?: Prisma.XOR<Prisma.BusinessCreateWithoutRecurringExpensesInput, Prisma.BusinessUncheckedCreateWithoutRecurringExpensesInput>
   connectOrCreate?: Prisma.BusinessCreateOrConnectWithoutRecurringExpensesInput
@@ -594,7 +573,6 @@ export type BusinessCreateWithoutUserInput = {
   payments?: Prisma.PaymentCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseCreateNestedManyWithoutBusinessInput
 }
 
@@ -611,7 +589,6 @@ export type BusinessUncheckedCreateWithoutUserInput = {
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedCreateNestedManyWithoutBusinessInput
 }
 
@@ -668,7 +645,6 @@ export type BusinessCreateWithoutEmployeesInput = {
   payments?: Prisma.PaymentCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseCreateNestedManyWithoutBusinessInput
 }
 
@@ -685,7 +661,6 @@ export type BusinessUncheckedCreateWithoutEmployeesInput = {
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedCreateNestedManyWithoutBusinessInput
 }
 
@@ -718,7 +693,6 @@ export type BusinessUpdateWithoutEmployeesInput = {
   payments?: Prisma.PaymentUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUpdateManyWithoutBusinessNestedInput
 }
 
@@ -735,7 +709,6 @@ export type BusinessUncheckedUpdateWithoutEmployeesInput = {
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedUpdateManyWithoutBusinessNestedInput
 }
 
@@ -752,7 +725,6 @@ export type BusinessCreateWithoutTransactionsInput = {
   payments?: Prisma.PaymentCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseCreateNestedManyWithoutBusinessInput
 }
 
@@ -769,7 +741,6 @@ export type BusinessUncheckedCreateWithoutTransactionsInput = {
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedCreateNestedManyWithoutBusinessInput
 }
 
@@ -802,7 +773,6 @@ export type BusinessUpdateWithoutTransactionsInput = {
   payments?: Prisma.PaymentUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUpdateManyWithoutBusinessNestedInput
 }
 
@@ -819,7 +789,6 @@ export type BusinessUncheckedUpdateWithoutTransactionsInput = {
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedUpdateManyWithoutBusinessNestedInput
 }
 
@@ -836,7 +805,6 @@ export type BusinessCreateWithoutPaymentsInput = {
   transactions?: Prisma.TransactionCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseCreateNestedManyWithoutBusinessInput
 }
 
@@ -853,7 +821,6 @@ export type BusinessUncheckedCreateWithoutPaymentsInput = {
   transactions?: Prisma.TransactionUncheckedCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedCreateNestedManyWithoutBusinessInput
 }
 
@@ -886,7 +853,6 @@ export type BusinessUpdateWithoutPaymentsInput = {
   transactions?: Prisma.TransactionUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUpdateManyWithoutBusinessNestedInput
 }
 
@@ -903,7 +869,6 @@ export type BusinessUncheckedUpdateWithoutPaymentsInput = {
   transactions?: Prisma.TransactionUncheckedUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedUpdateManyWithoutBusinessNestedInput
 }
 
@@ -920,7 +885,6 @@ export type BusinessCreateWithoutTasksInput = {
   transactions?: Prisma.TransactionCreateNestedManyWithoutBusinessInput
   payments?: Prisma.PaymentCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseCreateNestedManyWithoutBusinessInput
 }
 
@@ -937,7 +901,6 @@ export type BusinessUncheckedCreateWithoutTasksInput = {
   transactions?: Prisma.TransactionUncheckedCreateNestedManyWithoutBusinessInput
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedCreateNestedManyWithoutBusinessInput
 }
 
@@ -970,7 +933,6 @@ export type BusinessUpdateWithoutTasksInput = {
   transactions?: Prisma.TransactionUpdateManyWithoutBusinessNestedInput
   payments?: Prisma.PaymentUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUpdateManyWithoutBusinessNestedInput
 }
 
@@ -987,7 +949,6 @@ export type BusinessUncheckedUpdateWithoutTasksInput = {
   transactions?: Prisma.TransactionUncheckedUpdateManyWithoutBusinessNestedInput
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedUpdateManyWithoutBusinessNestedInput
 }
 
@@ -1004,7 +965,6 @@ export type BusinessCreateWithoutRemindersInput = {
   transactions?: Prisma.TransactionCreateNestedManyWithoutBusinessInput
   payments?: Prisma.PaymentCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseCreateNestedManyWithoutBusinessInput
 }
 
@@ -1021,7 +981,6 @@ export type BusinessUncheckedCreateWithoutRemindersInput = {
   transactions?: Prisma.TransactionUncheckedCreateNestedManyWithoutBusinessInput
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutBusinessInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedCreateNestedManyWithoutBusinessInput
 }
 
@@ -1054,7 +1013,6 @@ export type BusinessUpdateWithoutRemindersInput = {
   transactions?: Prisma.TransactionUpdateManyWithoutBusinessNestedInput
   payments?: Prisma.PaymentUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUpdateManyWithoutBusinessNestedInput
 }
 
@@ -1071,91 +1029,6 @@ export type BusinessUncheckedUpdateWithoutRemindersInput = {
   transactions?: Prisma.TransactionUncheckedUpdateManyWithoutBusinessNestedInput
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutBusinessNestedInput
-  recurringExpenses?: Prisma.RecurringExpenseUncheckedUpdateManyWithoutBusinessNestedInput
-}
-
-export type BusinessCreateWithoutInsightsInput = {
-  id?: string
-  name: string
-  ip?: string | null
-  address?: string | null
-  yandexMapLink?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  user: Prisma.UserCreateNestedOneWithoutBusinessesInput
-  employees?: Prisma.EmployeeCreateNestedManyWithoutBusinessInput
-  transactions?: Prisma.TransactionCreateNestedManyWithoutBusinessInput
-  payments?: Prisma.PaymentCreateNestedManyWithoutBusinessInput
-  tasks?: Prisma.TaskCreateNestedManyWithoutBusinessInput
-  reminders?: Prisma.ReminderCreateNestedManyWithoutBusinessInput
-  recurringExpenses?: Prisma.RecurringExpenseCreateNestedManyWithoutBusinessInput
-}
-
-export type BusinessUncheckedCreateWithoutInsightsInput = {
-  id?: string
-  userId: string
-  name: string
-  ip?: string | null
-  address?: string | null
-  yandexMapLink?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  employees?: Prisma.EmployeeUncheckedCreateNestedManyWithoutBusinessInput
-  transactions?: Prisma.TransactionUncheckedCreateNestedManyWithoutBusinessInput
-  payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutBusinessInput
-  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutBusinessInput
-  reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutBusinessInput
-  recurringExpenses?: Prisma.RecurringExpenseUncheckedCreateNestedManyWithoutBusinessInput
-}
-
-export type BusinessCreateOrConnectWithoutInsightsInput = {
-  where: Prisma.BusinessWhereUniqueInput
-  create: Prisma.XOR<Prisma.BusinessCreateWithoutInsightsInput, Prisma.BusinessUncheckedCreateWithoutInsightsInput>
-}
-
-export type BusinessUpsertWithoutInsightsInput = {
-  update: Prisma.XOR<Prisma.BusinessUpdateWithoutInsightsInput, Prisma.BusinessUncheckedUpdateWithoutInsightsInput>
-  create: Prisma.XOR<Prisma.BusinessCreateWithoutInsightsInput, Prisma.BusinessUncheckedCreateWithoutInsightsInput>
-  where?: Prisma.BusinessWhereInput
-}
-
-export type BusinessUpdateToOneWithWhereWithoutInsightsInput = {
-  where?: Prisma.BusinessWhereInput
-  data: Prisma.XOR<Prisma.BusinessUpdateWithoutInsightsInput, Prisma.BusinessUncheckedUpdateWithoutInsightsInput>
-}
-
-export type BusinessUpdateWithoutInsightsInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  ip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  yandexMapLink?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  user?: Prisma.UserUpdateOneRequiredWithoutBusinessesNestedInput
-  employees?: Prisma.EmployeeUpdateManyWithoutBusinessNestedInput
-  transactions?: Prisma.TransactionUpdateManyWithoutBusinessNestedInput
-  payments?: Prisma.PaymentUpdateManyWithoutBusinessNestedInput
-  tasks?: Prisma.TaskUpdateManyWithoutBusinessNestedInput
-  reminders?: Prisma.ReminderUpdateManyWithoutBusinessNestedInput
-  recurringExpenses?: Prisma.RecurringExpenseUpdateManyWithoutBusinessNestedInput
-}
-
-export type BusinessUncheckedUpdateWithoutInsightsInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  userId?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  ip?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  address?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  yandexMapLink?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  employees?: Prisma.EmployeeUncheckedUpdateManyWithoutBusinessNestedInput
-  transactions?: Prisma.TransactionUncheckedUpdateManyWithoutBusinessNestedInput
-  payments?: Prisma.PaymentUncheckedUpdateManyWithoutBusinessNestedInput
-  tasks?: Prisma.TaskUncheckedUpdateManyWithoutBusinessNestedInput
-  reminders?: Prisma.ReminderUncheckedUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedUpdateManyWithoutBusinessNestedInput
 }
 
@@ -1173,7 +1046,6 @@ export type BusinessCreateWithoutRecurringExpensesInput = {
   payments?: Prisma.PaymentCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightCreateNestedManyWithoutBusinessInput
 }
 
 export type BusinessUncheckedCreateWithoutRecurringExpensesInput = {
@@ -1190,7 +1062,6 @@ export type BusinessUncheckedCreateWithoutRecurringExpensesInput = {
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutBusinessInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutBusinessInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutBusinessInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutBusinessInput
 }
 
 export type BusinessCreateOrConnectWithoutRecurringExpensesInput = {
@@ -1223,7 +1094,6 @@ export type BusinessUpdateWithoutRecurringExpensesInput = {
   payments?: Prisma.PaymentUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutBusinessNestedInput
 }
 
 export type BusinessUncheckedUpdateWithoutRecurringExpensesInput = {
@@ -1240,7 +1110,6 @@ export type BusinessUncheckedUpdateWithoutRecurringExpensesInput = {
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutBusinessNestedInput
 }
 
 export type BusinessCreateManyUserInput = {
@@ -1266,7 +1135,6 @@ export type BusinessUpdateWithoutUserInput = {
   payments?: Prisma.PaymentUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUpdateManyWithoutBusinessNestedInput
 }
 
@@ -1283,7 +1151,6 @@ export type BusinessUncheckedUpdateWithoutUserInput = {
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutBusinessNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutBusinessNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutBusinessNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutBusinessNestedInput
   recurringExpenses?: Prisma.RecurringExpenseUncheckedUpdateManyWithoutBusinessNestedInput
 }
 
@@ -1308,7 +1175,6 @@ export type BusinessCountOutputType = {
   payments: number
   tasks: number
   reminders: number
-  insights: number
   recurringExpenses: number
 }
 
@@ -1318,7 +1184,6 @@ export type BusinessCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensio
   payments?: boolean | BusinessCountOutputTypeCountPaymentsArgs
   tasks?: boolean | BusinessCountOutputTypeCountTasksArgs
   reminders?: boolean | BusinessCountOutputTypeCountRemindersArgs
-  insights?: boolean | BusinessCountOutputTypeCountInsightsArgs
   recurringExpenses?: boolean | BusinessCountOutputTypeCountRecurringExpensesArgs
 }
 
@@ -1370,13 +1235,6 @@ export type BusinessCountOutputTypeCountRemindersArgs<ExtArgs extends runtime.Ty
 /**
  * BusinessCountOutputType without action
  */
-export type BusinessCountOutputTypeCountInsightsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.InsightWhereInput
-}
-
-/**
- * BusinessCountOutputType without action
- */
 export type BusinessCountOutputTypeCountRecurringExpensesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.RecurringExpenseWhereInput
 }
@@ -1397,7 +1255,6 @@ export type BusinessSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs
   payments?: boolean | Prisma.Business$paymentsArgs<ExtArgs>
   tasks?: boolean | Prisma.Business$tasksArgs<ExtArgs>
   reminders?: boolean | Prisma.Business$remindersArgs<ExtArgs>
-  insights?: boolean | Prisma.Business$insightsArgs<ExtArgs>
   recurringExpenses?: boolean | Prisma.Business$recurringExpensesArgs<ExtArgs>
   _count?: boolean | Prisma.BusinessCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["business"]>
@@ -1445,7 +1302,6 @@ export type BusinessInclude<ExtArgs extends runtime.Types.Extensions.InternalArg
   payments?: boolean | Prisma.Business$paymentsArgs<ExtArgs>
   tasks?: boolean | Prisma.Business$tasksArgs<ExtArgs>
   reminders?: boolean | Prisma.Business$remindersArgs<ExtArgs>
-  insights?: boolean | Prisma.Business$insightsArgs<ExtArgs>
   recurringExpenses?: boolean | Prisma.Business$recurringExpensesArgs<ExtArgs>
   _count?: boolean | Prisma.BusinessCountOutputTypeDefaultArgs<ExtArgs>
 }
@@ -1465,7 +1321,6 @@ export type $BusinessPayload<ExtArgs extends runtime.Types.Extensions.InternalAr
     payments: Prisma.$PaymentPayload<ExtArgs>[]
     tasks: Prisma.$TaskPayload<ExtArgs>[]
     reminders: Prisma.$ReminderPayload<ExtArgs>[]
-    insights: Prisma.$InsightPayload<ExtArgs>[]
     recurringExpenses: Prisma.$RecurringExpensePayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
@@ -1877,7 +1732,6 @@ export interface Prisma__BusinessClient<T, Null = never, ExtArgs extends runtime
   payments<T extends Prisma.Business$paymentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Business$paymentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PaymentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   tasks<T extends Prisma.Business$tasksArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Business$tasksArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TaskPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   reminders<T extends Prisma.Business$remindersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Business$remindersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ReminderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  insights<T extends Prisma.Business$insightsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Business$insightsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$InsightPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   recurringExpenses<T extends Prisma.Business$recurringExpensesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Business$recurringExpensesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$RecurringExpensePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -2429,30 +2283,6 @@ export type Business$remindersArgs<ExtArgs extends runtime.Types.Extensions.Inte
   take?: number
   skip?: number
   distinct?: Prisma.ReminderScalarFieldEnum | Prisma.ReminderScalarFieldEnum[]
-}
-
-/**
- * Business.insights
- */
-export type Business$insightsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Insight
-   */
-  select?: Prisma.InsightSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Insight
-   */
-  omit?: Prisma.InsightOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.InsightInclude<ExtArgs> | null
-  where?: Prisma.InsightWhereInput
-  orderBy?: Prisma.InsightOrderByWithRelationInput | Prisma.InsightOrderByWithRelationInput[]
-  cursor?: Prisma.InsightWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.InsightScalarFieldEnum | Prisma.InsightScalarFieldEnum[]
 }
 
 /**

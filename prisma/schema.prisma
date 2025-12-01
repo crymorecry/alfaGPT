@@ -14,14 +14,12 @@ model User {
   updatedAt DateTime @updatedAt
   
   businesses      Business[]
-  chats           Chat[]
+  chatMessages    ChatMessage[]
   authTokens      AuthToken[]
   transactions    Transaction[]
   payments        Payment[]
   tasks           Task[]
   reminders       Reminder[]
-  insights        Insight[]
-  favoriteStocks  FavoriteStock[]
 }
 
 model Business {
@@ -40,7 +38,6 @@ model Business {
   payments          Payment[]
   tasks             Task[]
   reminders         Reminder[]
-  insights          Insight[]
   recurringExpenses RecurringExpense[]
   
   @@index([userId])
@@ -80,13 +77,16 @@ model EmployeeDay {
   @@index([date])
 }
 
-model Chat {
+model ChatMessage {
   id        String   @id @default(cuid())
-  title     String?
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role      String
+  content   String
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([createdAt])
 }
 
 model AuthToken {
@@ -183,35 +183,6 @@ model Reminder {
   @@index([completed])
 }
 
-
-model Insight {
-  id        String   @id @default(cuid())
-  userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  businessId String
-  business  Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
-  icon      String
-  text      String
-  level     String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@index([userId])
-  @@index([businessId])
-  @@index([level])
-}
-
-model FavoriteStock {
-  id        String   @id @default(cuid())
-  userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  ticker    String
-  createdAt DateTime @default(now())
-
-  @@unique([userId, ticker])
-  @@index([userId])
-  @@index([ticker])
-}
 
 model RecurringExpense {
   id          String   @id @default(cuid())

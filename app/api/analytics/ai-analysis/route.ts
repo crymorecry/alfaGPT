@@ -146,7 +146,7 @@ ${i + 1}. ${e.name} (${e.position || 'без должности'})
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
         'HTTP-Referer': process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-        'X-Title': 'Alfa Copilot'
+        'X-Title': 'Volency'
       },
       body: JSON.stringify({
         model: process.env.OPENROUTER_MODEL || 'openai/gpt-oss-20b:free',

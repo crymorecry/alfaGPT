@@ -175,14 +175,12 @@ export type UserWhereInput = {
   createdAt?: Prisma.DateTimeFilter<"User"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"User"> | Date | string
   businesses?: Prisma.BusinessListRelationFilter
-  chats?: Prisma.ChatListRelationFilter
+  chatMessages?: Prisma.ChatMessageListRelationFilter
   authTokens?: Prisma.AuthTokenListRelationFilter
   transactions?: Prisma.TransactionListRelationFilter
   payments?: Prisma.PaymentListRelationFilter
   tasks?: Prisma.TaskListRelationFilter
   reminders?: Prisma.ReminderListRelationFilter
-  insights?: Prisma.InsightListRelationFilter
-  favoriteStocks?: Prisma.FavoriteStockListRelationFilter
 }
 
 export type UserOrderByWithRelationInput = {
@@ -191,14 +189,12 @@ export type UserOrderByWithRelationInput = {
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   businesses?: Prisma.BusinessOrderByRelationAggregateInput
-  chats?: Prisma.ChatOrderByRelationAggregateInput
+  chatMessages?: Prisma.ChatMessageOrderByRelationAggregateInput
   authTokens?: Prisma.AuthTokenOrderByRelationAggregateInput
   transactions?: Prisma.TransactionOrderByRelationAggregateInput
   payments?: Prisma.PaymentOrderByRelationAggregateInput
   tasks?: Prisma.TaskOrderByRelationAggregateInput
   reminders?: Prisma.ReminderOrderByRelationAggregateInput
-  insights?: Prisma.InsightOrderByRelationAggregateInput
-  favoriteStocks?: Prisma.FavoriteStockOrderByRelationAggregateInput
 }
 
 export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -210,14 +206,12 @@ export type UserWhereUniqueInput = Prisma.AtLeast<{
   createdAt?: Prisma.DateTimeFilter<"User"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"User"> | Date | string
   businesses?: Prisma.BusinessListRelationFilter
-  chats?: Prisma.ChatListRelationFilter
+  chatMessages?: Prisma.ChatMessageListRelationFilter
   authTokens?: Prisma.AuthTokenListRelationFilter
   transactions?: Prisma.TransactionListRelationFilter
   payments?: Prisma.PaymentListRelationFilter
   tasks?: Prisma.TaskListRelationFilter
   reminders?: Prisma.ReminderListRelationFilter
-  insights?: Prisma.InsightListRelationFilter
-  favoriteStocks?: Prisma.FavoriteStockListRelationFilter
 }, "id" | "email">
 
 export type UserOrderByWithAggregationInput = {
@@ -246,14 +240,12 @@ export type UserCreateInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   businesses?: Prisma.BusinessCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageCreateNestedManyWithoutUserInput
   authTokens?: Prisma.AuthTokenCreateNestedManyWithoutUserInput
   transactions?: Prisma.TransactionCreateNestedManyWithoutUserInput
   payments?: Prisma.PaymentCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateInput = {
@@ -262,14 +254,12 @@ export type UserUncheckedCreateInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   businesses?: Prisma.BusinessUncheckedCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatUncheckedCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutUserInput
   authTokens?: Prisma.AuthTokenUncheckedCreateNestedManyWithoutUserInput
   transactions?: Prisma.TransactionUncheckedCreateNestedManyWithoutUserInput
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserUpdateInput = {
@@ -278,14 +268,12 @@ export type UserUpdateInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   businesses?: Prisma.BusinessUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUpdateManyWithoutUserNestedInput
   authTokens?: Prisma.AuthTokenUpdateManyWithoutUserNestedInput
   transactions?: Prisma.TransactionUpdateManyWithoutUserNestedInput
   payments?: Prisma.PaymentUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateInput = {
@@ -294,14 +282,12 @@ export type UserUncheckedUpdateInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   businesses?: Prisma.BusinessUncheckedUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUncheckedUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUncheckedUpdateManyWithoutUserNestedInput
   authTokens?: Prisma.AuthTokenUncheckedUpdateManyWithoutUserNestedInput
   transactions?: Prisma.TransactionUncheckedUpdateManyWithoutUserNestedInput
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateManyInput = {
@@ -378,18 +364,18 @@ export type UserUpdateOneRequiredWithoutBusinessesNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutBusinessesInput, Prisma.UserUpdateWithoutBusinessesInput>, Prisma.UserUncheckedUpdateWithoutBusinessesInput>
 }
 
-export type UserCreateNestedOneWithoutChatsInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutChatsInput, Prisma.UserUncheckedCreateWithoutChatsInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutChatsInput
+export type UserCreateNestedOneWithoutChatMessagesInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutChatMessagesInput, Prisma.UserUncheckedCreateWithoutChatMessagesInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutChatMessagesInput
   connect?: Prisma.UserWhereUniqueInput
 }
 
-export type UserUpdateOneRequiredWithoutChatsNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutChatsInput, Prisma.UserUncheckedCreateWithoutChatsInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutChatsInput
-  upsert?: Prisma.UserUpsertWithoutChatsInput
+export type UserUpdateOneRequiredWithoutChatMessagesNestedInput = {
+  create?: Prisma.XOR<Prisma.UserCreateWithoutChatMessagesInput, Prisma.UserUncheckedCreateWithoutChatMessagesInput>
+  connectOrCreate?: Prisma.UserCreateOrConnectWithoutChatMessagesInput
+  upsert?: Prisma.UserUpsertWithoutChatMessagesInput
   connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutChatsInput, Prisma.UserUpdateWithoutChatsInput>, Prisma.UserUncheckedUpdateWithoutChatsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutChatMessagesInput, Prisma.UserUpdateWithoutChatMessagesInput>, Prisma.UserUncheckedUpdateWithoutChatMessagesInput>
 }
 
 export type UserCreateNestedOneWithoutAuthTokensInput = {
@@ -464,47 +450,17 @@ export type UserUpdateOneRequiredWithoutRemindersNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutRemindersInput, Prisma.UserUpdateWithoutRemindersInput>, Prisma.UserUncheckedUpdateWithoutRemindersInput>
 }
 
-export type UserCreateNestedOneWithoutInsightsInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutInsightsInput, Prisma.UserUncheckedCreateWithoutInsightsInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutInsightsInput
-  connect?: Prisma.UserWhereUniqueInput
-}
-
-export type UserUpdateOneRequiredWithoutInsightsNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutInsightsInput, Prisma.UserUncheckedCreateWithoutInsightsInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutInsightsInput
-  upsert?: Prisma.UserUpsertWithoutInsightsInput
-  connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutInsightsInput, Prisma.UserUpdateWithoutInsightsInput>, Prisma.UserUncheckedUpdateWithoutInsightsInput>
-}
-
-export type UserCreateNestedOneWithoutFavoriteStocksInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutFavoriteStocksInput, Prisma.UserUncheckedCreateWithoutFavoriteStocksInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutFavoriteStocksInput
-  connect?: Prisma.UserWhereUniqueInput
-}
-
-export type UserUpdateOneRequiredWithoutFavoriteStocksNestedInput = {
-  create?: Prisma.XOR<Prisma.UserCreateWithoutFavoriteStocksInput, Prisma.UserUncheckedCreateWithoutFavoriteStocksInput>
-  connectOrCreate?: Prisma.UserCreateOrConnectWithoutFavoriteStocksInput
-  upsert?: Prisma.UserUpsertWithoutFavoriteStocksInput
-  connect?: Prisma.UserWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.UserUpdateToOneWithWhereWithoutFavoriteStocksInput, Prisma.UserUpdateWithoutFavoriteStocksInput>, Prisma.UserUncheckedUpdateWithoutFavoriteStocksInput>
-}
-
 export type UserCreateWithoutBusinessesInput = {
   id?: string
   email: string
   createdAt?: Date | string
   updatedAt?: Date | string
-  chats?: Prisma.ChatCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageCreateNestedManyWithoutUserInput
   authTokens?: Prisma.AuthTokenCreateNestedManyWithoutUserInput
   transactions?: Prisma.TransactionCreateNestedManyWithoutUserInput
   payments?: Prisma.PaymentCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutBusinessesInput = {
@@ -512,14 +468,12 @@ export type UserUncheckedCreateWithoutBusinessesInput = {
   email: string
   createdAt?: Date | string
   updatedAt?: Date | string
-  chats?: Prisma.ChatUncheckedCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutUserInput
   authTokens?: Prisma.AuthTokenUncheckedCreateNestedManyWithoutUserInput
   transactions?: Prisma.TransactionUncheckedCreateNestedManyWithoutUserInput
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutBusinessesInput = {
@@ -543,14 +497,12 @@ export type UserUpdateWithoutBusinessesInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chats?: Prisma.ChatUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUpdateManyWithoutUserNestedInput
   authTokens?: Prisma.AuthTokenUpdateManyWithoutUserNestedInput
   transactions?: Prisma.TransactionUpdateManyWithoutUserNestedInput
   payments?: Prisma.PaymentUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutBusinessesInput = {
@@ -558,17 +510,15 @@ export type UserUncheckedUpdateWithoutBusinessesInput = {
   email?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  chats?: Prisma.ChatUncheckedUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUncheckedUpdateManyWithoutUserNestedInput
   authTokens?: Prisma.AuthTokenUncheckedUpdateManyWithoutUserNestedInput
   transactions?: Prisma.TransactionUncheckedUpdateManyWithoutUserNestedInput
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedUpdateManyWithoutUserNestedInput
 }
 
-export type UserCreateWithoutChatsInput = {
+export type UserCreateWithoutChatMessagesInput = {
   id?: string
   email: string
   createdAt?: Date | string
@@ -579,11 +529,9 @@ export type UserCreateWithoutChatsInput = {
   payments?: Prisma.PaymentCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockCreateNestedManyWithoutUserInput
 }
 
-export type UserUncheckedCreateWithoutChatsInput = {
+export type UserUncheckedCreateWithoutChatMessagesInput = {
   id?: string
   email: string
   createdAt?: Date | string
@@ -594,27 +542,25 @@ export type UserUncheckedCreateWithoutChatsInput = {
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedCreateNestedManyWithoutUserInput
 }
 
-export type UserCreateOrConnectWithoutChatsInput = {
+export type UserCreateOrConnectWithoutChatMessagesInput = {
   where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutChatsInput, Prisma.UserUncheckedCreateWithoutChatsInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutChatMessagesInput, Prisma.UserUncheckedCreateWithoutChatMessagesInput>
 }
 
-export type UserUpsertWithoutChatsInput = {
-  update: Prisma.XOR<Prisma.UserUpdateWithoutChatsInput, Prisma.UserUncheckedUpdateWithoutChatsInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutChatsInput, Prisma.UserUncheckedCreateWithoutChatsInput>
+export type UserUpsertWithoutChatMessagesInput = {
+  update: Prisma.XOR<Prisma.UserUpdateWithoutChatMessagesInput, Prisma.UserUncheckedUpdateWithoutChatMessagesInput>
+  create: Prisma.XOR<Prisma.UserCreateWithoutChatMessagesInput, Prisma.UserUncheckedCreateWithoutChatMessagesInput>
   where?: Prisma.UserWhereInput
 }
 
-export type UserUpdateToOneWithWhereWithoutChatsInput = {
+export type UserUpdateToOneWithWhereWithoutChatMessagesInput = {
   where?: Prisma.UserWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutChatsInput, Prisma.UserUncheckedUpdateWithoutChatsInput>
+  data: Prisma.XOR<Prisma.UserUpdateWithoutChatMessagesInput, Prisma.UserUncheckedUpdateWithoutChatMessagesInput>
 }
 
-export type UserUpdateWithoutChatsInput = {
+export type UserUpdateWithoutChatMessagesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -625,11 +571,9 @@ export type UserUpdateWithoutChatsInput = {
   payments?: Prisma.PaymentUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUpdateManyWithoutUserNestedInput
 }
 
-export type UserUncheckedUpdateWithoutChatsInput = {
+export type UserUncheckedUpdateWithoutChatMessagesInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   email?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -640,8 +584,6 @@ export type UserUncheckedUpdateWithoutChatsInput = {
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutAuthTokensInput = {
@@ -650,13 +592,11 @@ export type UserCreateWithoutAuthTokensInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   businesses?: Prisma.BusinessCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageCreateNestedManyWithoutUserInput
   transactions?: Prisma.TransactionCreateNestedManyWithoutUserInput
   payments?: Prisma.PaymentCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutAuthTokensInput = {
@@ -665,13 +605,11 @@ export type UserUncheckedCreateWithoutAuthTokensInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   businesses?: Prisma.BusinessUncheckedCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatUncheckedCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutUserInput
   transactions?: Prisma.TransactionUncheckedCreateNestedManyWithoutUserInput
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutAuthTokensInput = {
@@ -696,13 +634,11 @@ export type UserUpdateWithoutAuthTokensInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   businesses?: Prisma.BusinessUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUpdateManyWithoutUserNestedInput
   transactions?: Prisma.TransactionUpdateManyWithoutUserNestedInput
   payments?: Prisma.PaymentUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutAuthTokensInput = {
@@ -711,13 +647,11 @@ export type UserUncheckedUpdateWithoutAuthTokensInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   businesses?: Prisma.BusinessUncheckedUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUncheckedUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUncheckedUpdateManyWithoutUserNestedInput
   transactions?: Prisma.TransactionUncheckedUpdateManyWithoutUserNestedInput
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutTransactionsInput = {
@@ -726,13 +660,11 @@ export type UserCreateWithoutTransactionsInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   businesses?: Prisma.BusinessCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageCreateNestedManyWithoutUserInput
   authTokens?: Prisma.AuthTokenCreateNestedManyWithoutUserInput
   payments?: Prisma.PaymentCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutTransactionsInput = {
@@ -741,13 +673,11 @@ export type UserUncheckedCreateWithoutTransactionsInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   businesses?: Prisma.BusinessUncheckedCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatUncheckedCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutUserInput
   authTokens?: Prisma.AuthTokenUncheckedCreateNestedManyWithoutUserInput
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutTransactionsInput = {
@@ -772,13 +702,11 @@ export type UserUpdateWithoutTransactionsInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   businesses?: Prisma.BusinessUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUpdateManyWithoutUserNestedInput
   authTokens?: Prisma.AuthTokenUpdateManyWithoutUserNestedInput
   payments?: Prisma.PaymentUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutTransactionsInput = {
@@ -787,13 +715,11 @@ export type UserUncheckedUpdateWithoutTransactionsInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   businesses?: Prisma.BusinessUncheckedUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUncheckedUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUncheckedUpdateManyWithoutUserNestedInput
   authTokens?: Prisma.AuthTokenUncheckedUpdateManyWithoutUserNestedInput
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutPaymentsInput = {
@@ -802,13 +728,11 @@ export type UserCreateWithoutPaymentsInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   businesses?: Prisma.BusinessCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageCreateNestedManyWithoutUserInput
   authTokens?: Prisma.AuthTokenCreateNestedManyWithoutUserInput
   transactions?: Prisma.TransactionCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutPaymentsInput = {
@@ -817,13 +741,11 @@ export type UserUncheckedCreateWithoutPaymentsInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   businesses?: Prisma.BusinessUncheckedCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatUncheckedCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutUserInput
   authTokens?: Prisma.AuthTokenUncheckedCreateNestedManyWithoutUserInput
   transactions?: Prisma.TransactionUncheckedCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutPaymentsInput = {
@@ -848,13 +770,11 @@ export type UserUpdateWithoutPaymentsInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   businesses?: Prisma.BusinessUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUpdateManyWithoutUserNestedInput
   authTokens?: Prisma.AuthTokenUpdateManyWithoutUserNestedInput
   transactions?: Prisma.TransactionUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutPaymentsInput = {
@@ -863,13 +783,11 @@ export type UserUncheckedUpdateWithoutPaymentsInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   businesses?: Prisma.BusinessUncheckedUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUncheckedUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUncheckedUpdateManyWithoutUserNestedInput
   authTokens?: Prisma.AuthTokenUncheckedUpdateManyWithoutUserNestedInput
   transactions?: Prisma.TransactionUncheckedUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutTasksInput = {
@@ -878,13 +796,11 @@ export type UserCreateWithoutTasksInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   businesses?: Prisma.BusinessCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageCreateNestedManyWithoutUserInput
   authTokens?: Prisma.AuthTokenCreateNestedManyWithoutUserInput
   transactions?: Prisma.TransactionCreateNestedManyWithoutUserInput
   payments?: Prisma.PaymentCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutTasksInput = {
@@ -893,13 +809,11 @@ export type UserUncheckedCreateWithoutTasksInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   businesses?: Prisma.BusinessUncheckedCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatUncheckedCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutUserInput
   authTokens?: Prisma.AuthTokenUncheckedCreateNestedManyWithoutUserInput
   transactions?: Prisma.TransactionUncheckedCreateNestedManyWithoutUserInput
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutUserInput
   reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutTasksInput = {
@@ -924,13 +838,11 @@ export type UserUpdateWithoutTasksInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   businesses?: Prisma.BusinessUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUpdateManyWithoutUserNestedInput
   authTokens?: Prisma.AuthTokenUpdateManyWithoutUserNestedInput
   transactions?: Prisma.TransactionUpdateManyWithoutUserNestedInput
   payments?: Prisma.PaymentUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutTasksInput = {
@@ -939,13 +851,11 @@ export type UserUncheckedUpdateWithoutTasksInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   businesses?: Prisma.BusinessUncheckedUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUncheckedUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUncheckedUpdateManyWithoutUserNestedInput
   authTokens?: Prisma.AuthTokenUncheckedUpdateManyWithoutUserNestedInput
   transactions?: Prisma.TransactionUncheckedUpdateManyWithoutUserNestedInput
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutUserNestedInput
   reminders?: Prisma.ReminderUncheckedUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedUpdateManyWithoutUserNestedInput
 }
 
 export type UserCreateWithoutRemindersInput = {
@@ -954,13 +864,11 @@ export type UserCreateWithoutRemindersInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   businesses?: Prisma.BusinessCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageCreateNestedManyWithoutUserInput
   authTokens?: Prisma.AuthTokenCreateNestedManyWithoutUserInput
   transactions?: Prisma.TransactionCreateNestedManyWithoutUserInput
   payments?: Prisma.PaymentCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockCreateNestedManyWithoutUserInput
 }
 
 export type UserUncheckedCreateWithoutRemindersInput = {
@@ -969,13 +877,11 @@ export type UserUncheckedCreateWithoutRemindersInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   businesses?: Prisma.BusinessUncheckedCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatUncheckedCreateNestedManyWithoutUserInput
+  chatMessages?: Prisma.ChatMessageUncheckedCreateNestedManyWithoutUserInput
   authTokens?: Prisma.AuthTokenUncheckedCreateNestedManyWithoutUserInput
   transactions?: Prisma.TransactionUncheckedCreateNestedManyWithoutUserInput
   payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutUserInput
   tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedCreateNestedManyWithoutUserInput
 }
 
 export type UserCreateOrConnectWithoutRemindersInput = {
@@ -1000,13 +906,11 @@ export type UserUpdateWithoutRemindersInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   businesses?: Prisma.BusinessUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUpdateManyWithoutUserNestedInput
   authTokens?: Prisma.AuthTokenUpdateManyWithoutUserNestedInput
   transactions?: Prisma.TransactionUpdateManyWithoutUserNestedInput
   payments?: Prisma.PaymentUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUpdateManyWithoutUserNestedInput
 }
 
 export type UserUncheckedUpdateWithoutRemindersInput = {
@@ -1015,165 +919,11 @@ export type UserUncheckedUpdateWithoutRemindersInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   businesses?: Prisma.BusinessUncheckedUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUncheckedUpdateManyWithoutUserNestedInput
+  chatMessages?: Prisma.ChatMessageUncheckedUpdateManyWithoutUserNestedInput
   authTokens?: Prisma.AuthTokenUncheckedUpdateManyWithoutUserNestedInput
   transactions?: Prisma.TransactionUncheckedUpdateManyWithoutUserNestedInput
   payments?: Prisma.PaymentUncheckedUpdateManyWithoutUserNestedInput
   tasks?: Prisma.TaskUncheckedUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedUpdateManyWithoutUserNestedInput
-}
-
-export type UserCreateWithoutInsightsInput = {
-  id?: string
-  email: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  businesses?: Prisma.BusinessCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatCreateNestedManyWithoutUserInput
-  authTokens?: Prisma.AuthTokenCreateNestedManyWithoutUserInput
-  transactions?: Prisma.TransactionCreateNestedManyWithoutUserInput
-  payments?: Prisma.PaymentCreateNestedManyWithoutUserInput
-  tasks?: Prisma.TaskCreateNestedManyWithoutUserInput
-  reminders?: Prisma.ReminderCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockCreateNestedManyWithoutUserInput
-}
-
-export type UserUncheckedCreateWithoutInsightsInput = {
-  id?: string
-  email: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  businesses?: Prisma.BusinessUncheckedCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatUncheckedCreateNestedManyWithoutUserInput
-  authTokens?: Prisma.AuthTokenUncheckedCreateNestedManyWithoutUserInput
-  transactions?: Prisma.TransactionUncheckedCreateNestedManyWithoutUserInput
-  payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutUserInput
-  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutUserInput
-  reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutUserInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedCreateNestedManyWithoutUserInput
-}
-
-export type UserCreateOrConnectWithoutInsightsInput = {
-  where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutInsightsInput, Prisma.UserUncheckedCreateWithoutInsightsInput>
-}
-
-export type UserUpsertWithoutInsightsInput = {
-  update: Prisma.XOR<Prisma.UserUpdateWithoutInsightsInput, Prisma.UserUncheckedUpdateWithoutInsightsInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutInsightsInput, Prisma.UserUncheckedCreateWithoutInsightsInput>
-  where?: Prisma.UserWhereInput
-}
-
-export type UserUpdateToOneWithWhereWithoutInsightsInput = {
-  where?: Prisma.UserWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutInsightsInput, Prisma.UserUncheckedUpdateWithoutInsightsInput>
-}
-
-export type UserUpdateWithoutInsightsInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  businesses?: Prisma.BusinessUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUpdateManyWithoutUserNestedInput
-  authTokens?: Prisma.AuthTokenUpdateManyWithoutUserNestedInput
-  transactions?: Prisma.TransactionUpdateManyWithoutUserNestedInput
-  payments?: Prisma.PaymentUpdateManyWithoutUserNestedInput
-  tasks?: Prisma.TaskUpdateManyWithoutUserNestedInput
-  reminders?: Prisma.ReminderUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUpdateManyWithoutUserNestedInput
-}
-
-export type UserUncheckedUpdateWithoutInsightsInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  businesses?: Prisma.BusinessUncheckedUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUncheckedUpdateManyWithoutUserNestedInput
-  authTokens?: Prisma.AuthTokenUncheckedUpdateManyWithoutUserNestedInput
-  transactions?: Prisma.TransactionUncheckedUpdateManyWithoutUserNestedInput
-  payments?: Prisma.PaymentUncheckedUpdateManyWithoutUserNestedInput
-  tasks?: Prisma.TaskUncheckedUpdateManyWithoutUserNestedInput
-  reminders?: Prisma.ReminderUncheckedUpdateManyWithoutUserNestedInput
-  favoriteStocks?: Prisma.FavoriteStockUncheckedUpdateManyWithoutUserNestedInput
-}
-
-export type UserCreateWithoutFavoriteStocksInput = {
-  id?: string
-  email: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  businesses?: Prisma.BusinessCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatCreateNestedManyWithoutUserInput
-  authTokens?: Prisma.AuthTokenCreateNestedManyWithoutUserInput
-  transactions?: Prisma.TransactionCreateNestedManyWithoutUserInput
-  payments?: Prisma.PaymentCreateNestedManyWithoutUserInput
-  tasks?: Prisma.TaskCreateNestedManyWithoutUserInput
-  reminders?: Prisma.ReminderCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightCreateNestedManyWithoutUserInput
-}
-
-export type UserUncheckedCreateWithoutFavoriteStocksInput = {
-  id?: string
-  email: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  businesses?: Prisma.BusinessUncheckedCreateNestedManyWithoutUserInput
-  chats?: Prisma.ChatUncheckedCreateNestedManyWithoutUserInput
-  authTokens?: Prisma.AuthTokenUncheckedCreateNestedManyWithoutUserInput
-  transactions?: Prisma.TransactionUncheckedCreateNestedManyWithoutUserInput
-  payments?: Prisma.PaymentUncheckedCreateNestedManyWithoutUserInput
-  tasks?: Prisma.TaskUncheckedCreateNestedManyWithoutUserInput
-  reminders?: Prisma.ReminderUncheckedCreateNestedManyWithoutUserInput
-  insights?: Prisma.InsightUncheckedCreateNestedManyWithoutUserInput
-}
-
-export type UserCreateOrConnectWithoutFavoriteStocksInput = {
-  where: Prisma.UserWhereUniqueInput
-  create: Prisma.XOR<Prisma.UserCreateWithoutFavoriteStocksInput, Prisma.UserUncheckedCreateWithoutFavoriteStocksInput>
-}
-
-export type UserUpsertWithoutFavoriteStocksInput = {
-  update: Prisma.XOR<Prisma.UserUpdateWithoutFavoriteStocksInput, Prisma.UserUncheckedUpdateWithoutFavoriteStocksInput>
-  create: Prisma.XOR<Prisma.UserCreateWithoutFavoriteStocksInput, Prisma.UserUncheckedCreateWithoutFavoriteStocksInput>
-  where?: Prisma.UserWhereInput
-}
-
-export type UserUpdateToOneWithWhereWithoutFavoriteStocksInput = {
-  where?: Prisma.UserWhereInput
-  data: Prisma.XOR<Prisma.UserUpdateWithoutFavoriteStocksInput, Prisma.UserUncheckedUpdateWithoutFavoriteStocksInput>
-}
-
-export type UserUpdateWithoutFavoriteStocksInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  businesses?: Prisma.BusinessUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUpdateManyWithoutUserNestedInput
-  authTokens?: Prisma.AuthTokenUpdateManyWithoutUserNestedInput
-  transactions?: Prisma.TransactionUpdateManyWithoutUserNestedInput
-  payments?: Prisma.PaymentUpdateManyWithoutUserNestedInput
-  tasks?: Prisma.TaskUpdateManyWithoutUserNestedInput
-  reminders?: Prisma.ReminderUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUpdateManyWithoutUserNestedInput
-}
-
-export type UserUncheckedUpdateWithoutFavoriteStocksInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  email?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  businesses?: Prisma.BusinessUncheckedUpdateManyWithoutUserNestedInput
-  chats?: Prisma.ChatUncheckedUpdateManyWithoutUserNestedInput
-  authTokens?: Prisma.AuthTokenUncheckedUpdateManyWithoutUserNestedInput
-  transactions?: Prisma.TransactionUncheckedUpdateManyWithoutUserNestedInput
-  payments?: Prisma.PaymentUncheckedUpdateManyWithoutUserNestedInput
-  tasks?: Prisma.TaskUncheckedUpdateManyWithoutUserNestedInput
-  reminders?: Prisma.ReminderUncheckedUpdateManyWithoutUserNestedInput
-  insights?: Prisma.InsightUncheckedUpdateManyWithoutUserNestedInput
 }
 
 
@@ -1183,26 +933,22 @@ export type UserUncheckedUpdateWithoutFavoriteStocksInput = {
 
 export type UserCountOutputType = {
   businesses: number
-  chats: number
+  chatMessages: number
   authTokens: number
   transactions: number
   payments: number
   tasks: number
   reminders: number
-  insights: number
-  favoriteStocks: number
 }
 
 export type UserCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   businesses?: boolean | UserCountOutputTypeCountBusinessesArgs
-  chats?: boolean | UserCountOutputTypeCountChatsArgs
+  chatMessages?: boolean | UserCountOutputTypeCountChatMessagesArgs
   authTokens?: boolean | UserCountOutputTypeCountAuthTokensArgs
   transactions?: boolean | UserCountOutputTypeCountTransactionsArgs
   payments?: boolean | UserCountOutputTypeCountPaymentsArgs
   tasks?: boolean | UserCountOutputTypeCountTasksArgs
   reminders?: boolean | UserCountOutputTypeCountRemindersArgs
-  insights?: boolean | UserCountOutputTypeCountInsightsArgs
-  favoriteStocks?: boolean | UserCountOutputTypeCountFavoriteStocksArgs
 }
 
 /**
@@ -1225,8 +971,8 @@ export type UserCountOutputTypeCountBusinessesArgs<ExtArgs extends runtime.Types
 /**
  * UserCountOutputType without action
  */
-export type UserCountOutputTypeCountChatsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.ChatWhereInput
+export type UserCountOutputTypeCountChatMessagesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.ChatMessageWhereInput
 }
 
 /**
@@ -1264,20 +1010,6 @@ export type UserCountOutputTypeCountRemindersArgs<ExtArgs extends runtime.Types.
   where?: Prisma.ReminderWhereInput
 }
 
-/**
- * UserCountOutputType without action
- */
-export type UserCountOutputTypeCountInsightsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.InsightWhereInput
-}
-
-/**
- * UserCountOutputType without action
- */
-export type UserCountOutputTypeCountFavoriteStocksArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.FavoriteStockWhereInput
-}
-
 
 export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -1285,14 +1017,12 @@ export type UserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
   createdAt?: boolean
   updatedAt?: boolean
   businesses?: boolean | Prisma.User$businessesArgs<ExtArgs>
-  chats?: boolean | Prisma.User$chatsArgs<ExtArgs>
+  chatMessages?: boolean | Prisma.User$chatMessagesArgs<ExtArgs>
   authTokens?: boolean | Prisma.User$authTokensArgs<ExtArgs>
   transactions?: boolean | Prisma.User$transactionsArgs<ExtArgs>
   payments?: boolean | Prisma.User$paymentsArgs<ExtArgs>
   tasks?: boolean | Prisma.User$tasksArgs<ExtArgs>
   reminders?: boolean | Prisma.User$remindersArgs<ExtArgs>
-  insights?: boolean | Prisma.User$insightsArgs<ExtArgs>
-  favoriteStocks?: boolean | Prisma.User$favoriteStocksArgs<ExtArgs>
   _count?: boolean | Prisma.UserCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["user"]>
 
@@ -1320,14 +1050,12 @@ export type UserSelectScalar = {
 export type UserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "email" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
 export type UserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   businesses?: boolean | Prisma.User$businessesArgs<ExtArgs>
-  chats?: boolean | Prisma.User$chatsArgs<ExtArgs>
+  chatMessages?: boolean | Prisma.User$chatMessagesArgs<ExtArgs>
   authTokens?: boolean | Prisma.User$authTokensArgs<ExtArgs>
   transactions?: boolean | Prisma.User$transactionsArgs<ExtArgs>
   payments?: boolean | Prisma.User$paymentsArgs<ExtArgs>
   tasks?: boolean | Prisma.User$tasksArgs<ExtArgs>
   reminders?: boolean | Prisma.User$remindersArgs<ExtArgs>
-  insights?: boolean | Prisma.User$insightsArgs<ExtArgs>
-  favoriteStocks?: boolean | Prisma.User$favoriteStocksArgs<ExtArgs>
   _count?: boolean | Prisma.UserCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type UserIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -1337,14 +1065,12 @@ export type $UserPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs =
   name: "User"
   objects: {
     businesses: Prisma.$BusinessPayload<ExtArgs>[]
-    chats: Prisma.$ChatPayload<ExtArgs>[]
+    chatMessages: Prisma.$ChatMessagePayload<ExtArgs>[]
     authTokens: Prisma.$AuthTokenPayload<ExtArgs>[]
     transactions: Prisma.$TransactionPayload<ExtArgs>[]
     payments: Prisma.$PaymentPayload<ExtArgs>[]
     tasks: Prisma.$TaskPayload<ExtArgs>[]
     reminders: Prisma.$ReminderPayload<ExtArgs>[]
-    insights: Prisma.$InsightPayload<ExtArgs>[]
-    favoriteStocks: Prisma.$FavoriteStockPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1746,14 +1472,12 @@ readonly fields: UserFieldRefs;
 export interface Prisma__UserClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
   businesses<T extends Prisma.User$businessesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$businessesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$BusinessPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  chats<T extends Prisma.User$chatsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$chatsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ChatPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  chatMessages<T extends Prisma.User$chatMessagesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$chatMessagesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ChatMessagePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   authTokens<T extends Prisma.User$authTokensArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$authTokensArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$AuthTokenPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   transactions<T extends Prisma.User$transactionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$transactionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TransactionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   payments<T extends Prisma.User$paymentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$paymentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$PaymentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   tasks<T extends Prisma.User$tasksArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$tasksArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TaskPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   reminders<T extends Prisma.User$remindersArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$remindersArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ReminderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  insights<T extends Prisma.User$insightsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$insightsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$InsightPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  favoriteStocks<T extends Prisma.User$favoriteStocksArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.User$favoriteStocksArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$FavoriteStockPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2199,27 +1923,27 @@ export type User$businessesArgs<ExtArgs extends runtime.Types.Extensions.Interna
 }
 
 /**
- * User.chats
+ * User.chatMessages
  */
-export type User$chatsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type User$chatMessagesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Chat
+   * Select specific fields to fetch from the ChatMessage
    */
-  select?: Prisma.ChatSelect<ExtArgs> | null
+  select?: Prisma.ChatMessageSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Chat
+   * Omit specific fields from the ChatMessage
    */
-  omit?: Prisma.ChatOmit<ExtArgs> | null
+  omit?: Prisma.ChatMessageOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ChatInclude<ExtArgs> | null
-  where?: Prisma.ChatWhereInput
-  orderBy?: Prisma.ChatOrderByWithRelationInput | Prisma.ChatOrderByWithRelationInput[]
-  cursor?: Prisma.ChatWhereUniqueInput
+  include?: Prisma.ChatMessageInclude<ExtArgs> | null
+  where?: Prisma.ChatMessageWhereInput
+  orderBy?: Prisma.ChatMessageOrderByWithRelationInput | Prisma.ChatMessageOrderByWithRelationInput[]
+  cursor?: Prisma.ChatMessageWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.ChatScalarFieldEnum | Prisma.ChatScalarFieldEnum[]
+  distinct?: Prisma.ChatMessageScalarFieldEnum | Prisma.ChatMessageScalarFieldEnum[]
 }
 
 /**
@@ -2340,54 +2064,6 @@ export type User$remindersArgs<ExtArgs extends runtime.Types.Extensions.Internal
   take?: number
   skip?: number
   distinct?: Prisma.ReminderScalarFieldEnum | Prisma.ReminderScalarFieldEnum[]
-}
-
-/**
- * User.insights
- */
-export type User$insightsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Insight
-   */
-  select?: Prisma.InsightSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Insight
-   */
-  omit?: Prisma.InsightOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.InsightInclude<ExtArgs> | null
-  where?: Prisma.InsightWhereInput
-  orderBy?: Prisma.InsightOrderByWithRelationInput | Prisma.InsightOrderByWithRelationInput[]
-  cursor?: Prisma.InsightWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.InsightScalarFieldEnum | Prisma.InsightScalarFieldEnum[]
-}
-
-/**
- * User.favoriteStocks
- */
-export type User$favoriteStocksArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the FavoriteStock
-   */
-  select?: Prisma.FavoriteStockSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the FavoriteStock
-   */
-  omit?: Prisma.FavoriteStockOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.FavoriteStockInclude<ExtArgs> | null
-  where?: Prisma.FavoriteStockWhereInput
-  orderBy?: Prisma.FavoriteStockOrderByWithRelationInput | Prisma.FavoriteStockOrderByWithRelationInput[]
-  cursor?: Prisma.FavoriteStockWhereUniqueInput
-  take?: number
-  skip?: number
-  distinct?: Prisma.FavoriteStockScalarFieldEnum | Prisma.FavoriteStockScalarFieldEnum[]
 }
 
 /**
