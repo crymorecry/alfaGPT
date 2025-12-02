@@ -4,7 +4,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     container_name: alfaGPT_app
     restart: unless-stopped
     ports:
@@ -19,7 +19,8 @@ services:
       TELEGRAM_CHAT_ID: "1364654007"
       NEXT_PUBLIC_APP_URL: "http://localhost:3000"
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     networks:
       - alfaGPT_network
 
@@ -49,4 +50,3 @@ volumes:
 networks:
   alfaGPT_network:
     driver: bridge
-

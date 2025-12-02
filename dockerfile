@@ -1,23 +1,8 @@
-FROM node:20.5.0-alpine
+FROM node:20.5.0
 
 WORKDIR /app
-
-COPY package.json package-lock.json ./
-
-RUN npm ci && npm cache clean --force
-
-COPY prisma ./prisma
-
-RUN npx prisma generate
-RUN npm run seed
 COPY . .
-
+RUN npm i --save
 RUN npm run build
-
-RUN npm prune --production
 EXPOSE 3000
-
-
-RUN echo '#!/bin/sh\nnpx prisma migrate deploy\nnpm start' > /app/start.sh && chmod +x /app/start.sh
-
-CMD ["/app/start.sh"]
+CMD sh -c "npx prisma migrate deploy && npm run seed && npm start"
