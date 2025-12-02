@@ -9,7 +9,7 @@ RUN npm ci && npm cache clean --force
 COPY prisma ./prisma
 
 RUN npx prisma generate
-
+RUN npm run seed
 COPY . .
 
 RUN npm run build
