@@ -8,7 +8,15 @@
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
-    "seed": "tsx prisma/seed.ts"
+    "seed": "tsx prisma/seed.ts",
+    "db:up": "docker-compose up -d",
+    "db:down": "docker-compose down",
+    "db:restart": "docker-compose restart",
+    "db:logs": "docker-compose logs -f postgres",
+    "db:migrate": "npx prisma migrate dev",
+    "db:migrate:deploy": "npx prisma migrate deploy",
+    "db:studio": "npx prisma studio",
+    "db:reset": "npx prisma migrate reset"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.29.0",
@@ -33,7 +41,10 @@
     "react-markdown": "^10.1.0",
     "recharts": "^3.4.1",
     "remark-gfm": "^4.0.1",
-    "tailwind-merge": "^3.4.0"
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-react": "^5.30.3",
+    "tailwind-merge": "^3.4.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -41,6 +52,9 @@
     "@types/pg": "^8.15.6",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-react": "^5.18.0",
+    "@types/xlsx": "^0.0.35",
     "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "13.5.11",

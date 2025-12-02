@@ -9,7 +9,7 @@ import {
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer 
 } from 'recharts'
 import { Dialog, Portal } from '@chakra-ui/react'
-import { XIcon, Sparkles, TrendingUp, TrendingDown, Calendar } from 'lucide-react'
+import { XIcon, Sparkles, TrendingUp, TrendingDown, Calendar, Download } from 'lucide-react'
 import { toaster } from '@/components/ui/toaster'
 import ReactMarkdown from 'react-markdown'
 import { DateRangePicker } from '@/components/ui/date-range-picker'
@@ -132,6 +132,48 @@ export default function AnalyticsView() {
     }
   }
 
+  const handleDownloadData = async () => {
+    if (!currentBusiness) return
+
+    try {
+      const params = new URLSearchParams()
+      params.append('businessId', currentBusiness.id)
+      params.append('startDate', startDate.toISOString().split('T')[0])
+      params.append('endDate', endDate.toISOString().split('T')[0])
+      
+      const res = await fetch(`/api/analytics/export?${params}`)
+      
+      if (res.ok) {
+        const blob = await res.blob()
+        const url = window.URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        const safeBusinessName = currentBusiness.name
+          .replace(/[^a-zA-Z0-9]/g, '_')
+          .substring(0, 50)
+        a.download = `analytics_${safeBusinessName}_${startDate.toISOString().split('T')[0]}_${endDate.toISOString().split('T')[0]}.xlsx`
+        document.body.appendChild(a)
+        a.click()
+        window.URL.revokeObjectURL(url)
+        document.body.removeChild(a)
+        
+        toaster.create({
+          title: t('success'),
+          description: t('data_downloaded'),
+          type: 'success'
+        })
+      } else {
+        throw new Error('Failed to download data')
+      }
+    } catch (error) {
+      toaster.create({
+        title: t('error'),
+        description: t('error_downloading'),
+        type: 'error'
+      })
+    }
+  }
+
   if (loading || !analyticsData) {
     return (
       <div>
@@ -147,14 +189,23 @@ export default function AnalyticsView() {
     <div>
       <div className="flex items-center justify-between mb-6">
         <Title>Analytics</Title>
-        <button
-          onClick={handleAIAnalysis}
-          disabled={analyzing}
-          className=" bg-blue-600 hover:bg-blue-500 transition-all duration-200 px-4 py-2 rounded-lg flex items-center gap-2 font-semibold disabled:opacity-50 whitespace-nowrap text-white text-sm"
-        >
-          <Sparkles className="w-5 h-5" />
-          {analyzing ? t('analyzing') : t('request_ai_analysis')}
-        </button>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={handleDownloadData}
+            className="bg-green-600 hover:bg-green-500 transition-all duration-200 px-4 py-2 rounded-lg flex items-center gap-2 font-semibold whitespace-nowrap text-white text-sm"
+          >
+            <Download className="w-5 h-5" />
+            {t('download_data')}
+          </button>
+          <button
+            onClick={handleAIAnalysis}
+            disabled={analyzing}
+            className=" bg-blue-600 hover:bg-blue-500 transition-all duration-200 px-4 py-2 rounded-lg flex items-center gap-2 font-semibold disabled:opacity-50 whitespace-nowrap text-white text-sm"
+          >
+            <Sparkles className="w-5 h-5" />
+            {analyzing ? t('analyzing') : t('request_ai_analysis')}
+          </button>
+        </div>
       </div>
 
       <div className="bg-white dark:bg-zinc-900 p-4 rounded-xl shadow-sm mb-6">

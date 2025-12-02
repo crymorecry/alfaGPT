@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: alfaGPT_app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/alfaGPT?schema=public"
+      NAME_EMAIL: "mail@onvibe.fun"
+      PASS_EMAIL: "#3jbtSt_CXWr}d"
+      OPENROUTER_API_KEY: "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"
+      OPENROUTER_MODEL: "openai/gpt-oss-20b:free"
+      TELEGRAM_BOT_TOKEN: "8533092302:AAGO7ytlkySEHMssemrkZv719h3_5zyEXCA"
+      TELEGRAM_CHAT_ID: "1364654007"
+      NEXT_PUBLIC_APP_URL: "http://localhost:3000"
+    depends_on:
+      - postgres
+    networks:
+      - alfaGPT_network
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: alfaGPT_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: alfaGPT
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - alfaGPT_network
+
+volumes:
+  postgres_data:
+
+networks:
+  alfaGPT_network:
+    driver: bridge
+
