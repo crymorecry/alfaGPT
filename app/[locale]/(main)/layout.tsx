@@ -11,6 +11,13 @@ import { Toaster } from '@/components/ui/toaster'
 import Navbar from '@/components/landing/navbar'
 import ChatButton from '@/components/chat/ChatButton'
 import ChatModal from '@/components/chat/ChatModal'
+import { generateMetadata } from '@/utils/seo-head'
+
+export const metadata = generateMetadata({
+  title: 'Главная',
+  description: 'Volency — универсальный бизнес-помощник с ИИ для управления всеми аспектами бизнеса',
+  url: '/',
+})
 
 export default function RootLayout({
   children,
@@ -29,23 +36,23 @@ export default function RootLayout({
                 <BusinessProvider>
                   <ChatProvider>
                     <div className='flex flex-col w-full 2xl:px-20'>
-                    <div className='flex w-full h-full'>
-                      <SideBar />
-                      <div className='h-full w-[230px] flex-shrink-0 hidden lg:flex'></div>
-                      <div className='relative w-full'>
-                        <BgSVG />
-                        <div className='flex flex-col w-full'>
-                          <Navbar />
-                          <main className='w-full lg:w-full 2xl:w-full mx-auto px-4 lg:px-6 2xl:px-10 lg:mt-0 mt-20 pb-[100px]'>
-                            {children}
-                          </main>
+                      <div className='flex w-full h-full'>
+                        <SideBar />
+                        <div className='h-full w-[230px] flex-shrink-0 hidden lg:flex'></div>
+                        <div className='relative w-full'>
+                          <BgSVG />
+                          <div className='flex flex-col w-full'>
+                            <Navbar />
+                            <main className='w-full lg:w-full 2xl:w-full mx-auto px-4 lg:px-6 2xl:px-10 lg:mt-0 mt-20 pb-[100px]'>
+                              {children}
+                            </main>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <ChatButton />
-                  <ChatModal />
-                  <Toaster />
+                    <ChatButton />
+                    <ChatModal />
+                    <Toaster />
                   </ChatProvider>
                 </BusinessProvider>
               </AuthProvider>
