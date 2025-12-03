@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { getUserId } from '@/lib/middleware-auth'
+import { metricsStore } from '@/lib/metrics'
 
 export async function POST(request: NextRequest) {
   try {
@@ -56,10 +57,10 @@ export async function POST(request: NextRequest) {
       })
     ])
 
-    const employeeData = employees.map(emp => {
-      const workDays = emp.days.filter(d => d.type === 'work_override' || d.type === 'vacation_paid').length
-      const sickDays = emp.days.filter(d => d.type === 'sick').length
-      const vacationDays = emp.days.filter(d => d.type === 'vacation_paid' || d.type === 'vacation_unpaid').length
+    const employeeData = employees.map((emp: any) => {
+      const workDays = emp.days.filter((d: any) => d.type === 'work_override' || d.type === 'vacation_paid').length
+      const sickDays = emp.days.filter((d: any) => d.type === 'sick').length
+      const vacationDays = emp.days.filter((d: any) => d.type === 'vacation_paid' || d.type === 'vacation_unpaid').length
 
       return {
         name: emp.name,
@@ -73,14 +74,14 @@ export async function POST(request: NextRequest) {
     })
 
     const totalIncome = transactions
-      .filter(t => t.type === 'income')
-      .reduce((sum, t) => sum + t.amount, 0)
+      .filter((t: any) => t.type === 'income')
+      .reduce((sum: number, t: any) => sum + t.amount, 0)
 
     const totalExpense = transactions
-      .filter(t => t.type === 'expense')
-      .reduce((sum, t) => sum + t.amount, 0)
+      .filter((t: any) => t.type === 'expense')
+      .reduce((sum: number, t: any) => sum + t.amount, 0)
 
-    const monthlyRecurring = recurringExpenses.reduce((sum, exp) => {
+    const monthlyRecurring = recurringExpenses.reduce((sum: number, exp: any) => {
       let monthly = 0
       switch (exp.frequency) {
         case 'monthly': monthly = exp.amount; break
@@ -90,8 +91,8 @@ export async function POST(request: NextRequest) {
       return sum + monthly
     }, 0)
 
-    const employeeMonthlyCost = employees.reduce((sum, emp) => {
-      const [workDays, restDays] = emp.workSchedule.split('/').map(Number)
+    const employeeMonthlyCost = employees.reduce((sum: number, emp: any) => {
+      const [workDays, restDays] = emp.workSchedule.split('/').map((n: string) => Number(n))
       const totalCycle = workDays + restDays
       const workDaysPerMonth = (30 / totalCycle) * workDays
       return sum + (emp.dailyRate * workDaysPerMonth)
@@ -105,7 +106,7 @@ export async function POST(request: NextRequest) {
 - Адрес: ${business.address || 'не указан'}
 
 Сотрудники (${employees.length}):
-${employeeData.map((e, i) => `
+${employeeData.map((e: any, i: number) => `
 ${i + 1}. ${e.name} (${e.position || 'без должности'})
    - Дневная ставка: ${e.dailyRate} ₽
    - График: ${e.workSchedule}
@@ -140,6 +141,9 @@ ${i + 1}. ${e.name} (${e.position || 'без должности'})
 
 Ответ должен быть подробным, структурированным и полезным для владельца малого бизнеса. Используй Markdown форматирование для лучшей читаемости.`
 
+    const model = process.env.OPENROUTER_MODEL || 'openai/gpt-oss-20b:free'
+    const aiStartTime = Date.now()
+
     const openRouterResponse = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -149,7 +153,7 @@ ${i + 1}. ${e.name} (${e.position || 'без должности'})
         'X-Title': 'Volency'
       },
       body: JSON.stringify({
-        model: process.env.OPENROUTER_MODEL || 'openai/gpt-oss-20b:free',
+        model: model,
         messages: [
           {
             role: 'user',
@@ -161,12 +165,37 @@ ${i + 1}. ${e.name} (${e.position || 'без должности'})
       })
     })
 
+    const aiResponseTime = Date.now() - aiStartTime
+
     if (!openRouterResponse.ok) {
+      // Собираем метрики ошибки
+      metricsStore.addAIMetric({
+        timestamp: Date.now(),
+        endpoint: '/api/analytics/ai-analysis',
+        model: model,
+        responseTime: aiResponseTime,
+        tokensUsed: 0,
+        tokensPrompt: 0,
+        tokensResponse: 0,
+        success: false
+      })
       throw new Error('Ошибка при обращении к ИИ')
     }
 
     const aiData = await openRouterResponse.json()
     const aiResponse = aiData.choices[0]?.message?.content || ''
+
+    // Собираем метрики AI
+    metricsStore.addAIMetric({
+      timestamp: Date.now(),
+      endpoint: '/api/analytics/ai-analysis',
+      model: model,
+      responseTime: aiResponseTime,
+      tokensUsed: aiData.usage?.total_tokens || 0,
+      tokensPrompt: aiData.usage?.prompt_tokens || 0,
+      tokensResponse: aiData.usage?.completion_tokens || 0,
+      success: true
+    })
 
     return NextResponse.json({
       summary: aiResponse,

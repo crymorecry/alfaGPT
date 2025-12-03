@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { getUserId } from '@/lib/middleware-auth'
+import { getLocale } from 'next-intl/server'
 
 export async function GET(request: NextRequest) {
   try {
@@ -8,6 +9,23 @@ export async function GET(request: NextRequest) {
     if (!userId) {
       return NextResponse.json({ error: 'Не авторизован' }, { status: 401 })
     }
+
+    const locale = await getLocale()
+    const messages = (await import(`@/messages/${locale}.json`)).default
+    const monthNames = [
+      messages.analytics.month_january,
+      messages.analytics.month_february,
+      messages.analytics.month_march,
+      messages.analytics.month_april,
+      messages.analytics.month_may,
+      messages.analytics.month_june,
+      messages.analytics.month_july,
+      messages.analytics.month_august,
+      messages.analytics.month_september,
+      messages.analytics.month_october,
+      messages.analytics.month_november,
+      messages.analytics.month_december
+    ]
 
     const { searchParams } = new URL(request.url)
     const businessId = searchParams.get('businessId')
@@ -56,13 +74,14 @@ export async function GET(request: NextRequest) {
       current.setDate(1)
     
     while (current <= endDate) {
-      const monthKey = current.toLocaleString('ru-RU', { month: 'long', year: 'numeric' })
+      const monthKey = `${monthNames[current.getMonth()]} ${current.getFullYear()}`
       monthlyMap.set(monthKey, { income: 0, expense: 0 })
       current.setMonth(current.getMonth() + 1)
     }
 
     transactions.forEach(transaction => {
-      const monthKey = new Date(transaction.date).toLocaleString('ru-RU', { month: 'long', year: 'numeric' })
+      const date = new Date(transaction.date)
+      const monthKey = `${monthNames[date.getMonth()]} ${date.getFullYear()}`
       const monthData = monthlyMap.get(monthKey)
       if (monthData) {
         if (transaction.type === 'income') {
@@ -121,8 +140,6 @@ export async function GET(request: NextRequest) {
 
     monthlyMap.forEach((data, monthKey) => {
       const [monthName, yearStr] = monthKey.split(' ')
-      const monthNames = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 
-                         'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
       const monthIndex = monthNames.findIndex(m => m.toLowerCase() === monthName.toLowerCase())
       const year = parseInt(yearStr)
       

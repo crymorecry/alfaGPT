@@ -5,7 +5,8 @@
         "Employees": "Работники",
         "Operations": "Операции",
         "Analytics": "Аналитика",
-        "Chat": "Чат с ИИ"
+        "Chat": "Чат с ИИ",
+        "Metrics": "Метрики"
     },
     "login": {
         "title": "Авторизация в личный кабинет Volency",
@@ -318,6 +319,18 @@
         "download_data": "Скачать данные",
         "success": "Успешно",
         "data_downloaded": "Данные успешно скачаны",
-        "error_downloading": "Ошибка при скачивании данных"
+        "error_downloading": "Ошибка при скачивании данных",
+        "month_january": "январь",
+        "month_february": "февраль",
+        "month_march": "март",
+        "month_april": "апрель",
+        "month_may": "май",
+        "month_june": "июнь",
+        "month_july": "июль",
+        "month_august": "август",
+        "month_september": "сентябрь",
+        "month_october": "октябрь",
+        "month_november": "ноябрь",
+        "month_december": "декабрь"
     }
 }

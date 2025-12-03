@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
     })
 
     const isWorkDayBySchedule = (date: Date, schedule: string): boolean => {
-      const [workDays, restDays] = schedule.split('/').map(Number)
+      const [workDays, restDays] = schedule.split('/').map((n: string) => Number(n))
       const totalCycle = workDays + restDays
       
       const referenceDate = new Date(2024, 0, 1)
@@ -83,7 +83,7 @@ export async function GET(request: NextRequest) {
       description: string
     }> = []
 
-    transactions.forEach(transaction => {
+    transactions.forEach((transaction: any) => {
       allRecords.push({
         date: new Date(transaction.date),
         type: transaction.type === 'income' ? 'Доход' : 'Расход',
@@ -97,8 +97,8 @@ export async function GET(request: NextRequest) {
     while (currentDate <= endDate) {
       const dayStr = currentDate.toISOString().split('T')[0]
       
-      employees.forEach(employee => {
-        const exception = employee.days.find(d => d.date.toISOString().split('T')[0] === dayStr)
+      employees.forEach((employee: any) => {
+        const exception = employee.days.find((d: any) => d.date.toISOString().split('T')[0] === dayStr)
         let isWorkDay = false
         
         if (exception) {
@@ -123,7 +123,7 @@ export async function GET(request: NextRequest) {
       currentDate.setDate(currentDate.getDate() + 1)
     }
 
-    recurringExpenses.forEach(expense => {
+    recurringExpenses.forEach((expense: any) => {
       const expenseStartDate = new Date(Math.max(expense.createdAt.getTime(), startDate.getTime()))
       const currentExpenseDate = new Date(expenseStartDate)
       
@@ -173,7 +173,7 @@ export async function GET(request: NextRequest) {
 
     allRecords.sort((a, b) => a.date.getTime() - b.date.getTime())
 
-    const excelData = allRecords.map(record => ({
+    const excelData = allRecords.map((record: any) => ({
       'Дата': record.date.toLocaleDateString('ru-RU'),
       'Тип': record.type,
       'Категория': record.category,

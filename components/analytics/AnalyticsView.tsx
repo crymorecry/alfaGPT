@@ -90,7 +90,13 @@ export default function AnalyticsView() {
       const res = await fetch(`/api/analytics?${params}`)
       if (res.ok) {
         const data = await res.json()
-        setAnalyticsData(data)
+        // Создаем глубокую копию данных чтобы избежать проблем с readonly массивами
+        setAnalyticsData({
+          ...data,
+          monthlyData: [...data.monthlyData],
+          expenseByCategory: [...data.expenseByCategory],
+          incomeByCategory: [...data.incomeByCategory]
+        })
       }
     } catch (error) {
       console.error('Error fetching analytics:', error)
@@ -404,7 +410,7 @@ export default function AnalyticsView() {
         <div className="bg-white dark:bg-zinc-900 p-6 rounded-xl shadow-sm">
           <h3 className="text-lg font-semibold mb-4">{t('monthly_comparison')}</h3>
           <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={monthlyData.slice(-6)}>
+            <BarChart data={[...monthlyData].slice(-6)}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="month" />
               <YAxis />
@@ -430,7 +436,7 @@ export default function AnalyticsView() {
                 </tr>
               </thead>
               <tbody>
-                {expenseByCategory
+                {[...expenseByCategory]
                   .sort((a, b) => b.amount - a.amount)
                   .map((item, index) => {
                     const total = expenseByCategory.reduce((sum, i) => sum + i.amount, 0)

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { getUserId } from '@/lib/middleware-auth'
+import { metricsStore } from '@/lib/metrics'
 
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions'
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || ''
@@ -57,7 +58,7 @@ export async function POST(request: NextRequest) {
     // Проверка модерации перед отправкой
     if (lastMessage && lastMessage.role === 'user') {
       try {
-        const moderationResponse = await fetch('https://openrouter.ai/api/v1/moderations', {
+        const moderationResponse = await fetch('https://api.openai.com/v1/moderations', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -76,9 +77,13 @@ export async function POST(request: NextRequest) {
               { status: 400 }
             )
           }
+        } else {
+          const errorText = await moderationResponse.text()
+          console.error('Ошибка API модерации:', moderationResponse.status, errorText)
         }
       } catch (moderationError) {
         console.error('Ошибка проверки модерации:', moderationError)
+
       }
 
       await prisma.chatMessage.create({
@@ -93,6 +98,7 @@ export async function POST(request: NextRequest) {
     const systemPrompt = `Ты универсальный ИИ-помощник для бизнеса. Твоя задача - помогать пользователям с различными вопросами: бизнес-советы, финансы, маркетинг, юридические вопросы, управление задачами и другие бизнес-задачи. Отвечай на русском языке, будь профессиональным, дружелюбным и полезным. Предоставляй конкретные и практичные советы.`
 
     const model = process.env.OPENROUTER_MODEL || 'openai/gpt-oss-20b:free'
+    const aiStartTime = Date.now()
 
     const response = await fetch(OPENROUTER_API_URL, {
       method: 'POST',
@@ -116,6 +122,20 @@ export async function POST(request: NextRequest) {
     if (!response.ok) {
       const errorData = await response.text()
       console.error('OpenRouter API error:', errorData)
+      const aiResponseTime = Date.now() - aiStartTime
+      
+      // Собираем метрики ошибки
+      metricsStore.addAIMetric({
+        timestamp: Date.now(),
+        endpoint: '/api/chat',
+        model: model,
+        responseTime: aiResponseTime,
+        tokensUsed: 0,
+        tokensPrompt: 0,
+        tokensResponse: 0,
+        success: false
+      })
+      
       return NextResponse.json(
         { error: 'Ошибка при генерации ответа' },
         { status: 500 }
@@ -124,6 +144,19 @@ export async function POST(request: NextRequest) {
 
     const data = await response.json()
     const generatedText = data.choices?.[0]?.message?.content || ''
+    const aiResponseTime = Date.now() - aiStartTime
+
+    // Собираем метрики AI
+    metricsStore.addAIMetric({
+      timestamp: Date.now(),
+      endpoint: '/api/chat',
+      model: model,
+      responseTime: aiResponseTime,
+      tokensUsed: data.usage?.total_tokens || 0,
+      tokensPrompt: data.usage?.prompt_tokens || 0,
+      tokensResponse: data.usage?.completion_tokens || 0,
+      success: true
+    })
 
     await prisma.chatMessage.create({
       data: {

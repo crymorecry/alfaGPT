@@ -3,10 +3,35 @@ import { Menu } from '@chakra-ui/react'
 import { useAuth } from '../auth/AuthProvider'
 import { useTranslations } from 'next-intl'
 import { Globe, Wrench, LogOut } from 'lucide-react'
+import { usePathname, useRouter } from 'next/navigation'
+import { startTransition } from 'react'
+import { useLocale } from 'next-intl'
 
 export default function UserButton() {
     const { user, logout } = useAuth()
     const t = useTranslations('user')
+    const router = useRouter()
+    const pathname = usePathname()
+    const locale = useLocale()
+
+    function onSelectChange(selectedLocale: string) {
+        startTransition(() => {
+          let newPath = pathname
+          
+          if (locale === 'ru' && selectedLocale === 'en') {
+            newPath = `/${selectedLocale}${pathname}`
+          } else if (locale === 'en' && selectedLocale === 'ru') {
+            newPath = pathname.replace('/en', '')
+          } else if (locale === 'en' && selectedLocale === 'en') {
+            newPath = pathname
+          } else {
+            newPath = pathname.replace(`/${locale}`, `/${selectedLocale}`)
+          }
+          
+          router.replace(newPath)
+        })
+      }
+
 
     return (
         <Menu.Root>
@@ -25,14 +50,18 @@ export default function UserButton() {
                             {t('login')}: {user?.email?.split('@')[0] || ''}
                         </div>
                     </div>
-                    
+
                     <div className="px-3 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase">
                         {t('select_language')}
                     </div>
-                    <Menu.RadioItemGroup value="ru">
-                        <Menu.RadioItem value="ru">
-                            <Menu.ItemIndicator />
+                    <Menu.RadioItemGroup value={locale}>
+                        <Menu.RadioItem value="ru" onClick={() => onSelectChange('ru')}>
+                            {locale === "ru" ? <Menu.ItemIndicator /> : null}
                             <span>Русский</span>
+                        </Menu.RadioItem>
+                        <Menu.RadioItem value="en" onClick={() => onSelectChange('en')}>
+                            {locale === "en" ? <Menu.ItemIndicator /> : null}
+                            <span>English</span>
                         </Menu.RadioItem>
                     </Menu.RadioItemGroup>
                     <Menu.Separator />
@@ -41,8 +70,8 @@ export default function UserButton() {
                             <Wrench className="w-4 h-4" />
                             <span>{t('in_development')}</span>
                         </Menu.Item>
-                        <Menu.Item 
-                            value="logout" 
+                        <Menu.Item
+                            value="logout"
                             className="flex items-center gap-2 text-red-600 dark:text-red-400"
                             onClick={logout}
                         >

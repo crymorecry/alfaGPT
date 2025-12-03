@@ -51,7 +51,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     try {
       await fetch('/api/auth/logout', { method: 'POST' })
       setUser(null)
-      router.push('/')
+      router.push('/login')
     } catch (error) {
       console.error('Ошибка при выходе:', error)
     }
