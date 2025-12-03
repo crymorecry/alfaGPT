@@ -24,21 +24,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter()
   const pathname = usePathname()
   const fetchUser = async () => {
+    let user2 = null
     try {
       const response = await fetch('/api/auth/me')
       if (response.ok) {
         const data = await response.json()
         setUser(data.user)
+        user2 = data.user
       } else {
         setUser(null)
+        user2 = null
         router.push('/login')
       }
     } catch (error) {
       setUser(null)
+      user2 = null
     } finally {
-      if (user == null && (pathname === '/login' || pathname === '/en/login')) {
+      if (user2 == null && (pathname === '/login' || pathname === '/en/login')) {
         setLoading(false)
-      }else if(user != null && (pathname === '/login' || pathname === '/en/login')) {
+      }else if(user2 != null && (pathname === '/login' || pathname === '/en/login')) {
         router.push('/')
         setLoading(false)
       }
