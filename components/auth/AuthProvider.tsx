@@ -36,9 +36,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     } catch (error) {
       setUser(null)
     } finally {
-      if (user == null && (pathname === '/login' || pathname === '/ru/login')) {
+      if (user == null && (pathname === '/login' || pathname === '/en/login')) {
         setLoading(false)
-      }else if(user != null && (pathname === '/login' || pathname === '/ru/login')) {
+      }else if(user != null && (pathname === '/login' || pathname === '/en/login')) {
         router.push('/')
         setLoading(false)
       }
