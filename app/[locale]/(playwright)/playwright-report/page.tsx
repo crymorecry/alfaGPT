@@ -1,21 +1,16 @@
-'use client'
+import { readFile } from "fs/promises"
+import { join } from "path"
+import { existsSync } from "fs"
 
-import { useEffect, useState } from "react"
+export const dynamic = 'force-dynamic'
 
-export default function PlaywrightReportPage() {
-    const [htmlContent, setHtmlContent] = useState('')
-
-    useEffect(() => {
-        fetch('/api/test/playwright')
-            .then(response => response.text())
-            .then(text => setHtmlContent(text))
-    }, [])
-
+export default async function PlaywrightReportPage() {
+    
     return (
         <iframe
             className="w-full h-full border-0 bg-white"
-            src="/api/test/playwright"
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
+            src={'/playwright-report/index.html'}
+            style={{ width: '100%', height: '100vh', border: 'none' }}
         />
     )
 }

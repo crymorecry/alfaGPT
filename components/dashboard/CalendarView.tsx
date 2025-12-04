@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useMemo } from 'react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import CalendarEventsModal from './CalendarEventsModal'
 
 interface CalendarEvent {
@@ -53,7 +53,8 @@ export default function CalendarView() {
     })
   }
 
-  const monthName = currentDate.toLocaleDateString('ru-RU', { month: 'long', year: 'numeric' })
+  const locale = useLocale()
+  const monthName = locale === 'ru' ? currentDate.toLocaleDateString('ru-RU', { month: 'long', year: 'numeric' }) : currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
   const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate()
   const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay()
   const adjustedFirstDay = firstDayOfMonth === 0 ? 6 : firstDayOfMonth - 1
@@ -143,7 +144,7 @@ export default function CalendarView() {
       ) : (
         <>
           <div className="grid grid-cols-7 gap-1 mb-4">
-            {['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'].map(day => (
+            {(locale === 'ru' ? ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'] : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']).map((day: string) => (
               <div key={day} className="text-center text-sm font-medium text-gray-600 dark:text-gray-400 py-2">
                 {day}
               </div>

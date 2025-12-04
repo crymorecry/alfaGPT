@@ -3,7 +3,7 @@ import { Menu } from '@chakra-ui/react'
 import { useAuth } from '../auth/AuthProvider'
 import { useTranslations } from 'next-intl'
 import { Globe, Wrench, LogOut } from 'lucide-react'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next-intl/client';
 import { startTransition } from 'react'
 import { useLocale } from 'next-intl'
 
@@ -16,19 +16,8 @@ export default function UserButton() {
 
     function onSelectChange(selectedLocale: string) {
         startTransition(() => {
-          let newPath = pathname
-          
-          if (locale === 'ru' && selectedLocale === 'en') {
-            newPath = `/${selectedLocale}${pathname}`
-          } else if (locale === 'en' && selectedLocale === 'ru') {
-            newPath = pathname.replace('/en', '')
-          } else if (locale === 'en' && selectedLocale === 'en') {
-            newPath = pathname
-          } else {
-            newPath = pathname.replace(`/${locale}`, `/${selectedLocale}`)
-          }
-          
-          router.replace(newPath)
+            router.replace(pathname, { locale: selectedLocale });
+
         })
       }
 
