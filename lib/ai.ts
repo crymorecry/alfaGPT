@@ -38,7 +38,6 @@
  *   console.log(response.content)
  */
 
-import { metricsStore } from './metrics'
 
 export interface AIMessage {
     role: 'system' | 'user' | 'assistant'
@@ -185,22 +184,9 @@ export async function chatWithAI(options: AIChatOptions): Promise<AIResponse> {
             body: JSON.stringify(body)
         })
 
-        const aiResponseTime = Date.now() - aiStartTime
-
         if (!response.ok) {
             const errorData = await response.text()
             console.error(`AI API error (${provider}):`, response.status, errorData)
-
-            metricsStore.addAIMetric({
-                timestamp: Date.now(),
-                endpoint,
-                model,
-                responseTime: aiResponseTime,
-                tokensUsed: 0,
-                tokensPrompt: 0,
-                tokensResponse: 0,
-                success: false
-            })
 
             throw new Error(`AI API error: ${response.status}`)
         }
@@ -230,16 +216,6 @@ export async function chatWithAI(options: AIChatOptions): Promise<AIResponse> {
                 break
         }
 
-        metricsStore.addAIMetric({
-            timestamp: Date.now(),
-            endpoint,
-            model,
-            responseTime: aiResponseTime,
-            tokensUsed,
-            tokensPrompt,
-            tokensResponse,
-            success: true
-        })
 
         return {
             content,
@@ -248,19 +224,6 @@ export async function chatWithAI(options: AIChatOptions): Promise<AIResponse> {
             tokensResponse
         }
     } catch (error) {
-        const aiResponseTime = Date.now() - aiStartTime
-
-        metricsStore.addAIMetric({
-            timestamp: Date.now(),
-            endpoint,
-            model,
-            responseTime: aiResponseTime,
-            tokensUsed: 0,
-            tokensPrompt: 0,
-            tokensResponse: 0,
-            success: false
-        })
-
         throw error
     }
 }

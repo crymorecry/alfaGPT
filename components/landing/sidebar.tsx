@@ -1,7 +1,7 @@
 'use client'
 
 import Logo from "@/components/ui/logo"
-import { Home, DollarSign, Settings, MessageSquare, Users, BarChart3, Activity } from "lucide-react"
+import { Home, DollarSign, Settings, MessageSquare, Users, BarChart3 } from "lucide-react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -38,11 +38,6 @@ const links = [
         name: "Chat",
         href: "/chat",
         icon: MessageSquare
-    },
-    {
-        name: "Metrics",
-        href: "/metrics",
-        icon: Activity
     },
 ]
 export default function SideBar() {

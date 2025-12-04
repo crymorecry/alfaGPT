@@ -11,7 +11,6 @@ import { Toaster } from '@/components/ui/toaster'
 import Navbar from '@/components/landing/navbar'
 import ChatButton from '@/components/chat/ChatButton'
 import ChatModal from '@/components/chat/ChatModal'
-import { PageMetricsTracker } from '@/components/metrics/PageMetricsTracker'
 import { generateMetadata } from '@/utils/seo-head'
 
 export const metadata = generateMetadata({
@@ -53,7 +52,6 @@ export default function RootLayout({
                     </div>
                     <ChatButton />
                     <ChatModal />
-                    <PageMetricsTracker />
                     <Toaster />
                   </ChatProvider>
                 </BusinessProvider>
