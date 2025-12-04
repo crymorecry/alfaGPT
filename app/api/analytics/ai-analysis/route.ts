@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { getUserId } from '@/lib/middleware-auth'
-import { metricsStore } from '@/lib/metrics'
+import { chatWithAI } from '@/lib/ai'
 
 export async function POST(request: NextRequest) {
   try {
@@ -141,64 +141,22 @@ ${i + 1}. ${e.name} (${e.position || 'без должности'})
 
 Ответ должен быть подробным, структурированным и полезным для владельца малого бизнеса. Используй Markdown форматирование для лучшей читаемости.`
 
-    const model = process.env.OPENROUTER_MODEL || 'openai/gpt-oss-20b:free'
-    const aiStartTime = Date.now()
-
-    const openRouterResponse = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
-        'HTTP-Referer': process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-        'X-Title': 'Volency'
-      },
-      body: JSON.stringify({
-        model: model,
-        messages: [
-          {
-            role: 'user',
-            content: prompt
-          }
-        ],
-        temperature: 0.7,
-        max_tokens: 2000
-      })
+    const aiResponse = await chatWithAI({
+      messages: [
+        {
+          role: 'user',
+          content: prompt
+        }
+      ],
+      temperature: 0.7,
+      maxTokens: 2000,
+      endpoint: '/api/analytics/ai-analysis'
     })
 
-    const aiResponseTime = Date.now() - aiStartTime
-
-    if (!openRouterResponse.ok) {
-      // Собираем метрики ошибки
-      metricsStore.addAIMetric({
-        timestamp: Date.now(),
-        endpoint: '/api/analytics/ai-analysis',
-        model: model,
-        responseTime: aiResponseTime,
-        tokensUsed: 0,
-        tokensPrompt: 0,
-        tokensResponse: 0,
-        success: false
-      })
-      throw new Error('Ошибка при обращении к ИИ')
-    }
-
-    const aiData = await openRouterResponse.json()
-    const aiResponse = aiData.choices[0]?.message?.content || ''
-
-    // Собираем метрики AI
-    metricsStore.addAIMetric({
-      timestamp: Date.now(),
-      endpoint: '/api/analytics/ai-analysis',
-      model: model,
-      responseTime: aiResponseTime,
-      tokensUsed: aiData.usage?.total_tokens || 0,
-      tokensPrompt: aiData.usage?.prompt_tokens || 0,
-      tokensResponse: aiData.usage?.completion_tokens || 0,
-      success: true
-    })
+    const aiResponseText = aiResponse.content
 
     return NextResponse.json({
-      summary: aiResponse,
+      summary: aiResponseText,
       yearlyProjection: '',
       profitability: '',
       recommendations: [],
