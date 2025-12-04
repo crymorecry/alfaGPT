@@ -124,12 +124,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3067,
+                      "duration": 2728,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:24.200Z",
+                      "startTime": "2025-12-04T19:10:33.867Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -158,12 +158,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5121,
+                      "duration": 4784,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:24.047Z",
+                      "startTime": "2025-12-04T19:10:33.868Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -192,12 +192,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 15103,
+                      "duration": 14768,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:24.053Z",
+                      "startTime": "2025-12-04T19:10:33.874Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -226,12 +226,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4988,
+                      "duration": 5328,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:24.122Z",
+                      "startTime": "2025-12-04T19:10:33.869Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -260,12 +260,12 @@
                       "workerIndex": 4,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 4896,
+                      "duration": 11947,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:24.127Z",
+                      "startTime": "2025-12-04T19:10:33.866Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -294,12 +294,12 @@
                       "workerIndex": 5,
                       "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 5030,
+                      "duration": 4874,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:24.110Z",
+                      "startTime": "2025-12-04T19:10:33.887Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -328,12 +328,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7965,
+                      "duration": 8163,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:27.523Z",
+                      "startTime": "2025-12-04T19:10:36.813Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -362,12 +362,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 8042,
+                      "duration": 7958,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:29.303Z",
+                      "startTime": "2025-12-04T19:10:38.861Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -394,14 +394,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2029,
+                      "duration": 1810,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:20.568Z",
+                      "startTime": "2025-12-04T19:11:25.095Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -428,14 +428,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4490,
+                      "duration": 4116,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:20.919Z",
+                      "startTime": "2025-12-04T19:11:26.181Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -462,14 +462,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 5,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 14424,
+                      "duration": 14191,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:21.304Z",
+                      "startTime": "2025-12-04T19:11:26.896Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -496,14 +496,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 3363,
+                      "duration": 3940,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:23.070Z",
+                      "startTime": "2025-12-04T19:11:27.294Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -530,14 +530,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3239,
+                      "duration": 10495,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:25.978Z",
+                      "startTime": "2025-12-04T19:11:30.827Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -564,14 +564,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 3316,
+                      "duration": 3574,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:26.466Z",
+                      "startTime": "2025-12-04T19:11:31.261Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -598,14 +598,14 @@
                   "results": [
                     {
                       "workerIndex": 9,
-                      "parallelIndex": 1,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 9173,
+                      "duration": 9787,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:27.601Z",
+                      "startTime": "2025-12-04T19:11:32.658Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -632,14 +632,14 @@
                   "results": [
                     {
                       "workerIndex": 10,
-                      "parallelIndex": 4,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 9607,
+                      "duration": 9276,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:27.848Z",
+                      "startTime": "2025-12-04T19:11:32.665Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -666,14 +666,14 @@
                   "results": [
                     {
                       "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1351,
+                      "duration": 1300,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:31.472Z",
+                      "startTime": "2025-12-04T19:12:27.198Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -699,15 +699,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3567,
+                      "duration": 3521,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:31.882Z",
+                      "startTime": "2025-12-04T19:12:27.455Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -733,15 +733,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 14,
+                      "workerIndex": 13,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 13500,
+                      "duration": 13513,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:32.045Z",
+                      "startTime": "2025-12-04T19:12:27.456Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -768,14 +768,14 @@
                   "results": [
                     {
                       "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3225,
+                      "duration": 4072,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:32.895Z",
+                      "startTime": "2025-12-04T19:12:28.567Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -801,15 +801,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3142,
+                      "duration": 10686,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:35.530Z",
+                      "startTime": "2025-12-04T19:12:31.048Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -835,15 +835,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3305,
+                      "duration": 3874,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:36.134Z",
+                      "startTime": "2025-12-04T19:12:33.718Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -869,15 +869,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 2,
+                      "workerIndex": 12,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 8313,
+                      "duration": 8317,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:37.846Z",
+                      "startTime": "2025-12-04T19:12:32.653Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -904,14 +904,14 @@
                   "results": [
                     {
                       "workerIndex": 16,
-                      "parallelIndex": 1,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 8743,
+                      "duration": 8495,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:39.071Z",
+                      "startTime": "2025-12-04T19:12:34.949Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -954,15 +954,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 1017,
+                      "duration": 759,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:29.306Z",
+                      "startTime": "2025-12-04T19:10:38.960Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -988,15 +988,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1043,
+                      "duration": 817,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:29.323Z",
+                      "startTime": "2025-12-04T19:10:39.365Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1022,15 +1022,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 1963,
+                      "duration": 2675,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:29.324Z",
+                      "startTime": "2025-12-04T19:10:39.731Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1059,12 +1059,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4041,
+                      "duration": 3831,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:30.338Z",
+                      "startTime": "2025-12-04T19:10:40.199Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1093,12 +1093,12 @@
                       "workerIndex": 5,
                       "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 959,
+                      "duration": 654,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:30.377Z",
+                      "startTime": "2025-12-04T19:10:42.420Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1124,15 +1124,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "workerIndex": 11,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 1794,
+                      "duration": 1881,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:29.237Z",
+                      "startTime": "2025-12-04T19:11:35.984Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1159,14 +1159,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2037,
+                      "duration": 1524,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:29.809Z",
+                      "startTime": "2025-12-04T19:11:34.857Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1192,15 +1192,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 11,
-                      "parallelIndex": 3,
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2858,
+                      "duration": 3217,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:31.493Z",
+                      "startTime": "2025-12-04T19:11:36.402Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1226,15 +1226,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "workerIndex": 11,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 4439,
+                      "duration": 4033,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:31.054Z",
+                      "startTime": "2025-12-04T19:11:38.456Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1261,14 +1261,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1167,
+                      "duration": 854,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:31.862Z",
+                      "startTime": "2025-12-04T19:11:39.635Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1294,15 +1294,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "workerIndex": 17,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1393,
+                      "duration": 1411,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:38.693Z",
+                      "startTime": "2025-12-04T19:12:37.410Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1328,15 +1328,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1703,
+                      "duration": 1483,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:39.458Z",
+                      "startTime": "2025-12-04T19:12:37.679Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1362,15 +1362,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "workerIndex": 17,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 2757,
+                      "duration": 3246,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:40.105Z",
+                      "startTime": "2025-12-04T19:12:38.912Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1396,15 +1396,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 17,
+                      "workerIndex": 15,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4739,
+                      "duration": 4511,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:41.675Z",
+                      "startTime": "2025-12-04T19:12:39.178Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1431,14 +1431,14 @@
                   "results": [
                     {
                       "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1730,
+                      "duration": 1461,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:41.183Z",
+                      "startTime": "2025-12-04T19:12:40.993Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1481,15 +1481,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 7763,
+                      "duration": 7565,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:31.305Z",
+                      "startTime": "2025-12-04T19:10:43.085Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1515,15 +1515,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2742,
+                      "duration": 2589,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:31.351Z",
+                      "startTime": "2025-12-04T19:10:44.045Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1549,15 +1549,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2687,
+                      "duration": 2593,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:34.106Z",
+                      "startTime": "2025-12-04T19:10:44.992Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1583,15 +1583,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2854,
+                      "duration": 2580,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:34.395Z",
+                      "startTime": "2025-12-04T19:10:45.944Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1617,15 +1617,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2621,
+                      "duration": 2629,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:35.508Z",
+                      "startTime": "2025-12-04T19:10:46.645Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1651,15 +1651,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 7611,
+                      "duration": 7632,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:36.804Z",
+                      "startTime": "2025-12-04T19:10:46.839Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1686,14 +1686,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 8022,
+                      "duration": 7664,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:33.043Z",
+                      "startTime": "2025-12-04T19:11:40.503Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1719,15 +1719,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 11,
-                      "parallelIndex": 3,
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2946,
+                      "duration": 2844,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:34.921Z",
+                      "startTime": "2025-12-04T19:11:41.342Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1753,15 +1753,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3096,
+                      "duration": 2974,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:35.511Z",
+                      "startTime": "2025-12-04T19:11:41.620Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1787,15 +1787,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 5,
+                      "workerIndex": 10,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3116,
+                      "duration": 3142,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:36.374Z",
+                      "startTime": "2025-12-04T19:11:42.358Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1821,15 +1821,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 1,
+                      "workerIndex": 11,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 3343,
+                      "duration": 3108,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:37.344Z",
+                      "startTime": "2025-12-04T19:11:42.515Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1855,15 +1855,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 9,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 8285,
+                      "duration": 8140,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:37.884Z",
+                      "startTime": "2025-12-04T19:11:43.302Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1890,14 +1890,14 @@
                   "results": [
                     {
                       "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 8326,
+                      "duration": 8121,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:42.889Z",
+                      "startTime": "2025-12-04T19:12:41.041Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1923,15 +1923,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3334,
+                      "duration": 3186,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:42.934Z",
+                      "startTime": "2025-12-04T19:12:41.754Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1957,15 +1957,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 4,
+                      "workerIndex": 17,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3168,
+                      "duration": 3185,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:45.641Z",
+                      "startTime": "2025-12-04T19:12:42.180Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1991,15 +1991,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 2,
+                      "workerIndex": 12,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4008,
+                      "duration": 3114,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:46.241Z",
+                      "startTime": "2025-12-04T19:12:42.469Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2025,15 +2025,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 12,
+                      "workerIndex": 16,
                       "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 3943,
+                      "duration": 3345,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:46.283Z",
+                      "startTime": "2025-12-04T19:12:43.528Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2059,15 +2059,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 17,
+                      "workerIndex": 15,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 8736,
+                      "duration": 8185,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:46.523Z",
+                      "startTime": "2025-12-04T19:12:43.705Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2110,15 +2110,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1037,
+                      "duration": 562,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:37.264Z",
+                      "startTime": "2025-12-04T19:10:47.600Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2144,15 +2144,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7937,
+                      "duration": 7627,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:37.363Z",
+                      "startTime": "2025-12-04T19:10:48.171Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2178,15 +2178,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2950,
+                      "duration": 2677,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:38.143Z",
+                      "startTime": "2025-12-04T19:10:48.540Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2212,15 +2212,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 2855,
+                      "duration": 2719,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:38.309Z",
+                      "startTime": "2025-12-04T19:10:48.826Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2246,15 +2246,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 5081,
+                      "duration": 4679,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:39.083Z",
+                      "startTime": "2025-12-04T19:10:49.286Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2280,15 +2280,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 3908,
+                      "duration": 3625,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:39.317Z",
+                      "startTime": "2025-12-04T19:10:50.661Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2314,15 +2314,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2746,
+                      "duration": 2615,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:41.103Z",
+                      "startTime": "2025-12-04T19:10:51.231Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2348,15 +2348,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 2722,
+                      "duration": 2640,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:41.176Z",
+                      "startTime": "2025-12-04T19:10:51.563Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2382,15 +2382,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 4,
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1627,
+                      "duration": 1172,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:38.185Z",
+                      "startTime": "2025-12-04T19:11:44.205Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2416,15 +2416,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 9036,
+                      "duration": 8106,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:38.627Z",
+                      "startTime": "2025-12-04T19:11:44.617Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2450,15 +2450,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 5,
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 8386,
+                      "duration": 3412,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:39.509Z",
+                      "startTime": "2025-12-04T19:11:45.394Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2485,14 +2485,14 @@
                   "results": [
                     {
                       "workerIndex": 10,
-                      "parallelIndex": 4,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3296,
+                      "duration": 3432,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:39.844Z",
+                      "startTime": "2025-12-04T19:11:45.528Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2518,15 +2518,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 1,
+                      "workerIndex": 11,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 6140,
+                      "duration": 5422,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:40.711Z",
+                      "startTime": "2025-12-04T19:11:45.642Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2553,14 +2553,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 4847,
+                      "duration": 3853,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:41.087Z",
+                      "startTime": "2025-12-04T19:11:48.180Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2586,15 +2586,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 4,
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2964,
+                      "duration": 3277,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:43.154Z",
+                      "startTime": "2025-12-04T19:11:48.819Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2620,15 +2620,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "workerIndex": 10,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3278,
+                      "duration": 3136,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:45.951Z",
+                      "startTime": "2025-12-04T19:11:48.978Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2654,15 +2654,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 16,
+                      "workerIndex": 14,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2478,
+                      "duration": 1292,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:48.014Z",
+                      "startTime": "2025-12-04T19:12:44.955Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2688,15 +2688,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 4,
+                      "workerIndex": 17,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 8961,
+                      "duration": 8392,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:48.836Z",
+                      "startTime": "2025-12-04T19:12:45.392Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2723,14 +2723,14 @@
                   "results": [
                     {
                       "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 9066,
+                      "duration": 3257,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:50.242Z",
+                      "startTime": "2025-12-04T19:12:45.602Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2756,15 +2756,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 2,
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4067,
+                      "duration": 3269,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:50.291Z",
+                      "startTime": "2025-12-04T19:12:46.264Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2791,14 +2791,14 @@
                   "results": [
                     {
                       "workerIndex": 16,
-                      "parallelIndex": 1,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 6028,
+                      "duration": 5356,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:50.523Z",
+                      "startTime": "2025-12-04T19:12:46.904Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2824,15 +2824,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 13,
+                      "workerIndex": 12,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4697,
+                      "duration": 4687,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:51.239Z",
+                      "startTime": "2025-12-04T19:12:48.877Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2858,15 +2858,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 2,
+                      "workerIndex": 13,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 3295,
+                      "duration": 3431,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:54.386Z",
+                      "startTime": "2025-12-04T19:12:49.182Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2892,15 +2892,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 17,
-                      "parallelIndex": 0,
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3587,
+                      "duration": 3282,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:55.280Z",
+                      "startTime": "2025-12-04T19:12:49.546Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2943,15 +2943,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1519,
+                      "duration": 1779,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:43.241Z",
+                      "startTime": "2025-12-04T19:10:53.860Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2977,15 +2977,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1199,
+                      "duration": 850,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:43.861Z",
+                      "startTime": "2025-12-04T19:10:53.979Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3011,15 +3011,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1259,
+                      "duration": 1112,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:43.913Z",
+                      "startTime": "2025-12-04T19:10:54.218Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3045,15 +3045,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 3116,
+                      "duration": 3257,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:44.180Z",
+                      "startTime": "2025-12-04T19:10:54.302Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3079,15 +3079,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 4,
+                      "workerIndex": 11,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 3178,
+                      "duration": 1385,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:46.137Z",
+                      "startTime": "2025-12-04T19:11:51.081Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3113,15 +3113,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 9,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1639,
+                      "duration": 1361,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:46.187Z",
+                      "startTime": "2025-12-04T19:11:51.463Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3147,15 +3147,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 1,
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2592,
+                      "duration": 2553,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:46.878Z",
+                      "startTime": "2025-12-04T19:11:52.057Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3182,14 +3182,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4499,
+                      "duration": 4550,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:47.694Z",
+                      "startTime": "2025-12-04T19:11:52.116Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3215,15 +3215,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3658,
+                      "duration": 2257,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:55.969Z",
+                      "startTime": "2025-12-04T19:12:51.911Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3250,14 +3250,14 @@
                   "results": [
                     {
                       "workerIndex": 16,
-                      "parallelIndex": 1,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 2120,
+                      "duration": 2022,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:56.575Z",
+                      "startTime": "2025-12-04T19:12:52.279Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3283,15 +3283,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 2,
+                      "workerIndex": 13,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2629,
+                      "duration": 1986,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:57.702Z",
+                      "startTime": "2025-12-04T19:12:52.636Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3318,14 +3318,14 @@
                   "results": [
                     {
                       "workerIndex": 14,
-                      "parallelIndex": 4,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5888,
+                      "duration": 5089,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:57.823Z",
+                      "startTime": "2025-12-04T19:12:52.854Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3368,15 +3368,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 809,
+                      "duration": 1263,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:44.430Z",
+                      "startTime": "2025-12-04T19:10:54.491Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3402,15 +3402,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 9030,
+                      "duration": 8045,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:44.775Z",
+                      "startTime": "2025-12-04T19:10:54.841Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3436,15 +3436,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 7458,
+                      "duration": 6821,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:45.071Z",
+                      "startTime": "2025-12-04T19:10:55.344Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3470,15 +3470,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 3766,
+                      "duration": 3166,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:45.184Z",
+                      "startTime": "2025-12-04T19:10:55.650Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3504,15 +3504,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3699,
+                      "duration": 3110,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:45.252Z",
+                      "startTime": "2025-12-04T19:10:55.775Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3538,15 +3538,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3664,
+                      "duration": 3072,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:45.317Z",
+                      "startTime": "2025-12-04T19:10:55.815Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3572,15 +3572,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 3174,
+                      "duration": 2539,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:47.311Z",
+                      "startTime": "2025-12-04T19:10:57.568Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3606,15 +3606,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 7923,
+                      "duration": 7915,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:48.961Z",
+                      "startTime": "2025-12-04T19:10:58.827Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3640,15 +3640,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7939,
+                      "duration": 7923,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:48.962Z",
+                      "startTime": "2025-12-04T19:10:58.898Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3674,15 +3674,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 11,
-                      "parallelIndex": 3,
+                      "workerIndex": 10,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 2089,
+                      "duration": 2422,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:47.845Z",
+                      "startTime": "2025-12-04T19:11:52.137Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3708,15 +3708,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 8,
+                      "workerIndex": 11,
                       "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 9234,
+                      "duration": 9101,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:47.919Z",
+                      "startTime": "2025-12-04T19:11:52.486Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3742,15 +3742,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 8327,
+                      "duration": 7644,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:49.242Z",
+                      "startTime": "2025-12-04T19:11:52.766Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3776,15 +3776,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 4,
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4629,
+                      "duration": 3932,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:49.362Z",
+                      "startTime": "2025-12-04T19:11:52.847Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3810,15 +3810,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 1,
+                      "workerIndex": 10,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4512,
+                      "duration": 3765,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:49.500Z",
+                      "startTime": "2025-12-04T19:11:54.593Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3844,15 +3844,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 11,
-                      "parallelIndex": 3,
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 4130,
+                      "duration": 3712,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:49.957Z",
+                      "startTime": "2025-12-04T19:11:54.652Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3879,14 +3879,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3707,
+                      "duration": 3086,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:52.211Z",
+                      "startTime": "2025-12-04T19:11:56.687Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3912,15 +3912,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 4,
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 8446,
+                      "duration": 7976,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:54.007Z",
+                      "startTime": "2025-12-04T19:11:56.795Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3946,15 +3946,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 1,
+                      "workerIndex": 10,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 8397,
+                      "duration": 7928,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:54.046Z",
+                      "startTime": "2025-12-04T19:11:58.381Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3980,15 +3980,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 1,
+                      "workerIndex": 12,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1556,
+                      "duration": 1891,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:58.711Z",
+                      "startTime": "2025-12-04T19:12:53.586Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4015,14 +4015,14 @@
                   "results": [
                     {
                       "workerIndex": 17,
-                      "parallelIndex": 0,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 8488,
+                      "duration": 9034,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:58.905Z",
+                      "startTime": "2025-12-04T19:12:53.816Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4048,15 +4048,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 8583,
+                      "duration": 7775,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:59.334Z",
+                      "startTime": "2025-12-04T19:12:54.188Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4082,15 +4082,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "workerIndex": 16,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 5076,
+                      "duration": 3815,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:59.648Z",
+                      "startTime": "2025-12-04T19:12:54.318Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4116,15 +4116,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 1,
+                      "workerIndex": 13,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 4646,
+                      "duration": 3559,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:00.288Z",
+                      "startTime": "2025-12-04T19:12:54.644Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4150,15 +4150,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 2,
+                      "workerIndex": 12,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4570,
+                      "duration": 3569,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:00.350Z",
+                      "startTime": "2025-12-04T19:12:55.500Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4185,14 +4185,14 @@
                   "results": [
                     {
                       "workerIndex": 14,
-                      "parallelIndex": 4,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3134,
+                      "duration": 3400,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:03.733Z",
+                      "startTime": "2025-12-04T19:12:57.964Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4218,15 +4218,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "workerIndex": 16,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 8709,
+                      "duration": 8293,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:04.741Z",
+                      "startTime": "2025-12-04T19:12:58.151Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4252,15 +4252,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 2,
+                      "workerIndex": 13,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 8580,
+                      "duration": 8287,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:04.933Z",
+                      "startTime": "2025-12-04T19:12:58.220Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4306,12 +4306,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 911,
+                      "duration": 920,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:48.997Z",
+                      "startTime": "2025-12-04T19:10:58.908Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4340,12 +4340,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 13000,
+                      "duration": 12703,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:49.920Z",
+                      "startTime": "2025-12-04T19:10:59.838Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4371,15 +4371,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 6297,
+                      "duration": 6302,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:50.499Z",
+                      "startTime": "2025-12-04T19:11:00.119Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4405,15 +4405,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4350,
+                      "duration": 4207,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:52.541Z",
+                      "startTime": "2025-12-04T19:11:02.178Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4439,15 +4439,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4234,
+                      "duration": 4247,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:53.821Z",
+                      "startTime": "2025-12-04T19:11:02.900Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4473,15 +4473,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 7112,
+                      "duration": 6791,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:56.806Z",
+                      "startTime": "2025-12-04T19:11:06.394Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4507,15 +4507,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 7688,
+                      "duration": 7391,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:56.898Z",
+                      "startTime": "2025-12-04T19:11:06.433Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4541,15 +4541,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 8046,
+                      "duration": 7908,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:56.900Z",
+                      "startTime": "2025-12-04T19:11:06.755Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4575,15 +4575,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3045,
+                      "duration": 3041,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:56.914Z",
+                      "startTime": "2025-12-04T19:11:06.835Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4609,15 +4609,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 8566,
+                      "duration": 8216,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:58.066Z",
+                      "startTime": "2025-12-04T19:11:07.161Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4643,15 +4643,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7642,
+                      "duration": 7613,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:04:59.969Z",
+                      "startTime": "2025-12-04T19:11:09.885Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4680,12 +4680,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 7666,
+                      "duration": 7561,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:02.929Z",
+                      "startTime": "2025-12-04T19:11:12.550Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4711,15 +4711,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 11,
-                      "parallelIndex": 3,
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1406,
+                      "duration": 963,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:54.109Z",
+                      "startTime": "2025-12-04T19:11:58.385Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4745,15 +4745,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 11,
-                      "parallelIndex": 3,
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 13425,
+                      "duration": 12948,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:55.528Z",
+                      "startTime": "2025-12-04T19:11:59.360Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4780,14 +4780,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6759,
+                      "duration": 6718,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:55.937Z",
+                      "startTime": "2025-12-04T19:11:59.791Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4814,14 +4814,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 5,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5052,
+                      "duration": 4711,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:57.173Z",
+                      "startTime": "2025-12-04T19:12:00.426Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4847,15 +4847,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "workerIndex": 11,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 4692,
+                      "duration": 4510,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:57.584Z",
+                      "startTime": "2025-12-04T19:12:01.612Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4881,15 +4881,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 5,
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 8055,
+                      "duration": 6909,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:02.237Z",
+                      "startTime": "2025-12-04T19:12:04.802Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4915,15 +4915,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 8643,
+                      "duration": 7501,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:02.290Z",
+                      "startTime": "2025-12-04T19:12:05.150Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4949,15 +4949,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 1,
+                      "workerIndex": 11,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 8942,
+                      "duration": 8133,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:02.468Z",
+                      "startTime": "2025-12-04T19:12:06.139Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4984,14 +4984,14 @@
                   "results": [
                     {
                       "workerIndex": 10,
-                      "parallelIndex": 4,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3919,
+                      "duration": 3109,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:02.469Z",
+                      "startTime": "2025-12-04T19:12:06.322Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5018,14 +5018,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 8735,
+                      "duration": 8062,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:02.712Z",
+                      "startTime": "2025-12-04T19:12:06.528Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5052,14 +5052,14 @@
                   "results": [
                     {
                       "workerIndex": 10,
-                      "parallelIndex": 4,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 7811,
+                      "duration": 7756,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:06.407Z",
+                      "startTime": "2025-12-04T19:12:09.441Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5085,15 +5085,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 9,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 7813,
+                      "duration": 7802,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:08.967Z",
+                      "startTime": "2025-12-04T19:12:11.721Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5119,15 +5119,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 1,
+                      "workerIndex": 12,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1558,
+                      "duration": 1477,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:04.959Z",
+                      "startTime": "2025-12-04T19:12:59.097Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5153,15 +5153,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 1,
+                      "workerIndex": 12,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 13739,
+                      "duration": 13148,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:06.531Z",
+                      "startTime": "2025-12-04T19:13:00.591Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5188,14 +5188,14 @@
                   "results": [
                     {
                       "workerIndex": 14,
-                      "parallelIndex": 4,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 7455,
+                      "duration": 7365,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:06.888Z",
+                      "startTime": "2025-12-04T19:13:01.381Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5221,15 +5221,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 17,
+                      "workerIndex": 15,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5312,
+                      "duration": 5480,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:07.416Z",
+                      "startTime": "2025-12-04T19:13:01.983Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5255,15 +5255,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "workerIndex": 17,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 6688,
+                      "duration": 5452,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:07.941Z",
+                      "startTime": "2025-12-04T19:13:02.872Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5289,15 +5289,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 17,
-                      "parallelIndex": 0,
+                      "workerIndex": 16,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 7537,
+                      "duration": 7617,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:12.747Z",
+                      "startTime": "2025-12-04T19:13:06.461Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5324,14 +5324,14 @@
                   "results": [
                     {
                       "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 9108,
+                      "duration": 8317,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:13.469Z",
+                      "startTime": "2025-12-04T19:13:06.531Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5358,14 +5358,14 @@
                   "results": [
                     {
                       "workerIndex": 15,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9010,
+                      "duration": 8609,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:13.551Z",
+                      "startTime": "2025-12-04T19:13:07.481Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5391,15 +5391,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 4,
+                      "workerIndex": 17,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3624,
+                      "duration": 3273,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:14.357Z",
+                      "startTime": "2025-12-04T19:13:08.339Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5425,15 +5425,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 8353,
+                      "duration": 8436,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:14.650Z",
+                      "startTime": "2025-12-04T19:13:08.761Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5459,15 +5459,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 4,
+                      "workerIndex": 17,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 8226,
+                      "duration": 8241,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:17.996Z",
+                      "startTime": "2025-12-04T19:13:11.627Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5493,15 +5493,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 1,
+                      "workerIndex": 12,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 8771,
+                      "duration": 8274,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:20.283Z",
+                      "startTime": "2025-12-04T19:13:13.754Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -5512,533 +5512,6 @@
               "id": "1d1b0b311adfe43979fc-09e7b5483f58677fca35",
               "file": "finance.spec.ts",
               "line": 125,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "metrics.spec.ts",
-      "file": "metrics.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Метрики системы",
-          "file": "metrics.spec.ts",
-          "line": 4,
-          "column": 6,
-          "specs": [
-            {
-              "title": "должна отображать страницу метрик",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
-                      "status": "passed",
-                      "duration": 936,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:05:03.930Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-49ae32b6168dafd81b1a",
-              "file": "metrics.spec.ts",
-              "line": 9,
-              "column": 7
-            },
-            {
-              "title": "должна показывать секции метрик",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 1487,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:05:04.600Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-6973364845d5c5f6cb99",
-              "file": "metrics.spec.ts",
-              "line": 14,
-              "column": 7
-            },
-            {
-              "title": "должна обновлять метрики автоматически",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
-                      "status": "passed",
-                      "duration": 2874,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:05:04.876Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-92c1248abf2970269d61",
-              "file": "metrics.spec.ts",
-              "line": 22,
-              "column": 7
-            },
-            {
-              "title": "должна очищать метрики по кнопке",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1610,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:05:04.959Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-a29eef2b90d6a497c23e",
-              "file": "metrics.spec.ts",
-              "line": 30,
-              "column": 7
-            },
-            {
-              "title": "должна переключать автообновление",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 2404,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:05:06.100Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-4b121359e30cb458715d",
-              "file": "metrics.spec.ts",
-              "line": 41,
-              "column": 7
-            },
-            {
-              "title": "должна отображать страницу метрик",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 8,
-                      "parallelIndex": 5,
-                      "status": "passed",
-                      "duration": 1074,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:06:10.302Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-c7f82b58a455a7cfd0b1",
-              "file": "metrics.spec.ts",
-              "line": 9,
-              "column": 7
-            },
-            {
-              "title": "должна показывать секции метрик",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 6,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2789,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:06:10.946Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-e1ff0430f11b5a75245a",
-              "file": "metrics.spec.ts",
-              "line": 14,
-              "column": 7
-            },
-            {
-              "title": "должна обновлять метрики автоматически",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 8,
-                      "parallelIndex": 5,
-                      "status": "passed",
-                      "duration": 3934,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:06:11.390Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-e1b8f9e36d892e158b0f",
-              "file": "metrics.spec.ts",
-              "line": 22,
-              "column": 7
-            },
-            {
-              "title": "должна очищать метрики по кнопке",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 9,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 3783,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:06:11.430Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-10ce969b79b0eb29e724",
-              "file": "metrics.spec.ts",
-              "line": 30,
-              "column": 7
-            },
-            {
-              "title": "должна переключать автообновление",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 7,
-                      "parallelIndex": 2,
-                      "status": "passed",
-                      "duration": 4750,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:06:11.461Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-839ba94c530bb8ceb476",
-              "file": "metrics.spec.ts",
-              "line": 41,
-              "column": 7
-            },
-            {
-              "title": "должна отображать страницу метрик",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 17,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2814,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:07:20.302Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-1ab5e356c9ad6764f6b2",
-              "file": "metrics.spec.ts",
-              "line": 9,
-              "column": 7
-            },
-            {
-              "title": "должна показывать секции метрик",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 13,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 3227,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:07:22.594Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-cde815ae2009590f4d07",
-              "file": "metrics.spec.ts",
-              "line": 14,
-              "column": 7
-            },
-            {
-              "title": "должна обновлять метрики автоматически",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 15,
-                      "parallelIndex": 2,
-                      "status": "passed",
-                      "duration": 3814,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:07:22.601Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-8de2120141c59e37fd1e",
-              "file": "metrics.spec.ts",
-              "line": 22,
-              "column": 7
-            },
-            {
-              "title": "должна очищать метрики по кнопке",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 12,
-                      "parallelIndex": 5,
-                      "status": "passed",
-                      "duration": 3747,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:07:23.019Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-fb0474ca5842a307085d",
-              "file": "metrics.spec.ts",
-              "line": 30,
-              "column": 7
-            },
-            {
-              "title": "должна переключать автообновление",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 17,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4961,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:07:23.133Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "57ef374cf88f7974a124-b0c5c388985ff6ae2ab5",
-              "file": "metrics.spec.ts",
-              "line": 41,
               "column": 7
             }
           ]
@@ -6071,15 +5544,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1034,
+                      "duration": 722,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:06.582Z",
+                      "startTime": "2025-12-04T19:11:13.197Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6105,15 +5578,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 2901,
+                      "duration": 1802,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:06.646Z",
+                      "startTime": "2025-12-04T19:11:13.835Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6123,7 +5596,7 @@
               ],
               "id": "5d2868f7d23420c27cca-26c017180cfd57239af6",
               "file": "navigation.spec.ts",
-              "line": 28,
+              "line": 27,
               "column": 7
             },
             {
@@ -6139,15 +5612,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4582,
+                      "duration": 1652,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:07.627Z",
+                      "startTime": "2025-12-04T19:11:13.929Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6157,7 +5630,7 @@
               ],
               "id": "5d2868f7d23420c27cca-a030f789e9263b64bd8b",
               "file": "navigation.spec.ts",
-              "line": 37,
+              "line": 36,
               "column": 7
             },
             {
@@ -6173,15 +5646,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 3606,
+                      "duration": 1726,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:07.628Z",
+                      "startTime": "2025-12-04T19:11:14.678Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6191,7 +5664,7 @@
               ],
               "id": "5d2868f7d23420c27cca-33a17099fdcf114640d8",
               "file": "navigation.spec.ts",
-              "line": 46,
+              "line": 45,
               "column": 7
             },
             {
@@ -6207,15 +5680,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4469,
+                      "duration": 1925,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:07.764Z",
+                      "startTime": "2025-12-04T19:11:15.394Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6225,7 +5698,7 @@
               ],
               "id": "5d2868f7d23420c27cca-4df299544d5cbeb1d57a",
               "file": "navigation.spec.ts",
-              "line": 55,
+              "line": 54,
               "column": 7
             },
             {
@@ -6241,15 +5714,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3300,
+                      "duration": 2014,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:08.517Z",
+                      "startTime": "2025-12-04T19:11:15.591Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6259,41 +5732,7 @@
               ],
               "id": "5d2868f7d23420c27cca-d7656815bf88ba2863ea",
               "file": "navigation.spec.ts",
-              "line": 64,
-              "column": 7
-            },
-            {
-              "title": "должна переходить на страницу метрик",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
-                      "status": "passed",
-                      "duration": 4061,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:05:09.560Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "5d2868f7d23420c27cca-e1cb2365b9bf9a968521",
-              "file": "navigation.spec.ts",
-              "line": 73,
+              "line": 63,
               "column": 7
             },
             {
@@ -6310,14 +5749,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2128,
+                      "duration": 1335,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:13.750Z",
+                      "startTime": "2025-12-04T19:12:12.320Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6343,15 +5782,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 4,
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5689,
+                      "duration": 2786,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:14.233Z",
+                      "startTime": "2025-12-04T19:12:12.667Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6361,7 +5800,7 @@
               ],
               "id": "5d2868f7d23420c27cca-07b0ae23bc0e1dd3b8ef",
               "file": "navigation.spec.ts",
-              "line": 28,
+              "line": 27,
               "column": 7
             },
             {
@@ -6377,15 +5816,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 1,
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 5450,
+                      "duration": 2219,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:15.232Z",
+                      "startTime": "2025-12-04T19:12:13.666Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6395,7 +5834,7 @@
               ],
               "id": "5d2868f7d23420c27cca-8f36a83cab3872a935d6",
               "file": "navigation.spec.ts",
-              "line": 37,
+              "line": 36,
               "column": 7
             },
             {
@@ -6411,15 +5850,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 8,
+                      "workerIndex": 11,
                       "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 5684,
+                      "duration": 2535,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:15.342Z",
+                      "startTime": "2025-12-04T19:12:14.288Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6429,7 +5868,7 @@
               ],
               "id": "5d2868f7d23420c27cca-5fc9fdda42d3fb7c7a95",
               "file": "navigation.spec.ts",
-              "line": 46,
+              "line": 45,
               "column": 7
             },
             {
@@ -6445,15 +5884,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4835,
+                      "duration": 2620,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:15.891Z",
+                      "startTime": "2025-12-04T19:12:14.607Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6463,7 +5902,7 @@
               ],
               "id": "5d2868f7d23420c27cca-1523d3983f0c3987cc72",
               "file": "navigation.spec.ts",
-              "line": 55,
+              "line": 54,
               "column": 7
             },
             {
@@ -6479,15 +5918,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4558,
+                      "duration": 3737,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:16.226Z",
+                      "startTime": "2025-12-04T19:12:15.468Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6497,41 +5936,7 @@
               ],
               "id": "5d2868f7d23420c27cca-06a47d1dc08008729885",
               "file": "navigation.spec.ts",
-              "line": 64,
-              "column": 7
-            },
-            {
-              "title": "должна переходить на страницу метрик",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 11,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 5917,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:06:16.797Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "5d2868f7d23420c27cca-986daf5f9cf90b4077df",
-              "file": "navigation.spec.ts",
-              "line": 73,
+              "line": 63,
               "column": 7
             },
             {
@@ -6547,15 +5952,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "workerIndex": 16,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 2012,
+                      "duration": 1678,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:25.840Z",
+                      "startTime": "2025-12-04T19:13:14.098Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6581,15 +5986,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 14,
+                      "workerIndex": 13,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 5100,
+                      "duration": 4136,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:26.244Z",
+                      "startTime": "2025-12-04T19:13:14.867Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6599,7 +6004,7 @@
               ],
               "id": "5d2868f7d23420c27cca-d5c12e2c8972a043ca1a",
               "file": "navigation.spec.ts",
-              "line": 28,
+              "line": 27,
               "column": 7
             },
             {
@@ -6615,15 +6020,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 2,
+                      "workerIndex": 16,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 5115,
+                      "duration": 3028,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:26.433Z",
+                      "startTime": "2025-12-04T19:13:15.792Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6633,7 +6038,7 @@
               ],
               "id": "5d2868f7d23420c27cca-3fd42063148b3ec2a177",
               "file": "navigation.spec.ts",
-              "line": 37,
+              "line": 36,
               "column": 7
             },
             {
@@ -6649,15 +6054,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4506,
+                      "duration": 3154,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:26.785Z",
+                      "startTime": "2025-12-04T19:13:16.106Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6667,7 +6072,7 @@
               ],
               "id": "5d2868f7d23420c27cca-413022e8023651db76ab",
               "file": "navigation.spec.ts",
-              "line": 46,
+              "line": 45,
               "column": 7
             },
             {
@@ -6683,15 +6088,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 3,
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5719,
+                      "duration": 3190,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:27.866Z",
+                      "startTime": "2025-12-04T19:13:17.221Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6701,7 +6106,7 @@
               ],
               "id": "5d2868f7d23420c27cca-fcb06ce43888e1222a58",
               "file": "navigation.spec.ts",
-              "line": 55,
+              "line": 54,
               "column": 7
             },
             {
@@ -6717,15 +6122,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 17,
-                      "parallelIndex": 0,
+                      "workerIndex": 16,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 5431,
+                      "duration": 3470,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:28.112Z",
+                      "startTime": "2025-12-04T19:13:18.834Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6735,41 +6140,7 @@
               ],
               "id": "5d2868f7d23420c27cca-f064b61bdeb9d926289b",
               "file": "navigation.spec.ts",
-              "line": 64,
-              "column": 7
-            },
-            {
-              "title": "должна переходить на страницу метрик",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 16,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 4927,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-12-03T21:07:29.081Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "5d2868f7d23420c27cca-f22b772d90004f33d653",
-              "file": "navigation.spec.ts",
-              "line": 73,
+              "line": 63,
               "column": 7
             }
           ]
@@ -6802,15 +6173,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 1360,
+                      "duration": 983,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:10.611Z",
+                      "startTime": "2025-12-04T19:11:15.653Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6836,15 +6207,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 8599,
+                      "duration": 7958,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:11.249Z",
+                      "startTime": "2025-12-04T19:11:16.417Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6870,15 +6241,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 18399,
+                      "duration": 17879,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:11.829Z",
+                      "startTime": "2025-12-04T19:11:16.649Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6904,15 +6275,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 6892,
+                      "duration": 6668,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:11.984Z",
+                      "startTime": "2025-12-04T19:11:17.333Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6938,15 +6309,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 8372,
+                      "duration": 7958,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:12.225Z",
+                      "startTime": "2025-12-04T19:11:17.510Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -6972,15 +6343,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 6935,
+                      "duration": 6453,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:12.247Z",
+                      "startTime": "2025-12-04T19:11:17.617Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7006,15 +6377,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3410,
+                      "duration": 2629,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:13.633Z",
+                      "startTime": "2025-12-04T19:11:20.121Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7040,15 +6411,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3160,
+                      "duration": 3211,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:17.054Z",
+                      "startTime": "2025-12-04T19:11:22.761Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7074,15 +6445,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 7683,
+                      "duration": 7752,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:18.887Z",
+                      "startTime": "2025-12-04T19:11:24.010Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7108,15 +6479,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 7740,
+                      "duration": 7745,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:05:19.195Z",
+                      "startTime": "2025-12-04T19:11:24.080Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7142,15 +6513,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 10,
+                      "workerIndex": 6,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2541,
+                      "duration": 1563,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:19.938Z",
+                      "startTime": "2025-12-04T19:12:15.902Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7176,15 +6547,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 1,
+                      "workerIndex": 11,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 9252,
+                      "duration": 8889,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:20.704Z",
+                      "startTime": "2025-12-04T19:12:16.842Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7210,15 +6581,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 0,
+                      "workerIndex": 10,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 19430,
+                      "duration": 18847,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:20.747Z",
+                      "startTime": "2025-12-04T19:12:17.218Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7245,14 +6616,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7969,
+                      "duration": 7432,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:20.805Z",
+                      "startTime": "2025-12-04T19:12:17.249Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7278,15 +6649,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 5,
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 9127,
+                      "duration": 8693,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:21.050Z",
+                      "startTime": "2025-12-04T19:12:17.484Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7312,15 +6683,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 4,
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 8284,
+                      "duration": 6944,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:22.494Z",
+                      "startTime": "2025-12-04T19:12:19.230Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7346,15 +6717,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 9,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4482,
+                      "duration": 3034,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:22.737Z",
+                      "startTime": "2025-12-04T19:12:19.539Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7380,15 +6751,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 9,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3357,
+                      "duration": 3345,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:27.234Z",
+                      "startTime": "2025-12-04T19:12:22.584Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7415,14 +6786,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 2,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7814,
+                      "duration": 7742,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:28.788Z",
+                      "startTime": "2025-12-04T19:12:24.694Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7448,15 +6819,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 1,
+                      "workerIndex": 11,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 7853,
+                      "duration": 7826,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:06:29.983Z",
+                      "startTime": "2025-12-04T19:12:25.743Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7482,15 +6853,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "workerIndex": 13,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 2267,
+                      "duration": 1675,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:31.308Z",
+                      "startTime": "2025-12-04T19:13:19.020Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7516,15 +6887,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 4,
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9218,
+                      "duration": 8577,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:31.364Z",
+                      "startTime": "2025-12-04T19:13:19.277Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7550,15 +6921,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 15,
+                      "workerIndex": 17,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 18992,
+                      "duration": 18570,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:31.566Z",
+                      "startTime": "2025-12-04T19:13:19.897Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7584,15 +6955,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 17,
-                      "parallelIndex": 0,
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 8374,
+                      "duration": 7743,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:33.569Z",
+                      "startTime": "2025-12-04T19:13:20.439Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7618,15 +6989,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 5,
+                      "workerIndex": 13,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 9413,
+                      "duration": 8727,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:33.594Z",
+                      "startTime": "2025-12-04T19:13:20.707Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7652,15 +7023,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 13,
+                      "workerIndex": 12,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 8370,
+                      "duration": 7586,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:33.609Z",
+                      "startTime": "2025-12-04T19:13:22.050Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7687,14 +7058,14 @@
                   "results": [
                     {
                       "workerIndex": 16,
-                      "parallelIndex": 1,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 4025,
+                      "duration": 3523,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:34.031Z",
+                      "startTime": "2025-12-04T19:13:22.327Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7721,14 +7092,14 @@
                   "results": [
                     {
                       "workerIndex": 16,
-                      "parallelIndex": 1,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 3902,
+                      "duration": 3934,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:38.069Z",
+                      "startTime": "2025-12-04T19:13:25.864Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7754,15 +7125,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 4,
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 8109,
+                      "duration": 8270,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:40.594Z",
+                      "startTime": "2025-12-04T19:13:27.873Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7788,15 +7159,15 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 17,
-                      "parallelIndex": 0,
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 8026,
+                      "duration": 8285,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-12-03T21:07:41.957Z",
+                      "startTime": "2025-12-04T19:13:28.199Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -7816,9 +7187,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-12-03T21:04:22.799Z",
-    "duration": 207803.042,
-    "expected": 222,
+    "startTime": "2025-12-04T19:10:32.886Z",
+    "duration": 185634.485,
+    "expected": 204,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

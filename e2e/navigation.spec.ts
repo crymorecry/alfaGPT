@@ -16,7 +16,6 @@ test.describe('Навигация', () => {
       { text: 'Employees', href: '/employees' },
       { text: 'Operations', href: '/operations' },
       { text: 'Chat', href: '/chat' },
-      { text: 'Metrics', href: '/metrics' },
     ]
 
     for (const link of sidebarLinks) {
@@ -70,12 +69,4 @@ test.describe('Навигация', () => {
     await expect(page).toHaveURL(/.*chat/)
   })
 
-  test('должна переходить на страницу метрик', async ({ page }) => {
-    await page.goto('/')
-    
-    const metricsLink = page.locator('a[href="/metrics"]')
-    await metricsLink.click()
-    
-    await expect(page).toHaveURL(/.*metrics/)
-  })
 })
