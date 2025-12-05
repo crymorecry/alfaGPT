@@ -12,13 +12,13 @@ services:
     env_file:
       - .env
     environment:
-      - DATABASE_URL="postgresql://postgres:postgres@localhost:5432/alfaGPT?schema=public"
-      - NAME_EMAIL=${NAME_EMAIL}
-      - PASS_EMAIL=${PASS_EMAIL}
-      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
-      - OPENROUTER_MODEL=${OPENROUTER_MODEL}
-      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
-      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+      DATABASE_URL:  ${DATABASE_URL}
+      NAME_EMAIL: ${NAME_EMAIL}
+      PASS_EMAIL: ${PASS_EMAIL}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+      OPENROUTER_MODEL: ${OPENROUTER_MODEL}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}
+      TELEGRAM_CHAT_ID: ${TELEGRAM_CHAT_ID}
     depends_on:
       postgres:
         condition: service_healthy
