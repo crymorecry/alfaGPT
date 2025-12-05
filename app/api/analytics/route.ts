@@ -260,7 +260,7 @@ export async function GET(request: NextRequest) {
       .reduce((sum, t) => sum + t.amount, 0)
     const monthsCount = monthlyMap.size
     const totalExpenses = variableExpenses + (fixedExpenses * monthsCount) + totalSalaries
-    const efficiency = totalExpenses > 0 ? (totalIncome / totalExpenses) * 100 : 0
+      const efficiency = totalExpenses > 0 ? (totalIncome / totalExpenses) * 100 : 0
 
     const last3Months = monthlyData.slice(-3)
     const prev3Months = monthlyData.slice(-6, -3)
