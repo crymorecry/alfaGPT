@@ -4,10 +4,11 @@ import { useState, useEffect, useMemo } from 'react'
 import { useBusiness } from '@/components/business/BusinessProvider'
 import { useTranslations } from 'next-intl'
 import Title from '../ui/title'
-import { TrendingUp, TrendingDown, Wallet, Calendar, Plus, ArrowUpRight, ArrowDownRight } from 'lucide-react'
+import { TrendingUp, TrendingDown, Wallet, Calendar, Plus, ArrowUpRight, ArrowDownRight, Upload } from 'lucide-react'
 import TransactionsView from './TransactionsView'
 import RecurringExpensesView from './RecurringExpensesView'
 import TransactionFormModal from './TransactionFormModal'
+import ImportTransactionsModal from './ImportTransactionsModal'
 
 interface Transaction {
   id: string
@@ -33,6 +34,7 @@ export default function FinanceView() {
   const [recurringExpenses, setRecurringExpenses] = useState<RecurringExpense[]>([])
   const [loading, setLoading] = useState(true)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isImportOpen, setIsImportOpen] = useState(false)
 
   useEffect(() => {
     if (currentBusiness) {
@@ -153,13 +155,22 @@ export default function FinanceView() {
     <div>
       <div className="flex items-center justify-between mb-6">
         <Title>Finance</Title>
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="bg-[#1161EF] text-white hover:bg-[#1161EF]/80 transition-all duration-200 px-4 py-2 rounded-md flex items-center gap-2 whitespace-nowrap"
-        >
-          <Plus className="w-4 h-4" />
-          {t('add_transaction')}
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setIsImportOpen(true)}
+            className="bg-white text-[#1161EF] border border-[#1161EF]/50 hover:bg-blue-50 transition-all duration-200 px-4 py-2 rounded-md flex items-center gap-2 whitespace-nowrap"
+          >
+            <Upload className="w-4 h-4" />
+            {t('import_data')}
+          </button>
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="bg-[#1161EF] text-white hover:bg-[#1161EF]/80 transition-all duration-200 px-4 py-2 rounded-md flex items-center gap-2 whitespace-nowrap"
+          >
+            <Plus className="w-4 h-4" />
+            {t('add_transaction')}
+          </button>
+        </div>
       </div>
 
       <div className="border-b border-gray-200 dark:border-zinc-700 mb-6">
@@ -437,6 +448,14 @@ export default function FinanceView() {
         onSuccess={() => {
           fetchData()
           setIsModalOpen(false)
+        }}
+      />
+      <ImportTransactionsModal
+        isOpen={isImportOpen}
+        onClose={() => setIsImportOpen(false)}
+        onSuccess={() => {
+          fetchData()
+          setIsImportOpen(false)
         }}
       />
     </div>

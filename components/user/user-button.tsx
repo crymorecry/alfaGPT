@@ -52,6 +52,10 @@ export default function UserButton() {
                             {locale === "en" ? <Menu.ItemIndicator /> : null}
                             <span>English</span>
                         </Menu.RadioItem>
+                        <Menu.RadioItem value="kz" onClick={() => onSelectChange('kz')}>
+                            {locale === "kz" ? <Menu.ItemIndicator /> : null}
+                            <span>Қазақша</span>
+                        </Menu.RadioItem>
                     </Menu.RadioItemGroup>
                     <Menu.Separator />
                     <Menu.ItemGroup>
