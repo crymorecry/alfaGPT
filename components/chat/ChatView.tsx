@@ -7,6 +7,8 @@ import { Send, Bot, User, Trash2 } from 'lucide-react'
 import { toaster } from '../ui/toaster'
 import Title from '../ui/title'
 import { useChat } from './ChatProvider'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 export default function ChatView() {
     const t = useTranslations("chat")
@@ -125,13 +127,46 @@ export default function ChatView() {
                                     )}
                                 </div>
                                 <div
-                                    className={`rounded-lg px-4 py-2 ${
+                                    className={`rounded-lg px-4 py-2 text-sm leading-relaxed ${
                                         message.role === 'user'
                                             ? 'bg-blue-500 text-white'
                                             : 'bg-gray-100 dark:bg-zinc-800 text-gray-900 dark:text-gray-100'
                                     }`}
                                 >
-                                    <p className="whitespace-pre-wrap">{message.content}</p>
+                                    {message.role === 'assistant' ? (
+                                        <ReactMarkdown
+                                            remarkPlugins={[remarkGfm]}
+                                            components={{
+                                                p: ({ children, ...props }) => <p className="mb-2 last:mb-0" {...props}>{children}</p>,
+                                                ul: ({ children, ...props }) => <ul className="list-disc ml-5 space-y-1 mb-2 last:mb-0" {...props}>{children}</ul>,
+                                                ol: ({ children, ...props }) => <ol className="list-decimal ml-5 space-y-1 mb-2 last:mb-0" {...props}>{children}</ol>,
+                                                li: ({ children, ...props }) => <li className="leading-relaxed" {...props}>{children}</li>,
+                                                code: ({ children, className }) => {
+                                                    const isInline = !className
+                                                    return isInline ? (
+                                                        <code className="bg-black/10 dark:bg-white/10 px-1.5 py-0.5 rounded font-mono text-xs">{children}</code>
+                                                    ) : (
+                                                        <code className="block bg-black/10 dark:bg-white/10 p-3 rounded font-mono text-xs overflow-x-auto my-2">{children}</code>
+                                                    )
+                                                },
+                                                a: ({ children, href, ...props }) => (
+                                                    <a
+                                                        href={href}
+                                                        className="text-blue-600 dark:text-blue-400 underline"
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                        {...props}
+                                                    >
+                                                        {children}
+                                                    </a>
+                                                ),
+                                            }}
+                                        >
+                                            {message.content}
+                                        </ReactMarkdown>
+                                    ) : (
+                                        <p className="whitespace-pre-wrap">{message.content}</p>
+                                    )}
                                 </div>
                             </div>
                         </div>
